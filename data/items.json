@@ -1,5 +1,36 @@
 [
   {
+    "id": "coronary-culprit",
+    "title": "Coronary Culprit",
+    "url": "https://cliffreid.com/culprit",
+    "source_url": "https://x.com/cliffreid/status/2114639743845912941",
+    "summary": "Free ECG simulator: occlude a coronary artery on a 3D heart and see the 12-lead and echo change. Serial-ECG OMI cases, drills and mimics.",
+    "type": "clinician-built",
+    "tags": [
+      "ecg",
+      "acs",
+      "echo",
+      "interventional"
+    ],
+    "specialty": [
+      "cardiology",
+      "critical-care"
+    ],
+    "maker": "Cliff Reid, MD",
+    "maker_url": "https://x.com/cliffreid",
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-27T17:20:00Z",
+    "updated_at": "2026-10-27T17:20:00Z",
+    "issue": 16,
+    "owner_contact": null
+  },
+  {
     "id": "laa-tee-lab",
     "title": "LAA TEE Lab",
     "url": "https://laa.liorjankelson.com",
