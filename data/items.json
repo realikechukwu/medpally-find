@@ -1,5 +1,36 @@
 [
   {
+    "id": "cardiorender",
+    "title": "CardioRender",
+    "url": "https://cardiorender.com",
+    "source_url": "https://x.com/cardiorender/status/2104389105878728804",
+    "summary": "Browser-based cardiology simulators: congenital heart disease, cardiac mechanics and Electricity to ECG, a 14-module series from ion channels to infarct localisation. Pricing not stated.",
+    "type": "app",
+    "tags": [
+      "ecg",
+      "congenital",
+      "haemodynamics",
+      "imaging"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Dr Dinesh Raja Palanisamy",
+    "maker_url": "https://x.com/cardiorender",
+    "clinician_built": true,
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": "Clinician built",
+    "status": "active",
+    "added_at": "2026-10-27T19:23:31Z",
+    "updated_at": "2026-10-27T19:23:31Z",
+    "issue": 30,
+    "owner_contact": null
+  },
+  {
     "id": "pulmcritcare-simulators",
     "title": "PulmCritCare Simulators",
     "url": "https://www.pulmcritcare.com/topics/simulators",
