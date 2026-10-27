@@ -12,9 +12,10 @@ concurrency:
   cancel-in-progress: false
 jobs:
   intake:
-    # A public suggestion (label `suggestion`) runs only once the owner adds `intake`. Shortcut issues
-    # are created already labelled, so their `labeled` event is skipped to avoid a second run.
-    if: github.actor == github.repository_owner && (contains(github.event.issue.labels.*.name, 'intake') || startsWith(github.event.issue.title, 'intake:')) && (github.event_name != 'issues' || github.event.action != 'labeled' || (github.event.label.name == 'intake' && contains(github.event.issue.labels.*.name, 'suggestion')))
+    # A public suggestion runs only once the owner adds `intake` (with or without removing `suggestion`).
+    # Shortcut issues are created already labelled with an `intake:` title, so their `labeled` event is
+    # skipped to avoid a second run.
+    if: github.actor == github.repository_owner && (contains(github.event.issue.labels.*.name, 'intake') || startsWith(github.event.issue.title, 'intake:')) && (github.event_name != 'issues' || github.event.action != 'labeled' || (github.event.label.name == 'intake' && !startsWith(github.event.issue.title, 'intake:')))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +29,7 @@ jobs:
       - name: Load prompt
         id: prompt
         run: |
+          cp "$GITHUB_EVENT_PATH" .intake-event.json
           delimiter="PROMPT_$(openssl rand -hex 16)"
           { echo "text<<$delimiter"; cat .github/intake-prompt.md; echo "$delimiter"; } >> "$GITHUB_OUTPUT"
       - name: Curate resource
