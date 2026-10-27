@@ -1,5 +1,38 @@
 [
   {
+    "id": "ventriculus",
+    "title": "Ventriculus",
+    "url": "https://ventriculus.org",
+    "source_url": "https://x.com/BerkeKorucuMD/status/2104989231697264873",
+    "summary": "Tools for cardiology trainees: ECG atlas, TTE cheatsheet, coronary angiography simulator and a cardiogenic shock simulator with MCS (free account needed). Overall pricing not stated.",
+    "type": "clinician-built",
+    "tags": [
+      "ecg",
+      "echo",
+      "interventional",
+      "haemodynamics",
+      "mcs",
+      "critical-care"
+    ],
+    "specialty": [
+      "cardiology",
+      "critical-care"
+    ],
+    "maker": "Berke Cenktug Korucu, MD",
+    "maker_url": "https://x.com/BerkeKorucuMD",
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-27T17:00:00Z",
+    "updated_at": "2026-10-27T17:00:00Z",
+    "issue": 13,
+    "owner_contact": null
+  },
+  {
     "id": "night-float-cardiology",
     "title": "Night Float Cardiology",
     "url": "https://cardsnightfloat.netlify.app",
