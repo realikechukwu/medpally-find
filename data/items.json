@@ -46,7 +46,7 @@
     ],
     "maker": "CardioLADs",
     "maker_url": null,
-    "clinician_built": false,
+    "clinician_built": true,
     "pricing": "unknown",
     "platforms": [
       "web"
