@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   intake:
-    if: github.actor == github.repository_owner && contains(github.event.issue.labels.*.name, 'intake') && (github.event_name != 'issues' || github.event.action != 'labeled' || github.event.label.name == 'intake')
+    if: github.actor == github.repository_owner && (contains(github.event.issue.labels.*.name, 'intake') || startsWith(github.event.issue.title, 'intake:')) && (github.event_name != 'issues' || github.event.action != 'labeled' || github.event.label.name == 'intake')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
