@@ -126,3 +126,32 @@
 @media(prefers-color-scheme:dark){.site-menu{box-shadow:0 16px 40px #0006}}
 @media(prefers-reduced-motion:no-preference){.site-menu:popover-open{animation:menu-in .14s ease-out}}
 @keyframes menu-in{from{opacity:0;transform:translateY(-4px)}}
+
+/* Home: type and topic shortcuts link into Browse */
+a.category{display:flex;align-items:center;justify-content:center;white-space:nowrap}
+a.category:hover,a.tag-chip:hover{color:var(--ink)}
+.category-count{font-size:11px;font-weight:600;color:var(--muted);margin-left:6px}
+a.tag-chip{display:inline-flex;align-items:center}
+.see-all{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:14px;font-weight:650;color:var(--accent)}
+.see-all svg{width:18px;height:18px}
+.home-latest{padding-bottom:100px}
+.browse-all{display:none}
+@media(max-width:600px){.home-latest .see-all{display:none}.browse-all{display:flex;justify-content:center;margin-top:28px}.home-latest{padding-bottom:65px}}
+
+/* Browse page */
+.browse-intro{padding-top:56px;padding-bottom:40px}
+.browse-intro h1{font-size:clamp(36px,5vw,52px);letter-spacing:-.04em;line-height:1.1;margin:12px 0 0}
+.browse-search{margin:28px 0 0;height:62px}
+.browse .category-bar+.tags-row{border-bottom:1px solid var(--line)}
+.browse+.all-section{padding-top:40px}
+.pagination{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;margin-top:56px}
+.pagination a,.pagination span{min-width:44px;min-height:44px;display:inline-grid;place-items:center;padding:0 12px;border-radius:99px;font-size:14px;color:var(--muted)}
+.pagination a:hover{background:var(--chip);color:var(--ink)}
+.pagination a[aria-current]{background:var(--ink);color:var(--paper);font-weight:650}
+.pagination .page-step{color:var(--ink);font-weight:650}
+.pagination span.page-step{color:var(--line)}
+.pagination .page-gap{min-width:24px;padding:0}
+@media(max-width:600px){.browse-intro{padding-top:40px;padding-bottom:28px}.browse+.all-section{padding-top:28px}.pagination{gap:2px;margin-top:40px}.pagination .page-step{font-size:0;padding:0}.pagination a.page-step:before{font-size:18px;content:attr(data-arrow)}.pagination span.page-step:before{font-size:18px;content:attr(data-arrow)}}
+a.category>span{font-size:inherit;line-height:inherit;font-weight:inherit}
+.browse+.all-section .all-heading{margin-bottom:20px}
+@media(max-width:600px){.browse+.all-section .all-heading>p{max-width:none;text-align:left;font-size:12px}}
