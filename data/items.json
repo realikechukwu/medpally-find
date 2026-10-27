@@ -1,5 +1,34 @@
 [
   {
+    "id": "echosuite",
+    "title": "EchoSuite",
+    "url": "https://echosuite.app",
+    "source_url": "https://x.com/m__kamareddine/status/2112269026919587954",
+    "summary": "Free web echo simulator with a 3D probe lab, 15 labelled TTE views, coaching and echo calculators for practising image acquisition.",
+    "type": "app",
+    "tags": [
+      "echo",
+      "ultrasound/pocus"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Mohammed Kamareddine, MD",
+    "maker_url": "https://x.com/m__kamareddine",
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": "Clinician built",
+    "status": "active",
+    "added_at": "2026-10-27T19:12:46Z",
+    "updated_at": "2026-10-27T19:12:46Z",
+    "issue": 11,
+    "owner_contact": null
+  },
+  {
     "id": "hkux-advanced-cardiac-imaging-echo",
     "title": "Advanced Cardiac Imaging: Echocardiography (Echo)",
     "short_title": "Echocardiography (Echo)",
