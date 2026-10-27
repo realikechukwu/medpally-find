@@ -1,5 +1,33 @@
 [
   {
+    "id": "intro2ekg",
+    "title": "intro2ekg",
+    "url": "https://intro2ekg.com",
+    "source_url": "https://x.com/vkadiyalamd/status/2115111336330088912",
+    "summary": "Interactive ECG course for students and residents: lessons with animated heart models, real and simulated tracings, rhythms, blocks, ischaemia and AI-ECG, plus quizzes. Pricing not stated.",
+    "type": "app",
+    "tags": [
+      "ecg"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Vishnu Kadiyala, MD",
+    "maker_url": "https://x.com/VKadiyalaMD",
+    "clinician_built": true,
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-27T19:20:31Z",
+    "updated_at": "2026-10-27T19:20:31Z",
+    "issue": 26,
+    "owner_contact": null
+  },
+  {
     "id": "pacing-simulator",
     "title": "Pacing Simulator",
     "url": "https://pacingsimulator.com",
