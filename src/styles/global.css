@@ -109,3 +109,20 @@
 .form-status{margin:0;font-size:14px;min-height:1.5em}
 .form-status.error{color:var(--accent)}
 .empty-state .suggest-link{display:block;margin-top:16px;font-size:14px;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+
+/* Mobile menu: the header links fold into a popover; room for sign-in and profile later */
+.menu-button{display:none;width:44px;height:44px;margin-right:-10px;place-items:center;border:0;border-radius:50%;background:transparent;color:var(--ink)}
+.menu-button svg{width:24px;height:24px}
+.menu-close,.site-header:has(.site-menu:popover-open) .menu-open{display:none}
+.site-header:has(.site-menu:popover-open) .menu-close{display:block}
+.header-nav a[aria-current]{color:var(--ink)}
+.site-menu{position:fixed;inset:62px 12px auto auto;margin:0;width:min(260px,calc(100% - 24px));padding:6px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:0 16px 40px #2a221a1f,0 2px 8px #2a221a0d}
+.site-menu:popover-open{display:grid;gap:2px}
+.site-menu a{display:flex;align-items:center;gap:12px;min-height:48px;padding:0 12px;border-radius:12px;font-size:15px}
+.site-menu a:hover,.site-menu a[aria-current]{background:var(--chip)}
+.site-menu svg{width:20px;height:20px;flex:none;color:var(--muted)}
+.site-menu .saved-count{margin-left:auto}
+@media(max-width:600px){.header-nav{display:none}.menu-button{display:grid}}
+@media(prefers-color-scheme:dark){.site-menu{box-shadow:0 16px 40px #0006}}
+@media(prefers-reduced-motion:no-preference){.site-menu:popover-open{animation:menu-in .14s ease-out}}
+@keyframes menu-in{from{opacity:0;transform:translateY(-4px)}}
