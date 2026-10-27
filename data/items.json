@@ -1,5 +1,33 @@
 [
   {
+    "id": "how-to-perform-a-transthoracic-echocardiogram-tte",
+    "title": "How to Perform a Transthoracic Echocardiogram (TTE): Step-by-Step Guide",
+    "url": "https://www.youtube.com/watch?v=UPwwvKI4iUA",
+    "source_url": null,
+    "summary": "Step-by-step YouTube video on performing a transthoracic echo, by Youssef Abdallah. Curator notes it as BSE Level 2 material; content and pricing not checked beyond the title.",
+    "type": "video",
+    "tags": [
+      "echo",
+      "imaging"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Youssef Abdallah",
+    "maker_url": "https://www.youtube.com/@YoussefAbdallahOfficial",
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": "https://i.ytimg.com/vi/UPwwvKI4iUA/hqdefault.jpg",
+    "note": "Comprehensive BSE L2 video",
+    "status": "active",
+    "added_at": "2026-10-27T15:15:00Z",
+    "updated_at": "2026-10-27T15:15:00Z",
+    "issue": 9,
+    "owner_contact": null
+  },
+  {
     "id": "learncoronary",
     "title": "Learn Coronary: Virtual Coronary Angiography",
     "url": "https://learncoronary.com/",
