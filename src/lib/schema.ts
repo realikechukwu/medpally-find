@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const types = ['tool','calculator','app','vibecoded','course','video','podcast','guideline','paper','thread','website','dataset'] as const;
+export const types = ['tool','calculator','app','clinician-built','course','video','podcast','guideline','paper','thread','website','dataset'] as const;
 const webUrl = z.string().url().refine(value => ['http:', 'https:'].includes(new URL(value).protocol), 'Must be an HTTP(S) URL');
 const timestamp = z.string().datetime({ offset: false });
 export const itemSchema = z.object({

@@ -1,7 +1,7 @@
 # Build: find.medpally.com — a curated cardiology / cardio-ITU resource directory
 
 ## What this is
-A public, no-login directory of tools, calculators, vibecoded apps and educational resources for cardiology and cardiac intensive care (ITU/ICU). One curator (me) adds items by sharing links from an iPhone. An AI agent (Claude, running in GitHub Actions) reads each link, extracts structured info, and writes it to a JSON file in this repo. The site is static, rebuilt on every commit, and deployed to Cloudflare at `find.medpally.com`.
+A public, no-login directory of tools, calculators, clinician-built apps and educational resources for cardiology and cardiac intensive care (ITU/ICU). One curator (me) adds items by sharing links from an iPhone. An AI agent (Claude, running in GitHub Actions) reads each link, extracts structured info, and writes it to a JSON file in this repo. The site is static, rebuilt on every commit, and deployed to Cloudflare at `find.medpally.com`.
 
 Keep it lean. No database, no auth, no backend beyond static hosting. But structure the code so favourites, maker-claimed listings, public submissions and other specialties can be added later without a rewrite.
 
@@ -31,7 +31,7 @@ A JSON array, sorted newest first. Single source of truth. Schema (`src/lib/sche
 | `url` | string (url) | the actual tool/resource, not the tweet |
 | `source_url` | string (url) \| null | where I found it (tweet, post) |
 | `summary` | string | one or two plain sentences, ≤ 200 chars, clinically useful, no hype |
-| `type` | enum | `tool`, `calculator`, `app`, `vibecoded`, `course`, `video`, `podcast`, `guideline`, `paper`, `thread`, `website`, `dataset` |
+| `type` | enum | `tool`, `calculator`, `app`, `clinician-built`, `course`, `video`, `podcast`, `guideline`, `paper`, `thread`, `website`, `dataset` |
 | `tags` | string[] | from a controlled vocabulary in `data/tags.json` (e.g. echo, ecg, heart-failure, ep, interventional, imaging, haemodynamics, mcs, cardiac-surgery, pharmacology, acs, valve, congenital, pulmonary-hypertension, critical-care, ultrasound/pocus, ai). Agent may add new tags to `tags.json` when truly needed |
 | `specialty` | string[] | default `["cardiology"]`; `"critical-care"` too where relevant |
 | `maker` | string \| null | person/org who built it |
