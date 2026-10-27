@@ -13,4 +13,13 @@ export const itemSchema = z.object({
   issue: z.number().int().nonnegative(), owner_contact: z.null()
 }).strict();
 export type Item = z.infer<typeof itemSchema>;
+const faqSchema = z.object({ question: z.string().min(1), answer: z.string().min(1) }).strict();
+export const landingSchema = z.object({
+  heading: z.string().min(1), title: z.string().min(1).max(60), description: z.string().min(1).max(155),
+  intro: z.string().min(1), faqs: z.array(faqSchema).min(2).max(3), reviewed: z.boolean()
+}).strict();
+export const topicSchema = landingSchema.extend({ intro: z.string().refine(value => {
+  const count = value.trim().split(/\s+/).length;
+  return count >= 40 && count <= 200;
+}, 'Topic introduction must contain 40–200 words') });
 export { normalizeUrl } from './url';

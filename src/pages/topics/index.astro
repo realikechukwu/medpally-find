@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import { activeItems, label, slug } from '../../lib/items';
+import tags from '../../../data/tags.json';
+---
+<Base title="Cardiology topics | MedPally Find" description="Browse cardiology and cardiac critical care learning resources by topic."><main id="main" class="shell topics-index"><div class="section-kicker">BROWSE</div><h1>Browse by topic</h1><p>Explore resources by clinical topic. Counts show the number of active listings in each collection.</p><ul>{tags.map(tag => { const count = activeItems.filter(item => item.tags.includes(tag)).length; return <li>{count ? <a href={`/topics/${slug(tag)}/`}>{label(tag)}</a> : <span>{label(tag)}</span>}<span>{count} {count === 1 ? 'resource' : 'resources'}</span></li>; })}</ul></main></Base>
+<style>
+.topics-index{padding-top:56px;padding-bottom:100px}.topics-index h1{font-size:clamp(36px,5vw,52px);letter-spacing:-.04em;margin:12px 0 20px}.topics-index p{color:var(--muted);line-height:1.6}.topics-index ul{max-width:800px;list-style:none;padding:0;margin:40px 0 0;border-top:1px solid var(--line)}.topics-index li{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);text-transform:capitalize}.topics-index li a{text-decoration:underline;text-underline-offset:3px}.topics-index li span:last-child{color:var(--muted);font-size:13px;white-space:nowrap;text-transform:none}@media(max-width:600px){.topics-index{padding-top:40px;padding-bottom:65px}}
+</style>

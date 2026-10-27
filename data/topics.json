@@ -1,0 +1,299 @@
+{
+  "echo": {
+    "heading": "Learn echocardiography",
+    "title": "Echo learning resources and courses | MedPally Find",
+    "description": "Free and paid resources for learning echo: illustrated guides, online courses and the ASE guidelines. Picked by a cardiology registrar.",
+    "intro": "Echo is learned with a probe in your hand, but the reading around it matters. You need the standard views in your head before you scan, a way to check your measurements afterwards, and a reference for when the report doesn't match the patient.\n\nThe resources here include illustrated guides for views and anatomy, structured courses for physics and pathology, and society guidelines for chamber measurements and valve grading. They suit doctors starting echo in cardiology training, physiologists working towards accreditation, and anyone in acute medicine or intensive care who scans.",
+    "faqs": [
+      {
+        "question": "Where should I start if I've never done echo?",
+        "answer": "Learn the standard transthoracic views first: parasternal long and short axis, the apical views and subcostal. An illustrated guide such as Intro2Echo shows what each view should look like before you pick up the probe. After that you need supervised scanning time; reading alone won't get you there."
+      },
+      {
+        "question": "Which guidelines do echo reports follow?",
+        "answer": "Most departments base measurements and valve grading on American Society of Echocardiography (ASE) and EACVI recommendations, and in the UK on British Society of Echocardiography (BSE) guidance. Check which your department uses."
+      },
+      {
+        "question": "Is there free echo teaching online?",
+        "answer": "Yes. The ASE guidelines are free to read, and several of the courses and guides listed here have free sections. Each listing shows pricing where it's known."
+      }
+    ],
+    "reviewed": false
+  },
+  "ecg": {
+    "heading": "Learn ECG interpretation",
+    "title": "ECG interpretation resources | MedPally Find",
+    "description": "Resources for getting better at reading ECGs, from free pattern libraries to case-based courses. Picked by a cardiology registrar.",
+    "intro": "Most people get better at ECGs the same way: learn a system, then read a lot of tracings and check your answer each time. The hard part is finding enough good examples with honest explanations.\n\nThis page collects ECG libraries, case-based courses and references. They're useful for medical students and foundation doctors learning the basics, for medical and emergency registrars who review ECGs on call, and for cardiology trainees revising for exams.",
+    "faqs": [
+      {
+        "question": "What's the best way to learn ECGs?",
+        "answer": "Pick one systematic approach (rate, rhythm, axis, intervals, then morphology) and use it on every ECG. Then practise on cases where you can see the answer and the reasoning. A free library like LITFL is good for looking up patterns, and case-based teaching such as ECG Weekly helps with the reasoning."
+      },
+      {
+        "question": "Are there free ECG resources?",
+        "answer": "Yes. The LITFL ECG Library is free and covers most patterns you'll see on the wards. Some case-based courses charge a subscription, so check each listing."
+      }
+    ],
+    "reviewed": false
+  },
+  "heart-failure": {
+    "heading": "Heart failure resources",
+    "title": "Heart failure guidelines and tools | MedPally Find",
+    "description": "Guidelines, risk scores and learning resources for managing heart failure. Picked by a cardiology registrar.",
+    "intro": "Heart failure guidelines have changed often in recent years. For reduced ejection fraction, treatment is now built on several drug classes started and titrated together. You need the current recommendations close at hand and a reliable place to find risk scores.\n\nThis page lists the guideline sources and decision tools that come up in heart failure clinics, on the wards and on the medical take. They're useful for medical registrars, heart failure nurses and anyone looking after patients with reduced or preserved ejection fraction.",
+    "faqs": [
+      {
+        "question": "Which heart failure guidelines should I follow?",
+        "answer": "In the UK and Europe most teams use the ESC heart failure guidelines alongside NICE guidance. The ESC guidelines are free to read on the ESC website. Follow local protocols for prescribing and titration."
+      },
+      {
+        "question": "Where can I find heart failure risk scores?",
+        "answer": "MDCalc includes several scores used in cardiovascular care, with notes on the evidence behind each. Use them to support your judgement, not replace it."
+      }
+    ],
+    "reviewed": false
+  },
+  "ep": {
+    "heading": "Electrophysiology and device resources",
+    "title": "EP and cardiac device learning resources | MedPally Find",
+    "description": "Learning resources for electrophysiology and cardiac devices: pacemakers, ICDs, CRT and remote monitoring. Picked by a cardiology registrar.",
+    "intro": "Electrophysiology covers arrhythmias, ablation and implanted devices. For most trainees, devices come first: checking a pacemaker, making sense of a remote monitoring alert, or implanting a loop recorder or pacemaker under supervision.\n\nThe resources here cover device programming and troubleshooting, arrhythmia mechanisms and preparation for device exams. They're aimed at cardiology trainees, cardiac physiologists and nurses who work in pacing clinics or EP labs.",
+    "faqs": [
+      {
+        "question": "Where can I learn about pacemakers and ICDs?",
+        "answer": "Device manufacturers run free education for clinicians. The Medtronic hub listed here covers pacemakers, ICDs, CRT and remote monitoring. It's worth looking at more than one manufacturer, because programming differs between companies."
+      },
+      {
+        "question": "How do I prepare for a device exam?",
+        "answer": "Exams such as BHRS, IBHRE and EHRA device certification need theory plus plenty of hands-on interrogation practice. Some manufacturer courses include exam preparation; check each listing."
+      }
+    ],
+    "reviewed": false
+  },
+  "interventional": {
+    "heading": "Interventional cardiology resources",
+    "title": "Interventional cardiology learning resources | MedPally Find",
+    "description": "Resources for learning coronary angiography and the cath lab: projection simulators, anatomy guides and courses. Picked by a cardiology registrar.",
+    "intro": "Early in the cath lab, the hardest part is often working out what you're looking at. Coronary anatomy on a flat angiogram depends on the projection, and it takes time to recognise each vessel in RAO, LAO, cranial and caudal views.\n\nThis page lists tools that help with that: 3D anatomy viewers, projection simulators and guides to the cath lab. They suit cardiology trainees starting angiography, cath lab nurses and radiographers, and anyone who wants to read angiogram reports with more confidence.",
+    "faqs": [
+      {
+        "question": "How do I learn the angiographic projections?",
+        "answer": "Learn what each projection shows best, then practise naming vessels on real or simulated images. Tools like Learn Coronary and AngioView let you move the camera around a 3D heart and see how each vessel changes."
+      },
+      {
+        "question": "Are there free tools for coronary anatomy?",
+        "answer": "Several of the interactive tools here run free in a browser. Pricing hasn't been confirmed for all of them, so check each listing."
+      }
+    ],
+    "reviewed": false
+  },
+  "imaging": {
+    "heading": "Cardiac imaging resources",
+    "title": "Cardiac imaging courses: echo, CT and CMR | MedPally Find",
+    "description": "Courses and references for cardiac imaging, including echo, cardiac CT and cardiac MRI. Picked by a cardiology registrar.",
+    "intro": "Cardiac imaging now goes well beyond echo. Cardiac CT is used for chest pain and TAVI planning, and cardiac MRI for cardiomyopathy, myocarditis and viability. Most trainees need to know what each test can answer, even if they never report one.\n\nThe resources here include case-based CT and CMR courses, echo guides, radiology references and coronary angiography tools. Some suit beginners; others are aimed at people working towards reporting.",
+    "faqs": [
+      {
+        "question": "Where can I learn cardiac CT?",
+        "answer": "The University of Hong Kong cardiac CT course listed here works through cases covering calcium scoring, CT coronary angiography, TAVI planning and CT-FFR, and needs no prior experience."
+      },
+      {
+        "question": "Where can I learn cardiac MRI?",
+        "answer": "The University of Hong Kong (HKUx) also runs an online CMR course on edX. Radiopaedia also has free articles and cases on cardiac imaging."
+      }
+    ],
+    "reviewed": false
+  },
+  "haemodynamics": {
+    "heading": "Haemodynamics resources",
+    "title": "Haemodynamics and shock learning resources | MedPally Find",
+    "description": "Resources for understanding haemodynamics, shock and invasive monitoring in cardiac critical care. Picked by a cardiology registrar.",
+    "intro": "Haemodynamics sits behind most decisions in cardiac critical care: whether a patient in shock needs fluid, inotropes or mechanical support, and what a pulmonary artery catheter or echo is telling you.\n\nThese resources cover the physiology of shock, invasive monitoring and how to read pressure and flow data at the bedside. They're useful for intensive care and cardiology registrars, critical care nurses and anyone looking after patients with cardiogenic shock or after cardiac surgery.",
+    "faqs": [
+      {
+        "question": "Where can I learn about cardiogenic shock?",
+        "answer": "The Internet Book of Critical Care has free chapters on shock, cardiac emergencies and mechanical support, written for clinicians at the bedside."
+      },
+      {
+        "question": "What should I learn first?",
+        "answer": "Start with cardiac output, preload, afterload and contractility, then learn how each shows up in pressures, on echo and in the patient in front of you. Advanced monitoring makes much more sense once those are clear."
+      }
+    ],
+    "reviewed": false
+  },
+  "mcs": {
+    "heading": "Mechanical circulatory support resources",
+    "title": "Mechanical circulatory support resources | MedPally Find",
+    "description": "Learning resources on IABP, Impella, ECMO and LVADs for cardiology and critical care teams. Picked by a cardiology registrar.",
+    "intro": "Mechanical circulatory support covers devices that take over some of the heart's work: intra-aortic balloon pumps, Impella, VA-ECMO and long-term LVADs. Patients on them are looked after jointly by cardiology, intensive care and cardiac surgery, and everyone involved needs to know how the device works and what can go wrong.\n\nThis page lists references on device physiology, indications and troubleshooting, for intensive care and cardiology trainees, critical care nurses and perfusionists.",
+    "faqs": [
+      {
+        "question": "What's the difference between an IABP, Impella and ECMO?",
+        "answer": "An IABP inflates in diastole to improve coronary perfusion and deflates just before systole to reduce afterload. The left-sided Impella is a small pump that moves blood from the left ventricle into the aorta. VA-ECMO drains venous blood, oxygenates it and returns it to the arterial circulation, supporting both heart and lungs. The resources here explain each in more depth."
+      },
+      {
+        "question": "Where can I read about ECMO and Impella?",
+        "answer": "The Internet Book of Critical Care has free chapters on mechanical support. Device manufacturers and ECMO centres also run training, and local protocols should guide practice."
+      }
+    ],
+    "reviewed": false
+  },
+  "cardiac-surgery": {
+    "heading": "Cardiac surgery resources",
+    "title": "Cardiac surgery learning resources | MedPally Find",
+    "description": "Learning resources on cardiac surgery and post-operative care for cardiology, intensive care and surgical teams. Picked by a cardiology registrar.",
+    "intro": "Cardiology and cardiac surgery meet at the heart team meeting, in the cardiac ICU and on the ward after surgery. Knowing what an operation involves helps you explain it to patients and spot complications early.\n\nThis page collects resources on CABG, valve surgery and post-operative care, for cardiology and intensive care trainees, cardiac surgical trainees and nurses.",
+    "faqs": [
+      {
+        "question": "What should a cardiology trainee know about cardiac surgery?",
+        "answer": "The main operations (CABG and valve repair or replacement), when the heart team recommends surgery over a catheter procedure, and common problems after surgery such as bleeding, atrial fibrillation and tamponade."
+      },
+      {
+        "question": "Where can I learn post-operative cardiac care?",
+        "answer": "Critical care references and cardiac ICU guides are the best place to start. More resources will be added here as they're reviewed."
+      }
+    ],
+    "reviewed": false
+  },
+  "pharmacology": {
+    "heading": "Cardiovascular pharmacology resources",
+    "title": "Cardiovascular pharmacology resources | MedPally Find",
+    "description": "References and learning resources on cardiovascular drugs, from antiplatelets to inotropes. Picked by a cardiology registrar.",
+    "intro": "Cardiology relies on a lot of high-risk drugs: anticoagulants, antiplatelets, antiarrhythmics, heart failure medicines and inotropes. Doses change with kidney function, interactions are common and the evidence keeps moving.\n\nThis page lists references and learning resources on cardiovascular drugs. They're for understanding the drugs; always check doses against the BNF or your local formulary before prescribing.",
+    "faqs": [
+      {
+        "question": "Where should I check cardiac drug doses?",
+        "answer": "In the UK, use the BNF and your local formulary. Learning resources help you understand the drugs but shouldn't replace a prescribing reference."
+      },
+      {
+        "question": "Which drug topics come up most in cardiology training?",
+        "answer": "Anticoagulation, antiplatelet therapy after ACS or PCI, heart failure drug titration, antiarrhythmics, and inotropes and vasopressors in intensive care."
+      }
+    ],
+    "reviewed": false
+  },
+  "acs": {
+    "heading": "Acute coronary syndrome resources",
+    "title": "ACS guidelines and learning resources | MedPally Find",
+    "description": "Guidelines, risk scores and learning resources for acute coronary syndromes. Picked by a cardiology registrar.",
+    "intro": "Acute coronary syndromes are among the most common reasons for a cardiology referral. Managing them well means reading the ECG quickly, using troponin pathways properly, choosing antithrombotic therapy and knowing when a patient needs the cath lab.\n\nThe resources here include risk scores, guidelines and teaching on ACS. They're useful for emergency and acute medicine doctors, medical registrars on call and cardiology trainees.",
+    "faqs": [
+      {
+        "question": "Where can I find ACS risk scores?",
+        "answer": "MDCalc has the scores commonly used in chest pain and ACS, such as GRACE and HEART, with notes on how each was developed."
+      },
+      {
+        "question": "Which guidelines cover ACS?",
+        "answer": "The ESC guidelines cover the diagnosis and management of acute coronary syndromes and are free to read. In the UK, NICE guidance and local pathways also apply."
+      }
+    ],
+    "reviewed": false
+  },
+  "valve": {
+    "heading": "Valve disease resources",
+    "title": "Valvular heart disease resources | MedPally Find",
+    "description": "Guidelines and learning resources for valvular heart disease, from echo assessment to TAVI. Picked by a cardiology registrar.",
+    "intro": "Valve disease is common, and more so as people live longer. Managing it means grading severity on echo, timing intervention well and choosing between surgery and transcatheter options such as TAVI.\n\nThis page lists guidelines and learning resources on aortic, mitral, tricuspid and pulmonary valve disease, for cardiology trainees, echo physiologists and anyone who sees valve patients in clinic.",
+    "faqs": [
+      {
+        "question": "Which guidelines cover valve disease?",
+        "answer": "The ESC/EACTS valvular heart disease guidelines are widely used in Europe and the UK and are free to read on the ESC website. In the US, the ACC/AHA publish their own guideline."
+      },
+      {
+        "question": "Where can I learn to grade valve disease on echo?",
+        "answer": "The ASE guidelines set out how to measure and grade valve lesions, and the BSE publishes UK guidance too. An illustrated echo guide helps with the views you'll need first."
+      }
+    ],
+    "reviewed": false
+  },
+  "congenital": {
+    "heading": "Congenital heart disease resources",
+    "title": "Congenital heart disease resources | MedPally Find",
+    "description": "Learning resources on congenital heart disease in children and adults. Picked by a cardiology registrar.",
+    "intro": "More people born with congenital heart disease now live well into adulthood, so adult cardiologists see them more often: in clinic, on the ward and in emergencies. Their anatomy and previous operations can make routine problems complicated.\n\nThis page collects resources on congenital heart lesions, their repairs and long-term follow-up, for cardiology trainees, adult congenital heart disease teams and paediatric staff.",
+    "faqs": [
+      {
+        "question": "What should a general cardiology trainee know about adult congenital heart disease?",
+        "answer": "The common lesions and their repairs, such as ASD, VSD, tetralogy of Fallot, coarctation and the Fontan circulation, and when to involve a specialist adult congenital centre."
+      },
+      {
+        "question": "Can I suggest a congenital heart disease resource?",
+        "answer": "Yes. Use the suggest form. This page will grow as resources are reviewed and added."
+      }
+    ],
+    "reviewed": false
+  },
+  "pulmonary-hypertension": {
+    "heading": "Pulmonary hypertension resources",
+    "title": "Pulmonary hypertension resources | MedPally Find",
+    "description": "Guidelines and learning resources on diagnosing and managing pulmonary hypertension. Picked by a cardiology registrar.",
+    "intro": "Pulmonary hypertension is often first suspected on an echo or during a breathlessness work-up. Diagnosis needs right heart catheterisation, and the underlying cause decides the treatment, so getting the classification right matters.\n\nThis page lists guidelines and learning resources on pulmonary hypertension, for cardiology and respiratory trainees, echo physiologists and anyone referring patients to a specialist centre.",
+    "faqs": [
+      {
+        "question": "Which guidelines cover pulmonary hypertension?",
+        "answer": "The ESC/ERS pulmonary hypertension guidelines set out the definitions, classification and treatment, and are free to read on the ESC website."
+      },
+      {
+        "question": "How is pulmonary hypertension diagnosed?",
+        "answer": "Echo estimates how likely pulmonary hypertension is, but the diagnosis is confirmed with right heart catheterisation. In the UK, patients are usually referred to a designated pulmonary hypertension centre."
+      }
+    ],
+    "reviewed": false
+  },
+  "critical-care": {
+    "heading": "Cardiac critical care resources",
+    "title": "Cardiac critical care learning resources | MedPally Find",
+    "description": "References and learning resources for cardiac intensive care: shock, arrhythmias, mechanical support and post-op care. Picked by a cardiology registrar.",
+    "intro": "Cardiac critical care looks after the sickest cardiology patients: cardiogenic shock, survivors of cardiac arrest, patients on mechanical support and those recovering from heart surgery. Care is shared between cardiology, intensive care and anaesthetics.\n\nThe resources here are practical references and teaching, including free critical care textbooks and ECG libraries. They're useful for intensive care and cardiology registrars, critical care nurses and advanced practitioners.",
+    "faqs": [
+      {
+        "question": "Is there a free critical care textbook online?",
+        "answer": "Yes. The Internet Book of Critical Care is free and has chapters on cardiac emergencies, shock and mechanical support. LITFL is also free and covers ECGs and many critical care topics."
+      },
+      {
+        "question": "Who are these resources for?",
+        "answer": "Mainly doctors, nurses and advanced practitioners in cardiac or general intensive care, and cardiology trainees who cover the coronary care unit."
+      }
+    ],
+    "reviewed": false
+  },
+  "ultrasound/pocus": {
+    "heading": "Point-of-care ultrasound (POCUS) resources",
+    "title": "POCUS and focused echo learning resources | MedPally Find",
+    "description": "Courses and guides for learning point-of-care ultrasound and focused echo. Picked by a cardiology registrar.",
+    "intro": "Point-of-care ultrasound lets you answer focused questions at the bedside. Is the left ventricle badly impaired? Is there a pericardial effusion? Is the right ventricle dilated? It's now part of training in acute medicine, emergency medicine and intensive care.\n\nThe resources here teach focused cardiac ultrasound and related POCUS skills, from probe handling and standard views to recognising key findings. Accreditation still needs supervised scans and a logbook, so treat online learning as a supplement.",
+    "faqs": [
+      {
+        "question": "What's the difference between POCUS and a full echo?",
+        "answer": "POCUS answers a few focused questions at the bedside. A full echo is a complete, measured study, usually done by an accredited physiologist or cardiologist. A focused scan doesn't replace a formal echo when one is needed."
+      },
+      {
+        "question": "How do I get accredited in focused echo in the UK?",
+        "answer": "Common routes are FUSIC from the Intensive Care Society and BSE Level 1. Both combine course learning with supervised scans and a logbook."
+      },
+      {
+        "question": "Is there free POCUS teaching online?",
+        "answer": "Yes. 123sonography has free material alongside its paid courses. Each listing shows pricing where it's known."
+      }
+    ],
+    "reviewed": false
+  },
+  "ai": {
+    "heading": "AI in cardiology resources",
+    "title": "AI in cardiology: tools and resources | MedPally Find",
+    "description": "AI tools and learning resources for cardiology, from echo measurement to ECG analysis. Picked by a cardiology registrar.",
+    "intro": "AI is turning up in cardiology in practical ways: automated echo measurements, ECG analysis, and tools that summarise papers or draft letters. Some of it is useful now; much of it is still being tested.\n\nThis page lists AI tools and resources on how AI is used in cardiology, for clinicians who want to try the tools or understand the evidence. Check whether a tool is approved for clinical use before relying on it with patients.",
+    "faqs": [
+      {
+        "question": "Can I use AI tools with patient data?",
+        "answer": "Only if your organisation has approved the tool for that use. In the NHS, check with your information governance team before entering any patient information."
+      },
+      {
+        "question": "Where is AI already used in cardiology?",
+        "answer": "Common examples are automated measurements on echo machines, ECG interpretation software and risk prediction from imaging. The evidence varies a lot between tools."
+      }
+    ],
+    "reviewed": false
+  }
+}

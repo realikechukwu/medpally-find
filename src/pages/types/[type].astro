@@ -1,0 +1,13 @@
+---
+import Landing from '../../components/Landing.astro';
+import { activeItems } from '../../lib/items';
+import typeContent from '../../../data/types.json';
+export function getStaticPaths() {
+  return Object.entries(typeContent).flatMap(([type, content]) => {
+    const listings = activeItems.filter(item => item.type === type);
+    return listings.length ? [{ params: { type }, props: { type, content, listings } }] : [];
+  });
+}
+const { type, content, listings } = Astro.props;
+---
+<Landing content={content} listings={listings} kind="type" value={type}/>

@@ -1,10 +1,18 @@
 import { readFileSync } from 'node:fs';
 import { z } from 'zod';
-import { itemSchema, normalizeUrl } from '../src/lib/schema';
+import { itemSchema, landingSchema, topicSchema, types, normalizeUrl } from '../src/lib/schema';
+import { slug } from '../src/lib/items';
 const read = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
 try {
   const tags = z.array(z.string().min(1)).parse(read('data/tags.json'));
   if (new Set(tags).size !== tags.length) throw new Error('Duplicate controlled tags');
+  if (new Set(tags.map(slug)).size !== tags.length) throw new Error('Topic slugs must be unique');
+  const topicContent = z.record(z.string(), topicSchema).parse(read('data/topics.json'));
+  const typeContent = z.record(z.string(), landingSchema).parse(read('data/types.json'));
+  // A topic without written content falls back to a generic intro, so intake can add tags without editing topics.json.
+  for (const key of Object.keys(topicContent)) if (!tags.includes(key)) throw new Error(`Unknown topic content: ${key}`);
+  for (const key of types) if (!(key in typeContent)) throw new Error(`Missing type content: ${key}`);
+  for (const key of Object.keys(typeContent)) if (!(types as readonly string[]).includes(key)) throw new Error(`Unknown type content: ${key}`);
   const items = z.array(itemSchema).parse(read('data/items.json'));
   const ids = new Set<string>(), urls = new Set<string>();
   for (const item of items) {

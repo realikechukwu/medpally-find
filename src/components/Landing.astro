@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from './Card.astro';
+import JsonLd from './JsonLd.astro';
+import { MIN_INDEXABLE_ITEMS, activeItems, label, slug } from '../lib/items';
+import type { Item } from '../lib/schema';
+interface Content { heading: string; title: string; description: string; intro: string; faqs: { question: string; answer: string }[] }
+interface Props { content: Content; listings: Item[]; kind: 'topic' | 'type'; value: string }
+const { content, listings, kind, value } = Astro.props;
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+const resourceNames = new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(listings.slice(0, 3).map(item => item.title));
+const faqs = content.faqs.map(faq => ({ ...faq, answer: faq.answer.replaceAll('{{resources}}', resourceNames) }));
+const related = [...new Set(listings.flatMap(item => item.tags))]
+  .filter(tag => tag !== value && activeItems.some(item => item.tags.includes(tag)))
+  .sort((a, b) => listings.filter(item => item.tags.includes(b)).length - listings.filter(item => item.tags.includes(a)).length)
+  .slice(0, 6);
+const breadcrumbs = [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).href },
+  ...(kind === 'topic' ? [{ '@type': 'ListItem', position: 2, name: 'Topics', item: new URL('/topics/', Astro.site).href }] : []),
+  { '@type': 'ListItem', position: kind === 'topic' ? 3 : 2, name: content.heading, item: pageUrl }
+];
+const data = { '@context': 'https://schema.org', '@graph': [
+  { '@type': 'CollectionPage', '@id': pageUrl, name: content.heading, description: content.description, mainEntity: { '@id': `${pageUrl}#items` } },
+  { '@type': 'ItemList', '@id': `${pageUrl}#items`, numberOfItems: listings.length, itemListElement: listings.map((item, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(`/item/${item.id}/`, Astro.site).href, name: item.title })) },
+  ...(faqs.length ? [{ '@type': 'FAQPage', mainEntity: faqs.map(faq => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }] : []),
+  { '@type': 'BreadcrumbList', itemListElement: breadcrumbs }
+] };
+---
+<Base title={content.title} description={content.description} noindex={listings.length < MIN_INDEXABLE_ITEMS}>
+  <JsonLd data={data}/>
+  <main id="main" class="shell landing">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span>{kind === 'topic' && <><a href="/topics/">Topics</a><span aria-hidden="true">›</span></>}<span aria-current="page">{content.heading}</span></nav>
+    <div class="landing-intro"><div class="section-kicker">{kind === 'topic' ? 'TOPIC' : 'RESOURCE TYPE'}</div><h1>{content.heading}</h1>{content.intro.split(/\n\n+/).map(paragraph => <p>{paragraph}</p>)}</div>
+    <section class="landing-section" aria-labelledby="resources-heading"><div class="section-heading"><h2 id="resources-heading">Resources <span>({listings.length})</span></h2></div><div class="cards-grid">{listings.map(item => <Card item={item}/>)}</div></section>
+    {faqs.length > 0 && <section class="landing-section landing-text" aria-labelledby="faq-heading"><h2 id="faq-heading">Common questions</h2>{faqs.map(faq => <div><h3>{faq.question}</h3><p>{faq.answer}</p></div>)}</section>}
+    {related.length > 0 && <section class="landing-section" aria-labelledby="related-heading"><h2 id="related-heading">Related topics</h2><div class="landing-links">{related.map(tag => <a class="tag-chip" href={`/topics/${slug(tag)}/`}>{label(tag)}</a>)}</div></section>}
+  </main>
+</Base>
+<style>
+  .landing{padding-top:40px;padding-bottom:100px}.breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--muted);font-size:13px}.breadcrumbs a{text-decoration:underline;text-underline-offset:3px}.landing-intro{max-width:850px;margin-top:65px}.landing-intro h1{font-size:clamp(36px,5vw,56px);letter-spacing:-.045em;line-height:1.1;margin:14px 0 20px}.landing-intro p,.landing-text p{color:var(--muted);line-height:1.7}.landing-intro p+p{margin-top:14px}.landing-section{margin-top:72px}.landing-section h2{font-size:28px;letter-spacing:-.035em}.landing-text{max-width:850px}.landing-text h3{font-size:18px;margin:30px 0 8px}.landing-text p{margin:0}.landing-links{display:flex;flex-wrap:wrap;gap:8px}.landing-links a{display:inline-flex;align-items:center}.landing-links a:hover{color:var(--ink)}
+  @media(max-width:600px){.landing{padding-top:28px;padding-bottom:65px}.landing-intro{margin-top:42px}.landing-section{margin-top:52px}}
+</style>

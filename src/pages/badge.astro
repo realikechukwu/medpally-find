@@ -1,0 +1,6 @@
+---
+import Base from '../layouts/Base.astro';
+const html = '<a href="https://find.medpally.com/item/example/">\n  <img src="https://find.medpally.com/badge/featured.svg" alt="Featured on MedPally Find" width="250" height="58">\n</a>';
+const markdown = '[![Featured on MedPally Find](https://find.medpally.com/badge/featured.svg)](https://find.medpally.com/item/example/)';
+---
+<Base title="Featured badge | MedPally Find" description="Add a MedPally Find featured badge to your website." noindex><main id="main" class="shell legal"><h1>Featured on MedPally Find</h1><p>If your resource is listed, you can use this badge to link to your listing. Replace the example URL with your own item page URL.</p><p><img src="/badge/featured.svg" alt="Featured on MedPally Find" width="250" height="58"/></p><h2>HTML</h2><pre class="badge-code"><code>{html}</code></pre><h2>Markdown</h2><pre class="badge-code"><code>{markdown}</code></pre><p>For a dark background, replace <code>featured.svg</code> with <code>featured-dark.svg</code>.</p></main></Base>
