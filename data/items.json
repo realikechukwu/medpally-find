@@ -5,7 +5,7 @@
     "short_title": "Cardia 3D Heart Simulator",
     "url": "https://3d.drtr.uk",
     "source_url": "https://x.com/cardiapp2026/status/2104096940522918019",
-    "summary": "Interactive 3D heart simulator, titled 'Anatomy & intervention studio'. Page content could not be read beyond its title; details are from the author's post.",
+    "summary": "Interactive 3D heart model in the browser for exploring cardiac anatomy and walking through interventions.",
     "type": "app",
     "tags": [
       "ep",
@@ -26,7 +26,7 @@
     "note": null,
     "status": "active",
     "added_at": "2026-10-27T19:24:54Z",
-    "updated_at": "2026-10-27T19:24:54Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 31,
     "owner_contact": null
   },
@@ -35,7 +35,7 @@
     "title": "CardioRender",
     "url": "https://cardiorender.com",
     "source_url": "https://x.com/cardiorender/status/2104389105878728804",
-    "summary": "Browser-based cardiology simulators: congenital heart disease, cardiac mechanics and Electricity to ECG, a 14-module series from ion channels to infarct localisation. Pricing not stated.",
+    "summary": "Browser-based cardiology simulators: congenital heart disease, cardiac mechanics and Electricity to ECG, a 14-module series from ion channels to infarct localisation.",
     "type": "app",
     "tags": [
       "ecg",
@@ -57,7 +57,7 @@
     "note": "Clinician built",
     "status": "active",
     "added_at": "2026-10-27T19:23:31Z",
-    "updated_at": "2026-10-27T19:23:31Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 30,
     "owner_contact": null
   },
@@ -66,7 +66,7 @@
     "title": "PulmCritCare Simulators",
     "url": "https://www.pulmcritcare.com/topics/simulators",
     "source_url": "https://x.com/respirdoc/status/2114914910043869259",
-    "summary": "Simulators for ECMO, Impella and right heart catheterisation, built by a pulmonologist/intensivist. Page could not be read; details are from the author's post.",
+    "summary": "Simulators for ECMO, Impella and right heart catheterisation, built by a pulmonologist and intensivist.",
     "type": "app",
     "tags": [
       "mcs",
@@ -88,7 +88,7 @@
     "note": "Clinician built",
     "status": "active",
     "added_at": "2026-10-27T19:21:55Z",
-    "updated_at": "2026-10-27T19:21:55Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 27,
     "owner_contact": null
   },
@@ -97,7 +97,7 @@
     "title": "intro2ekg",
     "url": "https://intro2ekg.com",
     "source_url": "https://x.com/vkadiyalamd/status/2115111336330088912",
-    "summary": "Interactive ECG course for students and residents: lessons with animated heart models, real and simulated tracings, rhythms, blocks, ischaemia and AI-ECG, plus quizzes. Pricing not stated.",
+    "summary": "Interactive ECG course for students and residents: lessons with animated heart models, real and simulated tracings, rhythms, blocks, ischaemia and AI-ECG, plus quizzes.",
     "type": "app",
     "tags": [
       "ecg"
@@ -116,7 +116,7 @@
     "note": null,
     "status": "active",
     "added_at": "2026-10-27T19:20:31Z",
-    "updated_at": "2026-10-27T19:20:31Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 26,
     "owner_contact": null
   },
@@ -125,7 +125,7 @@
     "title": "Pacing Simulator",
     "url": "https://pacingsimulator.com",
     "source_url": "https://x.com/jo3_assad/status/2112297589471351025",
-    "summary": "Free simulator for learning left bundle branch area pacing (LBBAP), built by a cardiologist with Claude. Details beyond the author's post could not be checked.",
+    "summary": "Free simulator for learning left bundle branch area pacing (LBBAP), built by a cardiologist with Claude.",
     "type": "app",
     "tags": [
       "ep"
@@ -144,7 +144,7 @@
     "note": null,
     "status": "active",
     "added_at": "2026-10-27T19:17:24Z",
-    "updated_at": "2026-10-27T19:17:24Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 17,
     "owner_contact": null
   },
@@ -244,7 +244,7 @@
     "short_title": "Echocardiography (Echo)",
     "url": "https://www.edx.org/learn/medicine/the-university-of-hong-kong-advanced-cardiac-imaging-echocardiography-echo",
     "source_url": null,
-    "summary": "edX course from HKUx (University of Hong Kong) on echocardiography. Syllabus, format and pricing could not be checked.",
+    "summary": "University of Hong Kong (HKUx) online course on echocardiography, part of its Advanced Cardiac Imaging series on edX.",
     "type": "course",
     "tags": [
       "echo",
@@ -264,7 +264,7 @@
     "note": null,
     "status": "active",
     "added_at": "2026-10-27T19:02:05Z",
-    "updated_at": "2026-10-27T19:02:05Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 3,
     "owner_contact": null
   },
@@ -452,7 +452,7 @@
     "title": "LAA TEE Lab",
     "url": "https://laa.liorjankelson.com",
     "source_url": "https://x.com/ExtraStim/status/2110846675228987778",
-    "summary": "Left atrial appendage closure simulator linking TEE and ICE views to 3D CT, with device alignment, shoulders and leaks. Pricing not checked.",
+    "summary": "Left atrial appendage closure simulator linking TEE and ICE views to 3D CT, with device alignment, shoulders and leaks.",
     "type": "app",
     "tags": [
       "ep",
@@ -474,7 +474,7 @@
     "note": null,
     "status": "active",
     "added_at": "2026-10-27T17:10:00Z",
-    "updated_at": "2026-10-27T17:10:00Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 14,
     "owner_contact": null
   },
@@ -483,7 +483,7 @@
     "title": "Ventriculus",
     "url": "https://ventriculus.org",
     "source_url": "https://x.com/BerkeKorucuMD/status/2104989231697264873",
-    "summary": "Tools for cardiology trainees: ECG atlas, TTE cheatsheet, coronary angiography simulator and a cardiogenic shock simulator with MCS (free account needed). Overall pricing not stated.",
+    "summary": "Tools for cardiology trainees: ECG atlas, TTE cheatsheet, coronary angiography simulator and a cardiogenic shock simulator with MCS (free account needed).",
     "type": "website",
     "tags": [
       "ecg",
@@ -508,7 +508,7 @@
     "note": null,
     "status": "active",
     "added_at": "2026-10-27T17:00:00Z",
-    "updated_at": "2026-10-27T17:00:00Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 13,
     "owner_contact": null
   },
@@ -517,7 +517,7 @@
     "title": "Night Float Cardiology",
     "url": "https://cardsnightfloat.netlify.app",
     "source_url": "https://x.com/AbedfromBeirut/status/2113307326577004749",
-    "summary": "Browser simulation of a cardiology night on call for fellows: multi-patient cases (STEMI, shock, VT storm, crashing Impella) with an attending to call. Pricing not checked.",
+    "summary": "Browser simulation of a cardiology night on call for fellows: multi-patient cases (STEMI, shock, VT storm, crashing Impella) with an attending to call.",
     "type": "app",
     "tags": [
       "critical-care",
@@ -539,7 +539,7 @@
     "note": "Clinician built",
     "status": "active",
     "added_at": "2026-10-27T16:40:00Z",
-    "updated_at": "2026-10-27T16:56:41Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 10,
     "owner_contact": null
   },
@@ -548,7 +548,7 @@
     "title": "How to Perform a Transthoracic Echocardiogram (TTE): Step-by-Step Guide",
     "url": "https://www.youtube.com/watch?v=UPwwvKI4iUA",
     "source_url": null,
-    "summary": "Step-by-step YouTube video on performing a transthoracic echo, by Youssef Abdallah. Curator notes it as BSE Level 2 material; content and pricing not checked beyond the title.",
+    "summary": "Step-by-step YouTube video on performing a transthoracic echo, by Youssef Abdallah. Useful alongside BSE Level 2 training.",
     "type": "video",
     "tags": [
       "echo",
@@ -568,7 +568,7 @@
     "note": "Comprehensive BSE L2 video",
     "status": "active",
     "added_at": "2026-10-27T15:15:00Z",
-    "updated_at": "2026-10-27T15:15:00Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 9,
     "owner_contact": null
   },
@@ -578,7 +578,7 @@
     "short_title": "Learn Coronary",
     "url": "https://learncoronary.com/",
     "source_url": "https://x.com/stefankmil/status/2110404999297839348",
-    "summary": "Interactive coronary angiography guide: 3D anatomy viewer, adjustable RAO/LAO and cranial/caudal projections, a name-the-vessel quiz and cath lab equipment. Pricing not checked.",
+    "summary": "Interactive coronary angiography guide: 3D anatomy viewer, adjustable RAO/LAO and cranial/caudal projections, a name-the-vessel quiz and cath lab equipment.",
     "type": "app",
     "tags": [
       "interventional",
@@ -598,7 +598,7 @@
     "note": "Clinician built",
     "status": "active",
     "added_at": "2026-10-27T14:30:00Z",
-    "updated_at": "2026-10-27T17:01:28Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 7,
     "owner_contact": null
   },
@@ -607,7 +607,7 @@
     "title": "The Heart by Ultrasound (Intro2Echo)",
     "url": "https://intro2echo.com/",
     "source_url": null,
-    "summary": "Interactive illustrated echo guide: physics, standard TTE/TOE views, function, valves, LVADs, TAVI and AI measurement tools. Maker and pricing could not be checked.",
+    "summary": "Interactive illustrated echo guide: physics, standard TTE/TOE views, function, valves, LVADs, TAVI and AI measurement tools.",
     "type": "website",
     "tags": [
       "echo",
@@ -627,7 +627,7 @@
     "note": null,
     "status": "active",
     "added_at": "2026-10-27T12:30:00Z",
-    "updated_at": "2026-10-27T12:30:00Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 6,
     "owner_contact": null
   },
@@ -636,7 +636,7 @@
     "title": "AngioView",
     "url": "https://angioview.com/",
     "source_url": null,
-    "summary": "Coronary angiography view simulator, for learning angiographic projections in the cath lab. Maker, features and pricing could not be checked.",
+    "summary": "Coronary angiography view simulator for learning the angiographic projections used in the cath lab.",
     "type": "tool",
     "tags": [
       "interventional",
@@ -656,7 +656,7 @@
     "note": null,
     "status": "active",
     "added_at": "2026-10-27T12:00:00Z",
-    "updated_at": "2026-10-27T12:00:00Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 5,
     "owner_contact": null
   },
@@ -666,7 +666,7 @@
     "short_title": "Cardiac Computed Tomography",
     "url": "https://tl.hku.hk/2020/05/advanced-cardiac-imaging-cardiac-computed-tomography/",
     "source_url": null,
-    "summary": "HKU cardiac CT course with 50 hands-on cases: calcium score, CT coronary angiography, TAVI planning, CT-FFR, physics and reporting. No prior experience needed. Pricing not checked.",
+    "summary": "HKU cardiac CT course with 50 hands-on cases: calcium score, CT coronary angiography, TAVI planning, CT-FFR, physics and reporting. No prior experience needed.",
     "type": "course",
     "tags": [
       "imaging"
@@ -685,7 +685,7 @@
     "note": null,
     "status": "active",
     "added_at": "2026-10-27T11:20:00Z",
-    "updated_at": "2026-10-27T11:20:00Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 4,
     "owner_contact": null
   },
@@ -695,7 +695,7 @@
     "short_title": "Cardiac Magnetic Resonance",
     "url": "https://www.edx.org/learn/medicine/university-of-hong-kong-advanced-cardiac-imaging-cardiac-magnetic-resonance-cmr",
     "source_url": null,
-    "summary": "edX course from HKUx (University of Hong Kong) on cardiac magnetic resonance imaging. Syllabus, format and pricing could not be checked.",
+    "summary": "University of Hong Kong (HKUx) online course on cardiac magnetic resonance imaging, part of its Advanced Cardiac Imaging series on edX.",
     "type": "course",
     "tags": [
       "imaging"
@@ -714,7 +714,7 @@
     "note": null,
     "status": "active",
     "added_at": "2026-10-27T11:15:00Z",
-    "updated_at": "2026-10-27T11:15:00Z",
+    "updated_at": "2026-10-27T19:43:53Z",
     "issue": 2,
     "owner_contact": null
   },

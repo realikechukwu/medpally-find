@@ -23,6 +23,8 @@ try {
     urls.add(url);
     for (const tag of item.tags) if (!tags.includes(tag)) throw new Error(`${item.id}: unknown tag ${tag}`);
     if (new Date(item.updated_at) < new Date(item.added_at)) throw new Error(`${item.id}: updated_at precedes added_at`);
+    // Summaries are public copy; intake notes about what couldn't be checked belong in the curator comment.
+    if (/could(n't| not) be (read|checked)|not checked|not stated|unreadable|author's post/i.test(item.summary)) throw new Error(`${item.id}: summary contains an intake note`);
   }
   for (let i = 1; i < items.length; i++) if (items[i-1].added_at < items[i].added_at) throw new Error('Items must be sorted newest first');
   console.log(`Validated ${items.length} items and ${tags.length} tags.`);
