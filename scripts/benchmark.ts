@@ -1,0 +1,10 @@
+import MiniSearch from 'minisearch';
+import { performance } from 'node:perf_hooks';
+const index = new MiniSearch({ fields: ['title','tags','summary','maker'] });
+const docs = Array.from({ length: 2000 }, (_, i) => ({ id: `test-${i}`, title: `Cardiology resource ${i}`, tags: i % 2 ? 'echo heart failure' : 'ecg critical care', summary: 'A clinical reference for cardiovascular care', maker: 'MedPally' }));
+index.addAll(docs);
+const queries = ['cardiology', 'echo', 'ecg', 'heart fail', 'critical', 'cardiolog'];
+for (const query of queries) index.search(query, { prefix: true, fuzzy: 0.2, boost: {title:4,tags:3,summary:2,maker:1}, combineWith:'AND' });
+const timings = queries.map(query => { const start = performance.now(); index.search(query, { prefix: true, fuzzy: 0.2, boost: {title:4,tags:3,summary:2,maker:1}, combineWith:'AND' }); return performance.now() - start; });
+console.log(`2,000 synthetic items; query times: ${timings.map(n => `${n.toFixed(2)}ms`).join(', ')} (max ${Math.max(...timings).toFixed(2)}ms)`);
+if (Math.max(...timings) >= 50) process.exitCode = 1;

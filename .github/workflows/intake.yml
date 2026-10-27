@@ -1,0 +1,81 @@
+name: Curator intake
+on:
+  issues:
+    types: [opened, labeled]
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: intake
+  cancel-in-progress: false
+jobs:
+  intake:
+    if: github.actor == github.repository_owner && contains(github.event.issue.labels.*.name, 'intake') && (github.event_name != 'issues' || github.event.action != 'labeled' || github.event.label.name == 'intake')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Load prompt
+        id: prompt
+        run: |
+          delimiter="PROMPT_$(openssl rand -hex 16)"
+          { echo "text<<$delimiter"; cat .github/intake-prompt.md; echo "$delimiter"; } >> "$GITHUB_OUTPUT"
+      - name: Curate resource
+        id: claude
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        with:
+          github_token: ${{ github.token }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: ${{ steps.prompt.outputs.text }}
+          claude_args: '--allowedTools "Read,Glob,Grep,Edit,Write,WebFetch,Bash(npm run validate)"'
+      - name: Validate and publish result
+        if: always() && steps.claude.outcome != 'skipped'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          CLAUDE_OUTCOME: ${{ steps.claude.outcome }}
+        shell: bash
+        run: |
+          set -uo pipefail
+          if [[ "$CLAUDE_OUTCOME" != success ]]; then
+            gh issue comment "$ISSUE_NUMBER" --body "Intake could not complete. Please check the Actions log; the issue remains open."
+            exit 1
+          fi
+          if ! (npm ci && npm run validate) > /tmp/intake-validation.txt 2>&1; then
+            { printf 'Intake validation failed; the issue remains open.\n\n```\n'; cat /tmp/intake-validation.txt; printf '\n```\n'; } > /tmp/intake-comment.txt
+            gh issue comment "$ISSUE_NUMBER" --body-file /tmp/intake-comment.txt
+            exit 1
+          fi
+          if ! node -e 'const r=require("./.intake-result.json"); if (!r || !["done","needs_input"].includes(r.status) || typeof r.comment !== "string" || !r.comment.trim() || (r.status === "done" && (typeof r.title !== "string" || !r.title.trim()))) process.exit(1)' ; then
+            gh issue comment "$ISSUE_NUMBER" --body "Intake did not produce a valid result. Please check the Actions log; the issue remains open."
+            exit 1
+          fi
+          status=$(node -p 'require("./.intake-result.json").status')
+          node -e 'require("fs").writeFileSync("/tmp/intake-comment.txt", require("./.intake-result.json").comment)'
+          if [[ "$status" == done ]]; then
+            git add data/items.json data/tags.json
+            if ! git diff --cached --quiet; then
+              title=$(node -p 'require("./.intake-result.json").title.replace(/[\r\n]+/g," ")')
+              git config user.name 'github-actions[bot]'
+              git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+              git commit -m "intake: $title (#$ISSUE_NUMBER)"
+              if ! git push origin HEAD:main; then
+                gh issue comment "$ISSUE_NUMBER" --body "Intake validated but could not push to main. Please check branch protection or concurrent changes; the issue remains open."
+                exit 1
+              fi
+            fi
+            gh issue comment "$ISSUE_NUMBER" --body-file /tmp/intake-comment.txt
+            gh issue close "$ISSUE_NUMBER"
+          else
+            gh issue comment "$ISSUE_NUMBER" --body-file /tmp/intake-comment.txt
+          fi

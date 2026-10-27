@@ -1,0 +1,227 @@
+[
+  {
+    "id": "litfl-ecg-library",
+    "title": "LITFL ECG Library",
+    "url": "https://litfl.com/ecg-library/",
+    "source_url": null,
+    "summary": "A practical library of ECG patterns, interpretation guides and clinical examples.",
+    "type": "website",
+    "tags": [
+      "ecg",
+      "critical-care"
+    ],
+    "specialty": [
+      "cardiology",
+      "critical-care"
+    ],
+    "maker": "Life in the Fast Lane",
+    "maker_url": "https://litfl.com/",
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-26T12:00:00Z",
+    "updated_at": "2026-10-26T12:00:00Z",
+    "issue": 0,
+    "owner_contact": null
+  },
+  {
+    "id": "mdcalc",
+    "title": "MDCalc",
+    "url": "https://www.mdcalc.com/",
+    "source_url": null,
+    "summary": "Clinical calculators and decision tools, including scores used in cardiovascular care.",
+    "type": "calculator",
+    "tags": [
+      "acs",
+      "heart-failure"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "MDCalc",
+    "maker_url": "https://www.mdcalc.com/",
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-25T12:00:00Z",
+    "updated_at": "2026-10-25T12:00:00Z",
+    "issue": 0,
+    "owner_contact": null
+  },
+  {
+    "id": "esc-clinical-practice-guidelines",
+    "title": "ESC Clinical Practice Guidelines",
+    "url": "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines",
+    "source_url": null,
+    "summary": "European Society of Cardiology guidelines for the diagnosis and management of cardiovascular disease.",
+    "type": "guideline",
+    "tags": [
+      "heart-failure",
+      "valve"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "European Society of Cardiology",
+    "maker_url": "https://www.escardio.org/",
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-24T12:00:00Z",
+    "updated_at": "2026-10-24T12:00:00Z",
+    "issue": 0,
+    "owner_contact": null
+  },
+  {
+    "id": "ase-guidelines",
+    "title": "ASE Guidelines and Standards",
+    "url": "https://www.asecho.org/practice-clinical-resources/ase-guidelines/",
+    "source_url": null,
+    "summary": "Echocardiography guidelines and recommendations from the American Society of Echocardiography.",
+    "type": "guideline",
+    "tags": [
+      "echo",
+      "imaging"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "American Society of Echocardiography",
+    "maker_url": "https://www.asecho.org/",
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-23T12:00:00Z",
+    "updated_at": "2026-10-23T12:00:00Z",
+    "issue": 0,
+    "owner_contact": null
+  },
+  {
+    "id": "ecg-weekly",
+    "title": "ECG Weekly",
+    "url": "https://ecgweekly.com/",
+    "source_url": null,
+    "summary": "Case-based ECG education with interpretation lessons and clinical discussion.",
+    "type": "course",
+    "tags": [
+      "ecg"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "ECG Weekly",
+    "maker_url": "https://ecgweekly.com/",
+    "pricing": "paid",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-22T12:00:00Z",
+    "updated_at": "2026-10-22T12:00:00Z",
+    "issue": 0,
+    "owner_contact": null
+  },
+  {
+    "id": "123sonography",
+    "title": "123sonography",
+    "url": "https://123sonography.com/",
+    "source_url": null,
+    "summary": "Online ultrasound and echocardiography education for healthcare professionals.",
+    "type": "course",
+    "tags": [
+      "echo",
+      "ultrasound/pocus"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "123sonography",
+    "maker_url": "https://123sonography.com/",
+    "pricing": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-21T12:00:00Z",
+    "updated_at": "2026-10-21T12:00:00Z",
+    "issue": 0,
+    "owner_contact": null
+  },
+  {
+    "id": "internet-book-of-critical-care",
+    "title": "Internet Book of Critical Care",
+    "url": "https://emcrit.org/ibcc/toc/",
+    "source_url": null,
+    "summary": "An online critical care reference with chapters on cardiac emergencies, shock and mechanical support.",
+    "type": "website",
+    "tags": [
+      "critical-care",
+      "haemodynamics",
+      "mcs"
+    ],
+    "specialty": [
+      "cardiology",
+      "critical-care"
+    ],
+    "maker": "EMCrit Project",
+    "maker_url": "https://emcrit.org/",
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-20T12:00:00Z",
+    "updated_at": "2026-10-20T12:00:00Z",
+    "issue": 0,
+    "owner_contact": null
+  },
+  {
+    "id": "radiopaedia-cardiac-imaging",
+    "title": "Radiopaedia",
+    "url": "https://radiopaedia.org/",
+    "source_url": null,
+    "summary": "A radiology reference with articles and cases covering cardiac and thoracic imaging.",
+    "type": "website",
+    "tags": [
+      "imaging"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Radiopaedia",
+    "maker_url": "https://radiopaedia.org/",
+    "pricing": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-19T12:00:00Z",
+    "updated_at": "2026-10-19T12:00:00Z",
+    "issue": 0,
+    "owner_contact": null
+  }
+]

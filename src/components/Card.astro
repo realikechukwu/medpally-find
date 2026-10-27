@@ -1,0 +1,16 @@
+---
+import type { Item } from '../lib/schema';
+import { date, label } from '../lib/items';
+interface Props { item: Item; compact?: boolean }
+const { item, compact = false } = Astro.props;
+let hash = 0; for (const c of item.id) hash = (hash * 31 + c.charCodeAt(0)) >>> 0;
+const host = new URL(item.url).hostname;
+const site = host.replace(/^www\./, '');
+---
+<article class:list={['card', compact && 'card-compact']} data-id={item.id} data-type={item.type} data-tags={item.tags.join('|')}>
+  <div class:list={['card-art', `tone-${hash % 6}`]}>
+    {item.image ? <img class="cover" src={item.image} alt="" loading="lazy"/> : <><span class="art-orbit orbit-one"></span><span class="art-orbit orbit-two"></span><span class="art-icon"><img src={`https://${host}/favicon.ico`} alt="" loading="lazy" onerror="this.style.display='none'"/><span aria-hidden="true">✳</span></span><span class="art-caption">{site} <span>↗</span></span></>}
+    <a class="external-link" href={item.url} target="_blank" rel="noopener noreferrer" aria-label={`Open ${item.title} in a new tab`} title="Open resource"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 16 16 8M9 8h7v7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+  <div class="card-copy"><div class="card-topline"><span class="type-label">{label(item.type)}</span><time class="card-date" datetime={item.added_at} data-relative>{date(item.added_at)}</time></div><h3><a href={`/item/${item.id}/`}>{item.title}</a></h3><p>{item.summary}</p><div class="card-tags">{item.tags.slice(0,3).map(tag => <span>{label(tag)}</span>)}</div></div>
+</article>

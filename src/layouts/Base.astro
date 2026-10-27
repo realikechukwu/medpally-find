@@ -1,0 +1,15 @@
+---
+import '../styles/global.css';
+interface Props { title?: string; description?: string; image?: string | null; }
+const { title = 'MedPally Find — a little less searching, a lot more finding', description = 'A thoughtfully curated directory of cardiology and cardiac critical care resources.', image } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/><meta name="description" content={description}/><link rel="canonical" href={canonical}/><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><meta property="og:type" content="website"/><meta property="og:site_name" content="MedPally Find"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/>{image && <meta property="og:image" content={image}/>}<meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'}/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/>{image && <meta name="twitter:image" content={image}/>}<title>{title}</title></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="shell header-inner"><a class="wordmark" href="/" aria-label="MedPally Find home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-5 3.2 10L15 10l1.5 2H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>MedPally <strong>Find</strong></span></a><span class="header-note">A little help, for the work you do.</span></div></header><slot/><footer class="site-footer"><div class="shell footer-inner"><p>Made for curious clinicians. <span aria-hidden="true">♥</span></p><slot name="footer"/></div></footer><script>
+const days = (iso: string) => Math.max(0, Math.floor((Date.now() - new Date(iso).getTime()) / 86400000));
+const ago = (n: number, unit: string) => `${n} ${unit}${n === 1 ? '' : 's'} ago`;
+for (const el of document.querySelectorAll<HTMLTimeElement>('time[data-relative]')) {
+ const d = days(el.dateTime);
+ el.title = el.textContent ?? '';
+ el.textContent = d === 0 ? 'today' : d === 1 ? 'yesterday' : d < 7 ? ago(d, 'day') : d < 30 ? ago(Math.floor(d / 7), 'week') : d < 365 ? ago(Math.floor(d / 30), 'month') : el.textContent;
+}
+</script></body></html>
