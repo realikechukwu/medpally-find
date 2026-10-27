@@ -17,7 +17,7 @@
     ],
     "maker": "Marlo Solutions Ltd",
     "maker_url": null,
-    "clinician_built": false,
+    "clinician_built": true,
     "pricing": "freemium",
     "platforms": [
       "web"
