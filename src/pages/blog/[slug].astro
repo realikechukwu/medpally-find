@@ -13,15 +13,15 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const featured = post.data.items.map((id: string) => activeItems.find(item => item.id === id)).filter((item): item is NonNullable<typeof item> => Boolean(item));
 const url = new URL(`/blog/${post.id}/`, Astro.site).href;
-const structuredData = { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: post.data.title, description: post.data.description, url, author: { '@type': 'Person', name: post.data.author }, datePublished: post.data.published.toISOString(), dateModified: post.data.updated.toISOString() };
+const structuredData = { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: post.data.title, description: post.data.description, url, author: { '@type': 'Person', name: post.data.author, url: new URL('/about/', Astro.site).href }, publisher: { '@id': new URL('/#organization', Astro.site).href }, mainEntityOfPage: url, datePublished: post.data.published.toISOString(), dateModified: post.data.updated.toISOString() };
 ---
 <Base title={`${post.data.title} | MedPally Find`} description={post.data.description} noindex={post.data.draft}>
   {!post.data.draft && <JsonLd data={structuredData} />}
   <main id="main" class="shell post-page">
-    <article class="legal post-copy"><a class="back-link" href="/blog/">← All articles</a><div class="section-kicker">ARTICLE</div><h1>{post.data.title}</h1><p class="legal-date">By {post.data.author} · Published <time datetime={post.data.published.toISOString()}>{date(post.data.published.toISOString())}</time> · Last reviewed <time datetime={post.data.updated.toISOString()}>{date(post.data.updated.toISOString())}</time></p><Content />
+    <article class="legal post-copy"><a class="back-link" href="/blog/">← All articles</a><div class="section-kicker">ARTICLE</div><h1>{post.data.title}</h1><p class="legal-date">By <a href="/about/">{post.data.author}</a>, cardiology registrar · Published <time datetime={post.data.published.toISOString()}>{date(post.data.published.toISOString())}</time> · Last reviewed <time datetime={post.data.updated.toISOString()}>{date(post.data.updated.toISOString())}</time></p><Content />
       <p>Topics: {post.data.topics.map((tag: string, index: number) => <>{index > 0 && ', '}<a href={activeItems.some(item => item.tags.includes(tag)) ? `/topics/${slug(tag)}/` : "/topics/"}>{label(tag)}</a></>)}</p>
     </article>
     {featured.length > 0 && <section class="featured"><div class="section-heading"><h2>Featured resources</h2></div><div class="cards-grid">{featured.map(item => <Card item={item}/>)}</div></section>}
   </main>
 </Base>
-<style>.post-page{padding-bottom:90px}.post-copy{margin-inline:auto}.post-copy :global(h3){font-size:17px;margin-top:30px}.post-copy :global(p){line-height:1.75}.featured{border-top:1px solid var(--line);padding-top:48px}</style>
+<style>.post-page{padding-bottom:90px}.post-copy{margin-inline:auto}.post-copy :global(h3){font-size:17px;margin-top:30px}.post-copy :global(p){line-height:1.75;margin:0 0 18px}.post-copy :global(ul){margin:0 0 18px}.post-copy :global(h2){margin-top:44px}.featured{border-top:1px solid var(--line);padding-top:48px}</style>

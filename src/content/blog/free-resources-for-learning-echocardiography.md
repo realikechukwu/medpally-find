@@ -1,58 +1,61 @@
 ---
 title: Free resources for learning echocardiography
-description: A starting point for finding echocardiography learning resources, with notes on access and what to check before you begin.
-author: "TODO(curator)"
+description: The echo resources I'd point a new cardiology trainee to, and how to use them around your scanning lists.
+author: Ike
 published: 2026-10-27
 updated: 2026-10-27
 topics: [echo, imaging, ultrasound/pocus]
 items: [intro2echo, 123sonography, ase-guidelines, radiopaedia-cardiac-imaging]
-draft: true
+draft: false
 ---
 
-Learning echocardiography involves finding your way around the images, the language used to describe them and the published recommendations that support practice. This guide is for healthcare professionals looking for a place to start or a way to organise their study. It brings together resources already listed in MedPally Find, with a suggested order rather than a prescribed course.
+I started echo properly when I began cardiology training this year. I can get most of the standard views now. The subcostal window still fights me some days, and BSE Level 2 accreditation is a longer-term goal. So this isn't a guide from someone who has finished learning echo, just the list I'd have liked at the start.
 
-Access matters. The American Society of Echocardiography guidelines are listed as free. 123sonography is listed as freemium, so check which material is available without payment. We have not yet checked the pricing for Intro2Echo. Radiopaedia is listed as freemium. Availability, registration and costs can change; check each resource before making a plan or paying for anything.
+Nothing replaces time with a probe, a patient and someone experienced next to you. But reading around the scanning helps you get more out of it. These are the free, or mostly free, resources I'd start with.
 
-TODO(curator): add a personal line here.
+## Learn the views before you scan
 
-## Start with an illustrated overview
+[The Heart by Ultrasound (Intro2Echo)](/item/intro2echo/) is an illustrated, interactive echo guide. It covers physics, the standard transthoracic and transoesophageal views, ventricular function and valves, and goes on to LVADs and TAVI.
 
-[The Heart by Ultrasound (Intro2Echo)](/item/intro2echo/) is an interactive illustrated echo guide. Its listing describes material on physics, standard transthoracic and transoesophageal echo views, function and valves, as well as LVADs, TAVI and AI measurement tools. That makes it a possible starting point if you want an overview of the subject and the vocabulary around different views.
+Use it before a scanning list. If you know what a good parasternal long axis or apical four chamber view should look like, and which structures you're trying to line up, you'll spend less time hunting on the patient. Go back to it after the list for the views that didn't work.
 
-Try choosing one area at a time and returning to it as you encounter the same terms elsewhere. You do not need to work through every topic in the listing before moving on. Keep a note of questions that would benefit from discussion with a supervisor or colleague.
+## Get some structure with a course
 
-The listing does not establish who makes the guide or whether access is free. It also does not tell us how its material is organised or maintained. TODO(curator): verify access, authorship and how the guide is updated before publication.
+[123sonography](/item/123sonography/) runs online ultrasound and echo courses for healthcare professionals. Some of it is free and the rest is paid.
 
-## Look at a course option
+A course helps when reading on your own starts to feel random. Physics, haemodynamics and pathology make more sense when you learn them in order rather than dipping in and out. If you're paying, check what's included and whether it matches what your training programme needs. A course won't get you accredited by itself.
 
-[123sonography](/item/123sonography/) offers online ultrasound and echocardiography education for healthcare professionals. It is listed as freemium. If a course format suits you, look at what is offered and check which parts are included before registering or paying. Compare the available material with the areas you have identified for further study.
+## Use the guidelines as your reference
 
-The directory description is brief. It does not tell us the length, level or contents of individual courses, and it does not establish that any particular course is free. TODO(curator): verify the available free material and course details before publication. A structured course can sit alongside local teaching and supervision; a listing cannot establish whether it meets a particular training requirement.
+The [ASE guidelines](/item/ase-guidelines/) are free and set out how to measure chambers, assess function and grade valve disease. UK practice leans on ASE and EACVI recommendations alongside British Society of Echocardiography guidance, so these documents sit behind a lot of the numbers in an echo report.
 
-TODO(curator): add a personal line here.
+Don't read them cover to cover. Start with a question from a scan, such as how to grade the aortic stenosis you just saw, then find that section and read it. Over time you'll learn where everything is. If you're training in the UK, get to know the BSE's own guidance too.
 
-## Use recommendations as a reference
+## Look beyond echo when you need to
 
-The [ASE Guidelines and Standards](/item/ase-guidelines/) listing points to echocardiography guidelines and recommendations from the American Society of Echocardiography. It is marked free in the directory. Once you have an overview of the topic, these documents offer a way to locate recommendations relevant to the question you are studying.
+[Radiopaedia](/item/radiopaedia-cardiac-imaging/) is a radiology reference with articles and cases on cardiac and thoracic imaging. When an echo raises a question it can't answer, like a mass, a pericardial problem or something that needs CT or MRI, Radiopaedia is a good place to see how other scans show it. Most of it is free.
 
-Guidelines are different from an introductory lesson. Start with a question, find the relevant document and check its date and scope. The listing does not describe individual recommendations, and this article does not attempt to summarise them. Check the latest guidance and your local policies when applying any source in practice.
+## How I'd use them together
 
-## Explore related imaging
+- **Before a list:** go over the views you'll need in Intro2Echo.
+- **During the list:** scan, ask questions and get feedback. This is where most of the learning happens.
+- **After the list:** look up anything you measured or graded in the ASE guidelines.
+- **Through the year:** work through a course for the theory you keep tripping over.
 
-[Radiopaedia](/item/radiopaedia-cardiac-imaging/) is a radiology reference with articles and cases covering cardiac and thoracic imaging. It may be useful when your learning question extends beyond echo. Its directory entry is marked freemium, so check access to the material you choose. We have not described specific cases or articles here because the listing does not identify them.
-
-These resources serve different purposes. An illustrated guide can support an overview, a course may offer a way to study, and recommendations can provide a reference for a specific question. None of the listings is a substitute for supervised training or a guarantee that the material is current or appropriate for your setting.
+Keep a logbook from the start, even before you're formally collecting cases. It's much easier than reconstructing one later.
 
 ## Questions people ask
 
-### Which resource is free?
+### Can I learn echo online?
 
-The directory marks [ASE Guidelines and Standards](/item/ase-guidelines/) as free. 123sonography and Radiopaedia are marked freemium, and Intro2Echo pricing is unknown. Check current access on each site.
+You can learn the theory and the views online, but the hand skills only come from scanning under supervision. Use online resources to make your scanning time count.
 
-### Where should I begin?
+### Which of these are free?
 
-A reasonable starting point is the illustrated [Intro2Echo](/item/intro2echo/) listing, followed by a look at [123sonography](/item/123sonography/) if you prefer a course. Check their current access and choose the material that suits your experience and local training.
+The ASE guidelines are free. 123sonography and Radiopaedia have free content alongside paid features. I haven't confirmed pricing for Intro2Echo yet, so check the site.
 
-### Where can I find more resources?
+### Where can I find more?
 
-Browse the [echo topic](/topics/echo/) and [imaging topic](/topics/imaging/) for the current collection. The directory changes as resources are reviewed and added.
+The [echo](/topics/echo/) and [cardiac imaging](/topics/imaging/) pages have the full list, and both will grow as I add more.
+
+Thanks for reading.

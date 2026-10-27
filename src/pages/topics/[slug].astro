@@ -1,10 +1,17 @@
 ---
 import Landing from '../../components/Landing.astro';
-import { activeItems, slug } from '../../lib/items';
+import { activeItems, label, slug } from '../../lib/items';
+import tags from '../../../data/tags.json';
 import topics from '../../../data/topics.json';
+// Tags added by intake may not have written content yet.
+const fallback = (tag: string) => {
+  const name = label(tag).replace(/^./, c => c.toUpperCase());
+  return { heading: `${name} learning resources`, title: `${name} resources | MedPally Find`, description: `Tools, courses and references for ${label(tag)} in cardiology and cardiac critical care, picked by a cardiology registrar.`, intro: `Resources for ${label(tag)}, picked for doctors, nurses, physiologists and students working in cardiology and cardiac critical care. Each card says what the resource is and links to the original.`, faqs: [] };
+};
 export function getStaticPaths() {
-  return Object.entries(topics).flatMap(([tag, content]) => {
+  return tags.flatMap(tag => {
     const listings = activeItems.filter(item => item.tags.includes(tag));
+    const content = (topics as Record<string, ReturnType<typeof fallback>>)[tag] ?? fallback(tag);
     return listings.length ? [{ params: { slug: slug(tag) }, props: { tag, content, listings } }] : [];
   });
 }

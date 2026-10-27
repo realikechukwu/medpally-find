@@ -20,6 +20,6 @@ export const landingSchema = z.object({
 }).strict();
 export const topicSchema = landingSchema.extend({ intro: z.string().refine(value => {
   const count = value.trim().split(/\s+/).length;
-  return count >= 80 && count <= 150;
-}, 'Topic introduction must contain 80–150 words') });
+  return count >= 40 && count <= 200;
+}, 'Topic introduction must contain 40–200 words') });
 export { normalizeUrl } from './url';

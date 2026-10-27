@@ -9,10 +9,10 @@ try {
   if (new Set(tags.map(slug)).size !== tags.length) throw new Error('Topic slugs must be unique');
   const topicContent = z.record(z.string(), topicSchema).parse(read('data/topics.json'));
   const typeContent = z.record(z.string(), landingSchema).parse(read('data/types.json'));
-  for (const [name, expected, actual] of [['topic', tags, Object.keys(topicContent)], ['type', types, Object.keys(typeContent)]] as const) {
-    for (const key of expected) if (!actual.includes(key)) throw new Error(`Missing ${name} content: ${key}`);
-    for (const key of actual) if (!(expected as readonly string[]).includes(key)) throw new Error(`Unknown ${name} content: ${key}`);
-  }
+  // A topic without written content falls back to a generic intro, so intake can add tags without editing topics.json.
+  for (const key of Object.keys(topicContent)) if (!tags.includes(key)) throw new Error(`Unknown topic content: ${key}`);
+  for (const key of types) if (!(key in typeContent)) throw new Error(`Missing type content: ${key}`);
+  for (const key of Object.keys(typeContent)) if (!(types as readonly string[]).includes(key)) throw new Error(`Unknown type content: ${key}`);
   const items = z.array(itemSchema).parse(read('data/items.json'));
   const ids = new Set<string>(), urls = new Set<string>();
   for (const item of items) {

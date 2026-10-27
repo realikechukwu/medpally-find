@@ -1,204 +1,204 @@
 {
   "tool": {
-    "heading": "Tools for cardiology and cardiac critical care",
-    "title": "Tools for cardiology | MedPally Find",
-    "description": "Browse tools in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse tools listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Interactive cardiology learning tools",
+    "title": "Interactive cardiology learning tools | MedPally Find",
+    "description": "Interactive tools for learning cardiology, from angiography simulators to 3D anatomy viewers. Picked by a cardiology registrar.",
+    "intro": "Interactive tools let you move a virtual camera around the coronary arteries, test yourself on anatomy or work through a simulated case. They're good at building the mental picture that textbooks struggle to give you.",
     "faqs": [
       {
-        "question": "How do I find tools in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "What counts as a tool here?",
+        "answer": "Anything interactive that helps you learn or practise, such as simulators, viewers and quizzes. Calculators and apps have their own pages."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "Are these tools free?",
+        "answer": "Many run free in a browser. Check each listing for pricing, as some have paid features."
       }
     ],
     "reviewed": false
   },
   "calculator": {
-    "heading": "Calculators for cardiology and cardiac critical care",
-    "title": "Calculators for cardiology | MedPally Find",
-    "description": "Browse calculators in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse calculators listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Cardiology calculators and risk scores",
+    "title": "Cardiology calculators and risk scores | MedPally Find",
+    "description": "Clinical calculators and risk scores used in cardiology and cardiac critical care. Picked by a cardiology registrar.",
+    "intro": "Risk scores come up every day in cardiology: ACS risk, stroke and bleeding risk in atrial fibrillation, heart failure prognosis. A good calculator shows the evidence behind the score as well as the number.",
     "faqs": [
       {
-        "question": "How do I find calculators in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "Which cardiology scores are used most?",
+        "answer": "CHA2DS2-VASc and ORBIT or HAS-BLED in atrial fibrillation, GRACE and HEART in chest pain and ACS, and several heart failure risk models. MDCalc includes most of them."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "Should I rely on a calculator's result?",
+        "answer": "Use it to support your judgement. Check the population the score was developed in and whether it applies to your patient."
       }
     ],
     "reviewed": false
   },
   "app": {
-    "heading": "Apps for cardiology and cardiac critical care",
-    "title": "Apps for cardiology | MedPally Find",
-    "description": "Browse apps in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse apps listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Cardiology apps",
+    "title": "Cardiology apps for doctors and students | MedPally Find",
+    "description": "Mobile and web apps for cardiology learning and practice. Picked by a cardiology registrar.",
+    "intro": "Apps are the resources you actually have on you during a ward round or a night shift. The useful ones load quickly, work offline and do one job well, whether that's a guideline summary, a drug reference or a quiz.",
     "faqs": [
       {
-        "question": "How do I find apps in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "Which apps are worth having as a cardiology trainee?",
+        "answer": "A guideline app, a calculator and a drug reference cover most needs. Cardiology apps appear on this page as they're reviewed."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "Are these apps free?",
+        "answer": "Some are free and some charge a subscription. Each listing shows pricing where it's known."
       }
     ],
     "reviewed": false
   },
   "clinician-built": {
-    "heading": "Clinician-built resources for cardiology and cardiac critical care",
-    "title": "Clinician-built resources for cardiology | MedPally Find",
-    "description": "Browse clinician-built resources in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse clinician-built resources listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Tools built by clinicians",
+    "title": "Cardiology tools built by clinicians | MedPally Find",
+    "description": "Cardiology learning tools and apps made by doctors, nurses and physiologists. Picked by a cardiology registrar.",
+    "intro": "Some of the most useful cardiology tools are side projects built by clinicians who couldn't find what they needed. They're often free and made by people who know the clinical problem well.",
     "faqs": [
       {
-        "question": "How do I find clinician-built resources in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "What does clinician-built mean?",
+        "answer": "The resource was made by a working doctor, nurse, physiologist or other clinician, usually independently rather than by a company."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "I've built something. Can I add it?",
+        "answer": "Yes. Use the suggest form and it will be reviewed for listing."
       }
     ],
     "reviewed": false
   },
   "course": {
-    "heading": "Courses for cardiology and cardiac critical care",
-    "title": "Courses for cardiology | MedPally Find",
-    "description": "Browse courses in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse courses listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Cardiology courses",
+    "title": "Online cardiology and echo courses | MedPally Find",
+    "description": "Online courses in cardiology, echo, cardiac imaging, devices and critical care. Picked by a cardiology registrar.",
+    "intro": "Courses give you structure when you're learning something new: a syllabus, a sensible order and usually a way to test yourself. The ones here range from free university courses to paid programmes aimed at accreditation and exams.",
     "faqs": [
       {
-        "question": "How do I find courses in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "Are there free cardiology courses online?",
+        "answer": "Yes. Some university and manufacturer courses are free, though a certificate may cost extra. Each listing shows pricing where it's known."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "Will an online course count towards accreditation?",
+        "answer": "Usually not on its own. Accreditation in echo, devices and imaging normally also needs supervised cases and an exam. Check with the accrediting body."
       }
     ],
     "reviewed": false
   },
   "video": {
-    "heading": "Videos for cardiology and cardiac critical care",
-    "title": "Videos for cardiology | MedPally Find",
-    "description": "Browse videos in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse videos listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Cardiology teaching videos",
+    "title": "Cardiology teaching videos | MedPally Find",
+    "description": "Cardiology teaching videos and lecture series. Picked by a cardiology registrar.",
+    "intro": "Video is often the quickest way to understand something you need to see moving: an echo loop, a procedure or how a device behaves. This page lists cardiology teaching videos and lecture series.",
     "faqs": [
       {
-        "question": "How do I find videos in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "Where can I find cardiology teaching videos?",
+        "answer": "Society channels, university lecture series and individual educators all publish good material. Videos appear here as they're reviewed."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "Are the videos free?",
+        "answer": "Most are, but some sit behind a subscription. Check each listing."
       }
     ],
     "reviewed": false
   },
   "podcast": {
-    "heading": "Podcasts for cardiology and cardiac critical care",
-    "title": "Podcasts for cardiology | MedPally Find",
-    "description": "Browse podcasts in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse podcasts listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Cardiology podcasts",
+    "title": "Cardiology podcasts | MedPally Find",
+    "description": "Cardiology and cardiac critical care podcasts for trainees and clinicians. Picked by a cardiology registrar.",
+    "intro": "Podcasts help you keep up when you don't have time to sit down: on the commute, at the gym or between jobs. This page lists cardiology and cardiac critical care podcasts, from journal summaries to teaching series.",
     "faqs": [
       {
-        "question": "How do I find podcasts in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "What makes a cardiology podcast useful for trainees?",
+        "answer": "Look for ones that cover new trials, guideline updates and case-based teaching. Podcasts appear here as they're reviewed."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "Are podcasts free?",
+        "answer": "Almost always. Some offer CPD certificates or extra episodes for a fee."
       }
     ],
     "reviewed": false
   },
   "guideline": {
-    "heading": "Guidelines for cardiology and cardiac critical care",
-    "title": "Guidelines for cardiology | MedPally Find",
-    "description": "Browse guidelines in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse guidelines listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Cardiology guidelines",
+    "title": "Cardiology guidelines: ESC, ASE and more | MedPally Find",
+    "description": "Where to find cardiology guidelines, including ESC and ASE recommendations. Picked by a cardiology registrar.",
+    "intro": "Guidelines are the reference point for most cardiology decisions. It helps to know where to find the current version quickly, because they're updated regularly and old copies circulate for years. This page links to the main guideline sources for cardiology and echo.",
     "faqs": [
       {
-        "question": "How do I find guidelines in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "Which cardiology guidelines are used in the UK?",
+        "answer": "Most UK cardiologists use ESC guidelines alongside NICE guidance and local protocols. The British Society of Echocardiography publishes UK echo guidance."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "Are cardiology guidelines free to read?",
+        "answer": "Yes. ESC and ASE guidelines are free on their websites, and pocket versions are available."
       }
     ],
     "reviewed": false
   },
   "paper": {
-    "heading": "Papers for cardiology and cardiac critical care",
-    "title": "Papers for cardiology | MedPally Find",
-    "description": "Browse papers in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse papers listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Key cardiology papers",
+    "title": "Key cardiology papers and trials | MedPally Find",
+    "description": "Landmark trials and key papers in cardiology. Picked by a cardiology registrar.",
+    "intro": "Knowing the trials behind a guideline helps you explain decisions and notice when a patient doesn't fit the evidence. This page lists key papers and trial summaries in cardiology.",
     "faqs": [
       {
-        "question": "How do I find papers in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "How do I keep up with cardiology research?",
+        "answer": "Follow a few journal summaries or podcasts rather than trying to read everything, and focus on trials that change guidelines."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "Where can I find trial summaries?",
+        "answer": "Society websites, journal clubs and trial summary sites. Papers appear here as they're reviewed."
       }
     ],
     "reviewed": false
   },
   "thread": {
-    "heading": "Threads for cardiology and cardiac critical care",
-    "title": "Threads for cardiology | MedPally Find",
-    "description": "Browse threads in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse threads listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Teaching threads",
+    "title": "Cardiology teaching threads | MedPally Find",
+    "description": "Teaching threads from cardiologists and educators on social media. Picked by a cardiology registrar.",
+    "intro": "Some of the best short teaching in cardiology happens in social media threads: a single ECG explained step by step, or a new trial broken down. This page saves the good ones so they don't get lost in a feed.",
     "faqs": [
       {
-        "question": "How do I find threads in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "Why list social media threads?",
+        "answer": "Good threads can be clearer than a textbook, but they're hard to find again once they've scrolled past. Listing them keeps them findable."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "Are threads peer reviewed?",
+        "answer": "No. Treat them as teaching, not evidence, and check anything clinical against guidelines."
       }
     ],
     "reviewed": false
   },
   "website": {
-    "heading": "Websites for cardiology and cardiac critical care",
-    "title": "Websites for cardiology | MedPally Find",
-    "description": "Browse websites in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse websites listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Cardiology learning websites",
+    "title": "Cardiology learning websites | MedPally Find",
+    "description": "Free and paid websites for learning cardiology, echo, ECGs and critical care. Picked by a cardiology registrar.",
+    "intro": "A lot of the most useful cardiology teaching lives on websites built by individuals and small teams: ECG libraries, echo guides, critical care textbooks and radiology references. They're often free and kept up to date by people who use them clinically.",
     "faqs": [
       {
-        "question": "How do I find websites in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "Which free websites are good for cardiology?",
+        "answer": "LITFL for ECGs, the Internet Book of Critical Care for shock and cardiac emergencies, and Radiopaedia for imaging are good places to start."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "How do I know a website is reliable?",
+        "answer": "Check who writes it, whether it cites sources and when it was last updated. Use guidelines for clinical decisions."
       }
     ],
     "reviewed": false
   },
   "dataset": {
-    "heading": "Datasets for cardiology and cardiac critical care",
-    "title": "Datasets for cardiology | MedPally Find",
-    "description": "Browse datasets in the MedPally Find cardiology and cardiac critical care directory.",
-    "intro": "Browse datasets listed in MedPally Find for cardiology and cardiac critical care education. Each card links to a directory entry with a short description and available pricing and platform details. Check the original resource for current information. Listings are not clinical advice or endorsements.",
+    "heading": "Cardiology datasets",
+    "title": "Cardiology datasets for research | MedPally Find",
+    "description": "Open cardiology datasets, including ECG and imaging collections, for research and teaching. Picked by a cardiology registrar.",
+    "intro": "Open datasets let clinicians and researchers practise analysis, build teaching material or test AI models without starting from scratch. This page lists cardiology datasets, such as ECG and imaging collections.",
     "faqs": [
       {
-        "question": "How do I find datasets in this directory?",
-        "answer": "Browse the cards on this page and open a listing for its description and link to the original resource."
+        "question": "Where can I find open ECG datasets?",
+        "answer": "PhysioNet hosts several well-known open ECG datasets. Datasets appear here as they're reviewed."
       },
       {
-        "question": "How can I check the cost?",
-        "answer": "Open the listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+        "question": "Can I use these datasets for any project?",
+        "answer": "Check each dataset's licence and data use agreement first. Some need registration or ethics approval."
       }
     ],
     "reviewed": false

@@ -1,56 +1,57 @@
 ---
-title: "How to get better at ECG interpretation: resources worth your time"
-description: Explore two ECG education resources and a practical way to organise your learning, with access and limitations clearly stated.
-author: "TODO(curator)"
+title: How to get better at ECG interpretation
+description: A practical way to improve at reading ECGs, from medical school to registrar, and the two resources I'd start with.
+author: Ike
 published: 2026-10-27
 updated: 2026-10-27
 topics: [ecg, critical-care]
 items: [litfl-ecg-library, ecg-weekly]
-draft: true
+draft: false
 ---
 
-There is no single route through ECG education. You may want an accessible reference to revisit a pattern, or you may prefer learning through cases and discussion. This guide is for healthcare professionals looking for a starting point among the resources already listed in MedPally Find. It offers an order for exploring two resources, along with the limits of what we know about them.
+Almost every doctor reads ECGs, and most of us feel less sure about them than we'd like. On a medical night I might look at dozens: chest pain in ED, palpitations in SDEC, a new rhythm on the ward at 3am. In cardiology the questions just get more specific.
 
-The [LITFL ECG Library](/item/litfl-ecg-library/) is listed as free. [ECG Weekly](/item/ecg-weekly/) is listed as paid. Before registering or paying, check the current terms and what is available to you. The directory describes the resources, but it does not assess their suitability for every learner or training programme.
+Getting better isn't complicated, but it takes time. You need a system, a lot of examples and honest feedback. Here's how I'd go about it, and the two resources I'd start with.
 
-TODO(curator): add a personal line here.
+## Use the same system every time
 
-## Start with a reference library
+Rate, rhythm, axis, intervals, then morphology: P waves, QRS, ST segments and T waves. Then compare with an old ECG if there is one. The order matters less than doing it the same way every time, so you don't stop at the first abnormality and miss the second.
 
-The LITFL ECG Library is described in the directory as a library of patterns, interpretation guides and clinical examples. For someone building a study routine, a reference library can be a useful place to look up a topic and return to it later. The listing is marked free and identifies Life in the Fast Lane as its maker.
+Describe what you see before you name it. "Broad complex, regular, rate 150" is more useful than jumping straight to a diagnosis, and it stops you anchoring.
 
-Choose a question you want to understand, find the relevant material and make a note of what remains unclear. You could return to the same question after local teaching or a discussion with a colleague. The point is to build a record of what you have reviewed rather than trying to cover every page at once.
+## Look things up in a good library
 
-The directory summary does not describe every guide or example, or say how often the library is updated. TODO(curator): verify its current scope and update process before publication. Use the resource as one part of learning and check current local guidance where relevant.
+The [LITFL ECG Library](/item/litfl-ecg-library/) is free and covers almost every pattern you'll meet, with example tracings and short explanations. It's what I'd open when an ECG doesn't look right and I want to compare it with a clear example.
 
-## Add case-based learning
+It works best as a reference rather than something to read in order. When you see something new on the ward, look it up that day while the patient is still in your head. Linking a tracing to a real person is what makes it stick.
 
-ECG Weekly is listed as a paid course offering case-based ECG education with interpretation lessons and clinical discussion. It may suit someone who wants to work through cases alongside a reference library. Check the current price and course details on the provider's site before deciding whether it fits your needs.
+## Practise with cases
 
-One possible sequence is to start with a topic in the LITFL library, then consider a case-based resource as a different way to explore interpretation and discussion. This is a suggestion for organising study, not a claim that the resources cover the same material or form a complete curriculum. The listing does not specify the number of cases, the level of the course or its assessment arrangements.
+Recognising a pattern in a library isn't the same as finding it in a real, messy ECG with a clinical story attached. Case-based teaching helps with that.
 
-TODO(curator): verify course format and pricing before publication.
+[ECG Weekly](/item/ecg-weekly/) is a paid subscription built around cases, with each tracing worked through and the reasoning explained. It's popular in emergency medicine and suits anyone who learns better from someone talking through an ECG than from reading about it. Check the current price before signing up.
 
-TODO(curator): add a personal line here.
+If paying isn't an option, you can get similar practice for free. Ask your registrar or a cardiology colleague to go through the ECGs from your shift, or bring interesting ones to teaching.
 
-## Make room for review
+## Build the habit
 
-A useful study plan can be simple: pick a question, review a relevant source, write down what you learned and return to any uncertainty. A colleague, educator or supervisor can help you consider where a reference or course fits with your experience and local teaching. Keep your notes clear enough that you can find the source again.
-
-The two listings do not describe the same kind of resource. One is a library of patterns, guides and examples; the other is a paid, case-based course. You can use either independently. If you use both, check whether each answers the question you had in mind rather than assuming that completing one resource means you have covered a subject fully.
-
-Online resources may change, and a directory entry can become outdated. Follow the links to check current access and material. If you notice a listing that needs a correction, use the contact link in the site footer. MedPally Find links to third-party resources and does not endorse them or provide clinical advice. Always check against local guidance.
+- Read every ECG you're handed properly, even the ones that look normal.
+- Commit to an interpretation before you look at the machine report or ask someone.
+- Look up one thing you weren't sure about each shift.
+- Ask for feedback. Most cardiology registrars are happy to look at an ECG with you.
 
 ## Questions people ask
 
-### Is there a free ECG reference?
+### What's the best free ECG resource?
 
-The [LITFL ECG Library](/item/litfl-ecg-library/) is marked free in the directory. It is described as a library of patterns, interpretation guides and clinical examples. Check the provider's site for current access.
+The LITFL ECG Library is free and covers most of what you'll need, from the basics to rarer patterns.
 
-### Is there a case-based option?
+### Should I trust the machine interpretation?
 
-[ECG Weekly](/item/ecg-weekly/) is listed as a paid course with interpretation lessons and clinical discussion. Check its current terms and course details before signing up.
+Use it as a prompt, not an answer. Automated reports measure most intervals reasonably well, though the QT is often off, and they can miss or overcall important findings, so always read the ECG yourself.
 
-### What if I am looking for more resources?
+### Where can I find more ECG resources?
 
-The [ECG topic page](/topics/ecg/) shows the current ECG listings. You can also [suggest a resource](/suggest/) for the curator to review.
+The [ECG topic page](/topics/ecg/) has the full list, and I'll add more as I find good ones.
+
+Thanks for reading.
