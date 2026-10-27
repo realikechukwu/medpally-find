@@ -31,7 +31,7 @@ jobs:
         run: |
           cp "$GITHUB_EVENT_PATH" .intake-event.json
           delimiter="PROMPT_$(openssl rand -hex 16)"
-          { echo "text<<$delimiter"; cat .github/intake-prompt.md; echo "$delimiter"; } >> "$GITHUB_OUTPUT"
+          { echo "text<<$delimiter"; cat .github/intake-prompt.md; echo; echo "Current UTC time: $(date -u +%Y-%m-%dT%H:%M:%SZ). Use this exact value for added_at/updated_at; never guess the time."; echo "$delimiter"; } >> "$GITHUB_OUTPUT"
       - name: Curate resource
         id: claude
         continue-on-error: true

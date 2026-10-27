@@ -2,9 +2,7 @@
 import { Font } from 'astro:assets';
 import '../styles/global.css';
 import JsonLd from '../components/JsonLd.astro';
-import { activeItems, pluralLabel } from '../lib/items';
-import { types } from '../lib/schema';
-const usedTypes = types.filter(type => activeItems.some(item => item.type === type));
+import { pluralLabel, usedTypes } from '../lib/items';
 interface Props { title?: string; description?: string; image?: string | null; noindex?: boolean; photoHeader?: boolean; }
 const { title = 'Cardiology and cardiac critical care resources | MedPally Find', description = 'A free directory of cardiology and cardiac critical care tools, apps and learning resources, created by Marlo Solutions Ltd.', image, noindex = false, photoHeader = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname === '/404' || Astro.url.pathname === '/404/' ? '/404.html' : Astro.url.pathname, Astro.site);

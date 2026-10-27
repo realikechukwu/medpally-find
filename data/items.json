@@ -17,6 +17,7 @@
     ],
     "maker": "Marlo Solutions Ltd",
     "maker_url": null,
+    "clinician_built": false,
     "pricing": "freemium",
     "platforms": [
       "web"
@@ -45,6 +46,7 @@
     ],
     "maker": "CardioLADs",
     "maker_url": null,
+    "clinician_built": false,
     "pricing": "unknown",
     "platforms": [
       "web"
@@ -63,7 +65,7 @@
     "url": "https://cliffreid.com/culprit",
     "source_url": "https://x.com/cliffreid/status/2114639743845912941",
     "summary": "Free ECG simulator: occlude a coronary artery on a 3D heart and see the 12-lead and echo change. Serial-ECG OMI cases, drills and mimics.",
-    "type": "clinician-built",
+    "type": "app",
     "tags": [
       "ecg",
       "acs",
@@ -76,6 +78,7 @@
     ],
     "maker": "Cliff Reid, MD",
     "maker_url": "https://x.com/cliffreid",
+    "clinician_built": true,
     "pricing": "free",
     "platforms": [
       "web"
@@ -94,7 +97,7 @@
     "url": "https://laa.liorjankelson.com",
     "source_url": "https://x.com/ExtraStim/status/2110846675228987778",
     "summary": "Left atrial appendage closure simulator linking TEE and ICE views to 3D CT, with device alignment, shoulders and leaks. Pricing not checked.",
-    "type": "clinician-built",
+    "type": "app",
     "tags": [
       "ep",
       "interventional",
@@ -106,6 +109,7 @@
     ],
     "maker": "Lior Jankelson, MD",
     "maker_url": "https://x.com/ExtraStim",
+    "clinician_built": true,
     "pricing": "unknown",
     "platforms": [
       "web"
@@ -124,7 +128,7 @@
     "url": "https://ventriculus.org",
     "source_url": "https://x.com/BerkeKorucuMD/status/2104989231697264873",
     "summary": "Tools for cardiology trainees: ECG atlas, TTE cheatsheet, coronary angiography simulator and a cardiogenic shock simulator with MCS (free account needed). Overall pricing not stated.",
-    "type": "clinician-built",
+    "type": "website",
     "tags": [
       "ecg",
       "echo",
@@ -139,6 +143,7 @@
     ],
     "maker": "Berke Cenktug Korucu, MD",
     "maker_url": "https://x.com/BerkeKorucuMD",
+    "clinician_built": true,
     "pricing": "unknown",
     "platforms": [
       "web"
@@ -157,7 +162,7 @@
     "url": "https://cardsnightfloat.netlify.app",
     "source_url": "https://x.com/AbedfromBeirut/status/2113307326577004749",
     "summary": "Browser simulation of a cardiology night on call for fellows: multi-patient cases (STEMI, shock, VT storm, crashing Impella) with an attending to call. Pricing not checked.",
-    "type": "clinician-built",
+    "type": "app",
     "tags": [
       "critical-care",
       "mcs",
@@ -169,6 +174,7 @@
     ],
     "maker": "Abdul-Rahman Akkawi, MD",
     "maker_url": "https://x.com/AbedfromBeirut",
+    "clinician_built": true,
     "pricing": "unknown",
     "platforms": [
       "web"
@@ -177,7 +183,7 @@
     "note": "Clinician built",
     "status": "active",
     "added_at": "2026-10-27T16:40:00Z",
-    "updated_at": "2026-10-27T16:40:00Z",
+    "updated_at": "2026-10-27T16:56:41Z",
     "issue": 10,
     "owner_contact": null
   },
@@ -197,6 +203,7 @@
     ],
     "maker": "Youssef Abdallah",
     "maker_url": "https://www.youtube.com/@YoussefAbdallahOfficial",
+    "clinician_built": false,
     "pricing": "free",
     "platforms": [
       "web"
@@ -215,7 +222,7 @@
     "url": "https://learncoronary.com/",
     "source_url": null,
     "summary": "Interactive coronary angiography guide: 3D anatomy viewer, adjustable RAO/LAO and cranial/caudal projections, a name-the-vessel quiz and cath lab equipment. Maker and pricing not checked.",
-    "type": "clinician-built",
+    "type": "app",
     "tags": [
       "interventional",
       "imaging"
@@ -225,6 +232,7 @@
     ],
     "maker": null,
     "maker_url": null,
+    "clinician_built": true,
     "pricing": "unknown",
     "platforms": [
       "web"
@@ -233,7 +241,7 @@
     "note": "Clinician built",
     "status": "active",
     "added_at": "2026-10-27T14:30:00Z",
-    "updated_at": "2026-10-27T14:30:00Z",
+    "updated_at": "2026-10-27T16:56:41Z",
     "issue": 7,
     "owner_contact": null
   },
@@ -253,6 +261,7 @@
     ],
     "maker": null,
     "maker_url": null,
+    "clinician_built": false,
     "pricing": "unknown",
     "platforms": [
       "web"
@@ -281,6 +290,7 @@
     ],
     "maker": null,
     "maker_url": null,
+    "clinician_built": false,
     "pricing": "unknown",
     "platforms": [
       "web"
@@ -308,6 +318,7 @@
     ],
     "maker": "Department of Diagnostic Radiology, University of Hong Kong",
     "maker_url": null,
+    "clinician_built": false,
     "pricing": "unknown",
     "platforms": [
       "web"
@@ -335,6 +346,7 @@
     ],
     "maker": "HKUx (University of Hong Kong)",
     "maker_url": null,
+    "clinician_built": false,
     "pricing": "unknown",
     "platforms": [
       "web"
@@ -362,6 +374,7 @@
     ],
     "maker": "Medtronic",
     "maker_url": "https://www.medtronic.com/",
+    "clinician_built": false,
     "pricing": "unknown",
     "platforms": [
       "web"
@@ -391,6 +404,7 @@
     ],
     "maker": "Life in the Fast Lane",
     "maker_url": "https://litfl.com/",
+    "clinician_built": false,
     "pricing": "free",
     "platforms": [
       "web"
@@ -419,6 +433,7 @@
     ],
     "maker": "MDCalc",
     "maker_url": "https://www.mdcalc.com/",
+    "clinician_built": false,
     "pricing": "free",
     "platforms": [
       "web"
@@ -447,6 +462,7 @@
     ],
     "maker": "European Society of Cardiology",
     "maker_url": "https://www.escardio.org/",
+    "clinician_built": false,
     "pricing": "free",
     "platforms": [
       "web"
@@ -475,6 +491,7 @@
     ],
     "maker": "American Society of Echocardiography",
     "maker_url": "https://www.asecho.org/",
+    "clinician_built": false,
     "pricing": "free",
     "platforms": [
       "web"
@@ -502,6 +519,7 @@
     ],
     "maker": "ECG Weekly",
     "maker_url": "https://ecgweekly.com/",
+    "clinician_built": false,
     "pricing": "paid",
     "platforms": [
       "web"
@@ -530,6 +548,7 @@
     ],
     "maker": "123sonography",
     "maker_url": "https://123sonography.com/",
+    "clinician_built": false,
     "pricing": "freemium",
     "platforms": [
       "web"
@@ -560,6 +579,7 @@
     ],
     "maker": "EMCrit Project",
     "maker_url": "https://emcrit.org/",
+    "clinician_built": false,
     "pricing": "free",
     "platforms": [
       "web"
@@ -587,6 +607,7 @@
     ],
     "maker": "Radiopaedia",
     "maker_url": "https://radiopaedia.org/",
+    "clinician_built": false,
     "pricing": "freemium",
     "platforms": [
       "web"

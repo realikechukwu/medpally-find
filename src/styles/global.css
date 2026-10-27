@@ -192,3 +192,6 @@ a.category>span{font-size:inherit;line-height:inherit;font-weight:inherit}
 .beat-word{white-space:nowrap}
 .breadcrumbs{display:flex;flex-wrap:wrap;gap:9px;align-items:center;color:var(--muted);font-size:13px;line-height:1.5}.breadcrumbs a{text-decoration:underline;text-underline-offset:3px}.related-resources{padding-bottom:40px}.related-resources .section-heading{margin-bottom:28px}
 .badge-code{overflow-x:auto;padding:16px;background:var(--chip);border-radius:10px;font-size:12px;line-height:1.5}
+
+.card-labels{display:flex;gap:6px;flex-wrap:wrap;min-width:0}
+.maker-label{color:var(--muted);background:var(--chip);border-radius:99px;padding:5px 9px;font-size:10px;font-weight:650}

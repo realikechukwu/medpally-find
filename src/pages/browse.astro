@@ -1,10 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
-import { activeItems, label, pluralLabel } from '../lib/items';
+import { activeItems, label, pluralLabel, usedTypes } from '../lib/items';
 import tags from '../../data/tags.json';
-import { types } from '../lib/schema';
-const usedTypes = types.filter(type => activeItems.some(item => item.type === type));
 const usedTags = tags.filter(tag => activeItems.some(item => item.tags.includes(tag)));
 ---
 <Base title="Browse resources | MedPally Find" description="Search and filter cardiology and cardiac critical care tools, apps, courses and guidelines."><main id="main"><section class="shell browse-intro"><div class="section-kicker">BROWSE</div><h1>All resources</h1><form class="search-box browse-search" role="search" action="/browse/" autocomplete="off"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><label class="sr-only" for="search">Search resources</label><input id="search" name="q" placeholder="Search tools, topics, creators"/><kbd>/</kbd><button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>

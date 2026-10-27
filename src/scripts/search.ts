@@ -36,7 +36,7 @@ function renderPagination(pages: number) {
 function render() {
  const query = input.value.trim();
  const matches = query && index ? new Set(index.search(query, { prefix: true, fuzzy: 0.2, boost: { title: 4, tags: 3, summary: 2, maker: 1 }, combineWith: 'AND' }).map(result => String(result.id))) : null;
- const found = cards.filter(card => (!query || (matches ? matches.has(card.dataset.id!) : card.textContent!.toLowerCase().includes(query.toLowerCase()))) && (!category || card.dataset.type === category) && [...selected].every(tag => card.dataset.tags!.split('|').includes(tag)));
+ const found = cards.filter(card => (!query || (matches ? matches.has(card.dataset.id!) : card.textContent!.toLowerCase().includes(query.toLowerCase()))) && (!category || (category === 'clinician-built' ? card.dataset.clinician === 'true' : card.dataset.type === category)) && [...selected].every(tag => card.dataset.tags!.split('|').includes(tag)));
  const visible = found.length, pages = Math.max(1, Math.ceil(visible / PAGE_SIZE));
  page = Math.min(page, pages);
  const onPage = new Set(found.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE));
@@ -70,4 +70,4 @@ document.addEventListener('keydown', event => { if (event.key === '/' && !event.
 render();
 sync();
 revealCategory(false);
-fetch('/search-index.json').then(response => { if (!response.ok) throw new Error('Search index unavailable'); return response.text(); }).then(json => { index = MiniSearch.loadJSON(json, { fields: ['title', 'tags', 'summary', 'maker'] }); render(); }).catch(() => { count.textContent += ' · basic search'; });
+fetch('/search-index.json').then(response => { if (!response.ok) throw new Error('Search index unavailable'); return response.text(); }).then(json => { index = MiniSearch.loadJSON(json, { fields: ['title', 'tags', 'summary', 'maker', 'built'] }); render(); }).catch(() => { count.textContent += ' · basic search'; });

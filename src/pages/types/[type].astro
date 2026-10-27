@@ -1,10 +1,10 @@
 ---
 import Landing from '../../components/Landing.astro';
-import { activeItems } from '../../lib/items';
+import { activeItems, inType } from '../../lib/items';
 import typeContent from '../../../data/types.json';
 export function getStaticPaths() {
   return Object.entries(typeContent).flatMap(([type, content]) => {
-    const listings = activeItems.filter(item => item.type === type);
+    const listings = activeItems.filter(item => inType(item, type));
     return listings.length ? [{ params: { type }, props: { type, content, listings } }] : [];
   });
 }
