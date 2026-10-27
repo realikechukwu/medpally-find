@@ -220,8 +220,8 @@
     "id": "learncoronary",
     "title": "Learn Coronary: Virtual Coronary Angiography",
     "url": "https://learncoronary.com/",
-    "source_url": null,
-    "summary": "Interactive coronary angiography guide: 3D anatomy viewer, adjustable RAO/LAO and cranial/caudal projections, a name-the-vessel quiz and cath lab equipment. Maker and pricing not checked.",
+    "source_url": "https://x.com/stefankmil/status/2110404999297839348",
+    "summary": "Interactive coronary angiography guide: 3D anatomy viewer, adjustable RAO/LAO and cranial/caudal projections, a name-the-vessel quiz and cath lab equipment. Pricing not checked.",
     "type": "app",
     "tags": [
       "interventional",
@@ -230,7 +230,7 @@
     "specialty": [
       "cardiology"
     ],
-    "maker": null,
+    "maker": "Stefan Milutinovic",
     "maker_url": null,
     "clinician_built": true,
     "pricing": "unknown",
@@ -241,7 +241,7 @@
     "note": "Clinician built",
     "status": "active",
     "added_at": "2026-10-27T14:30:00Z",
-    "updated_at": "2026-10-27T16:56:41Z",
+    "updated_at": "2026-10-27T17:01:28Z",
     "issue": 7,
     "owner_contact": null
   },
