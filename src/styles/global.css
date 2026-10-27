@@ -67,6 +67,7 @@
 /* Save toggles */
 .save-toggle{position:absolute;z-index:2;top:10px;right:10px;width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--muted);transition:transform .2s ease,color .15s ease}
 .card:hover .save-toggle{transform:translateY(-4px)}
+@media(hover:none){.card:hover .card-art,.card:hover .save-toggle{transform:none;box-shadow:none}}
 .save-toggle svg,.save-button svg{width:20px;height:20px;fill:none}
 .save-toggle:hover{color:var(--ink)}
 .save-toggle.saved,.save-button.saved{color:var(--accent)}
@@ -117,7 +118,8 @@
 .site-menu::backdrop{background:#0b0d1000}
 .site-menu[open]::backdrop{background:#0b0d1073}
 html:has(.site-menu[open]){overflow:hidden}
-@media(prefers-reduced-motion:no-preference){.site-menu,.site-menu::backdrop{transition:transform .3s cubic-bezier(.2,.8,.2,1),background-color .3s ease,display .3s allow-discrete,overlay .3s allow-discrete}@starting-style{.site-menu[open]{transform:translateX(100%)}.site-menu[open]::backdrop{background:#0b0d1000}}}
+.site-menu[open][data-closing]{transform:translateX(100%)}.site-menu[open][data-closing]::backdrop{background:#0b0d1000}
+@media(prefers-reduced-motion:no-preference){.site-menu,.site-menu::backdrop{transition:transform .3s cubic-bezier(.2,.8,.2,1),background-color .3s ease}.site-menu[data-closing],.site-menu[data-closing]::backdrop{transition-timing-function:cubic-bezier(.4,0,1,1);transition-duration:.22s}@starting-style{.site-menu[open]{transform:translateX(100%)}.site-menu[open]::backdrop{background:#0b0d1000}}}
 .menu-head{display:flex;align-items:center;justify-content:space-between;min-height:70px;padding:max(13px,env(safe-area-inset-top)) 12px 13px 20px;border-bottom:1px solid var(--line)}
 .menu-dismiss{width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:50%;background:var(--chip);color:var(--ink)}
 .menu-dismiss svg{width:22px;height:22px}
