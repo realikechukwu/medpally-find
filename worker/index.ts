@@ -14,7 +14,7 @@ interface Env {
  SUGGEST_LIMIT: RateLimit;
  NOTIFY_EMAIL?: SendEmail;
  NOTIFY_FROM: string;
- NOTIFY_TO: string;
+ NOTIFY_ADDRESS?: string;
  GITHUB_REPO: string;
  GITHUB_TOKEN?: string;
  TURNSTILE_SECRET_KEY?: string;
@@ -122,12 +122,12 @@ function issueBody(url: string, note: string): string {
 // A plain-text email to the curator's verified Email Routing address. Failure is logged, never shown to
 // the suggester: the issue already exists.
 async function notify(env: Env, url: string, note: string, issueUrl: string): Promise<void> {
- if (!env.NOTIFY_EMAIL) return;
+ if (!env.NOTIFY_EMAIL || !env.NOTIFY_ADDRESS) return;
  const host = new URL(url).hostname.replace(/^www\./, '');
  const body = [url, '', note ? `Note from the suggester:\n${note}` : 'No note from the suggester.', '', `Review it: ${issueUrl}`, 'Add the `intake` label to approve, or close the issue to decline.'].join('\n');
  const raw = [
   `From: MedPally Find <${env.NOTIFY_FROM}>`,
-  `To: ${env.NOTIFY_TO}`,
+  `To: ${env.NOTIFY_ADDRESS}`,
   `Subject: New suggestion: ${host}`,
   `Message-ID: <${crypto.randomUUID()}@${env.NOTIFY_FROM.split('@')[1]}>`,
   `Date: ${new Date().toUTCString()}`,
@@ -137,7 +137,7 @@ async function notify(env: Env, url: string, note: string, issueUrl: string): Pr
   '',
   body,
  ].join('\r\n').replace(/(?<!\r)\n/g, '\r\n');
- try { await env.NOTIFY_EMAIL.send(new EmailMessage(env.NOTIFY_FROM, env.NOTIFY_TO, raw)); }
+ try { await env.NOTIFY_EMAIL.send(new EmailMessage(env.NOTIFY_FROM, env.NOTIFY_ADDRESS, raw)); }
  catch (error) { console.error('Suggestion email failed', error); }
 }
 
