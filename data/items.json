@@ -1,5 +1,36 @@
 [
   {
+    "id": "cardia-3d-heart-simulator",
+    "title": "Cardia 3D heart simulator",
+    "short_title": "Cardia 3D Heart Simulator",
+    "url": "https://3d.drtr.uk",
+    "source_url": "https://x.com/cardiapp2026/status/2104096940522918019",
+    "summary": "Interactive 3D heart simulator, titled 'Anatomy & intervention studio'. Page content could not be read beyond its title; details are from the author's post.",
+    "type": "app",
+    "tags": [
+      "ep",
+      "interventional",
+      "imaging"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Cardiapp (@cardiapp2026)",
+    "maker_url": "https://x.com/cardiapp2026",
+    "clinician_built": false,
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-27T19:24:54Z",
+    "updated_at": "2026-10-27T19:24:54Z",
+    "issue": 31,
+    "owner_contact": null
+  },
+  {
     "id": "cardiorender",
     "title": "CardioRender",
     "url": "https://cardiorender.com",
