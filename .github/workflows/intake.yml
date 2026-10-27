@@ -16,6 +16,12 @@ permissions:
   contents: write
   issues: write
   actions: write
+env:
+  # jq over an issue's comments: true once the workflow has answered it since $SINCE (ever, if unset) with
+  # anything but a failure notice, or has failed on it three times. Until then the sweep retries it.
+  ANSWERED_JQ: >-
+    [.[] | select(.user.login == "github-actions[bot]" and .created_at > (env.SINCE // ""))]
+    | (map(select(.body | test("^Intake (could not complete|validation failed|did not produce a valid result|validated but could not push)") | not)) | length > 0) or length >= 3
 jobs:
   pick:
     # A public suggestion runs only once the owner adds `intake` (with or without removing `suggestion`).
@@ -42,10 +48,10 @@ jobs:
             { echo "issue=$EVENT_ISSUE"; echo "since=$(date -u +%Y-%m-%dT%H:%M:%SZ)"; } >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # Sweep: the oldest open `intake` issue opened by the owner that the workflow has never answered.
+          # Sweep: the oldest open `intake` issue opened by the owner that the workflow hasn't answered.
           for n in $(gh api "repos/$GH_REPO/issues?state=open&labels=intake&sort=created&direction=asc&per_page=100" --jq ".[] | select(.pull_request == null and .user.login == \"$OWNER\") | .number"); do
             [[ "$n" == "$SKIP" ]] && continue
-            if [[ -z "$(gh api "repos/$GH_REPO/issues/$n/comments" --paginate --jq '.[] | select(.user.login == "github-actions[bot]") | .id')" ]]; then
+            if [[ "$(gh api "repos/$GH_REPO/issues/$n/comments?per_page=100" --jq "$ANSWERED_JQ")" == false ]]; then
               echo "Sweeping #$n"
               echo "issue=$n" >> "$GITHUB_OUTPUT"
               exit 0
@@ -74,7 +80,7 @@ jobs:
           set -euo pipefail
           # Another run may have answered the issue while this one waited: since the event, or ever for a sweep.
           # A comment is always an instruction to act on.
-          if [[ "$GITHUB_EVENT_NAME" != issue_comment && -n "$(gh api "repos/$GH_REPO/issues/$ISSUE_NUMBER/comments" --paginate --jq ".[] | select(.user.login == \"github-actions[bot]\" and .created_at > \"$SINCE\") | .id")" ]]; then
+          if [[ "$GITHUB_EVENT_NAME" != issue_comment && "$(gh api "repos/$GH_REPO/issues/$ISSUE_NUMBER/comments?per_page=100" --jq "$ANSWERED_JQ")" == true ]]; then
             echo "Issue #$ISSUE_NUMBER was already handled."
             echo "run=false" >> "$GITHUB_OUTPUT"
           else
@@ -111,6 +117,8 @@ jobs:
           github_token: ${{ github.token }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Sweeps are dispatched by the workflow token. Bot-opened issues and comments are still stopped by `pick`.
+          allowed_bots: github-actions[bot]
           prompt: ${{ steps.prompt.outputs.text }}
           claude_args: '--allowedTools "Read,Glob,Grep,Edit,Write,WebFetch,Bash(npm run validate)"'
       - name: Validate and publish result
