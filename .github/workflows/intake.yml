@@ -4,36 +4,107 @@ on:
     types: [opened, labeled]
   issue_comment:
     types: [created]
+  # The sweep: picks up an `intake` issue whose run was dropped from the queue (see `concurrency` below).
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      skip:
+        description: Issue number to leave out of this sweep
+        required: false
 permissions:
   contents: write
   issues: write
-concurrency:
-  group: intake
-  cancel-in-progress: false
+  actions: write
 jobs:
-  intake:
+  pick:
     # A public suggestion runs only once the owner adds `intake` (with or without removing `suggestion`).
     # Shortcut issues are created already labelled with an `intake:` title, so their `labeled` event is
     # skipped to avoid a second run.
-    if: github.actor == github.repository_owner && (contains(github.event.issue.labels.*.name, 'intake') || startsWith(github.event.issue.title, 'intake:')) && (github.event_name != 'issues' || github.event.action != 'labeled' || (github.event.label.name == 'intake' && !startsWith(github.event.issue.title, 'intake:')))
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || (github.actor == github.repository_owner && (contains(github.event.issue.labels.*.name, 'intake') || startsWith(github.event.issue.title, 'intake:')) && (github.event_name != 'issues' || github.event.action != 'labeled' || (github.event.label.name == 'intake' && !startsWith(github.event.issue.title, 'intake:'))))
     runs-on: ubuntu-latest
+    outputs:
+      issue: ${{ steps.pick.outputs.issue }}
+      since: ${{ steps.pick.outputs.since }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Pick the issue
+        id: pick
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          OWNER: ${{ github.repository_owner }}
+          EVENT_ISSUE: ${{ github.event.issue.number }}
+          SKIP: ${{ inputs.skip }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$GITHUB_EVENT_NAME" == issues || "$GITHUB_EVENT_NAME" == issue_comment ]]; then
+            { echo "issue=$EVENT_ISSUE"; echo "since=$(date -u +%Y-%m-%dT%H:%M:%SZ)"; } >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # Sweep: the oldest open `intake` issue opened by the owner that the workflow has never answered.
+          for n in $(gh api "repos/$GH_REPO/issues?state=open&labels=intake&sort=created&direction=asc&per_page=100" --jq ".[] | select(.pull_request == null and .user.login == \"$OWNER\") | .number"); do
+            [[ "$n" == "$SKIP" ]] && continue
+            if [[ -z "$(gh api "repos/$GH_REPO/issues/$n/comments" --paginate --jq '.[] | select(.user.login == "github-actions[bot]") | .id')" ]]; then
+              echo "Sweeping #$n"
+              echo "issue=$n" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "Nothing waiting."
+  intake:
+    needs: pick
+    if: needs.pick.outputs.issue
+    # Job-level, so skipped runs never take a place in the queue. GitHub still keeps only one pending run per
+    # group and cancels it when another arrives; the sweep picks up any issue that loses its place that way.
+    concurrency:
+      group: intake
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      ISSUE_NUMBER: ${{ needs.pick.outputs.issue }}
+      SINCE: ${{ needs.pick.outputs.since }}
+    steps:
+      - name: Check the issue still needs intake
+        id: check
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Another run may have answered the issue while this one waited: since the event, or ever for a sweep.
+          # A comment is always an instruction to act on.
+          if [[ "$GITHUB_EVENT_NAME" != issue_comment && -n "$(gh api "repos/$GH_REPO/issues/$ISSUE_NUMBER/comments" --paginate --jq ".[] | select(.user.login == \"github-actions[bot]\" and .created_at > \"$SINCE\") | .id")" ]]; then
+            echo "Issue #$ISSUE_NUMBER was already handled."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.check.outputs.run == 'true'
+        uses: actions/checkout@v4
         with:
           ref: main
-      - uses: actions/setup-node@v4
+      - if: steps.check.outputs.run == 'true'
+        uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
-      - run: npm ci
+      - if: steps.check.outputs.run == 'true'
+        run: npm ci
       - name: Load prompt
         id: prompt
+        if: steps.check.outputs.run == 'true'
         run: |
-          cp "$GITHUB_EVENT_PATH" .intake-event.json
+          if [[ "$GITHUB_EVENT_NAME" == issues || "$GITHUB_EVENT_NAME" == issue_comment ]]; then
+            cp "$GITHUB_EVENT_PATH" .intake-event.json
+          else
+            gh api "repos/$GH_REPO/issues/$ISSUE_NUMBER" | jq '{action: "opened", issue: .}' > .intake-event.json
+          fi
           delimiter="PROMPT_$(openssl rand -hex 16)"
           { echo "text<<$delimiter"; cat .github/intake-prompt.md; echo; echo "Current UTC time: $(date -u +%Y-%m-%dT%H:%M:%SZ). Use this exact value for added_at/updated_at; never guess the time."; echo "$delimiter"; } >> "$GITHUB_OUTPUT"
       - name: Curate resource
         id: claude
+        if: steps.check.outputs.run == 'true'
         continue-on-error: true
         uses: anthropics/claude-code-action@v1
         with:
@@ -43,10 +114,9 @@ jobs:
           prompt: ${{ steps.prompt.outputs.text }}
           claude_args: '--allowedTools "Read,Glob,Grep,Edit,Write,WebFetch,Bash(npm run validate)"'
       - name: Validate and publish result
+        id: publish
         if: always() && steps.claude.outcome != 'skipped'
         env:
-          GH_TOKEN: ${{ github.token }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
           CLAUDE_OUTCOME: ${{ steps.claude.outcome }}
         shell: bash
         run: |
@@ -84,3 +154,8 @@ jobs:
           else
             gh issue comment "$ISSUE_NUMBER" --body-file /tmp/intake-comment.txt
           fi
+      # Drains the backlog one issue at a time. Runs started with the workflow token can't trigger workflows,
+      # except workflow_dispatch. Skipping this issue stops a run that failed without commenting from looping.
+      - name: Sweep for the next waiting issue
+        if: always() && (steps.check.outputs.run == 'false' || steps.publish.outcome == 'success' || steps.publish.outcome == 'failure')
+        run: gh workflow run intake.yml --ref main -f skip="$ISSUE_NUMBER"
