@@ -207,10 +207,9 @@ a.category>span{font-size:inherit;line-height:inherit;font-weight:inherit}
 
 /* Topic art: a listing without an image gets a dark panel in its main topic's colour (src/lib/art.ts) */
 .card-art{container-type:inline-size}
-.card-art.topic-art{--pad:clamp(14px,6cqi,20px);background:var(--topic);border-color:transparent;display:flex;flex-direction:column;justify-content:space-between;padding:var(--pad);color:#fff}
+.card-art.topic-art{--pad:clamp(14px,6cqi,20px);background:var(--topic);border-color:transparent;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--pad);color:#fff}
 .art-motif{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:#fff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.13}
-.art-topic,.art-foot{position:relative}
-.art-topic{padding-right:44px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffffffb8}
+.art-foot{position:relative}
 .art-name{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:clamp(18px,7.6cqi,27px);line-height:1.08;letter-spacing:-.04em;font-weight:700;text-wrap:balance}
 .art-domain{display:block;margin-top:8px;font-size:11px;font-weight:600;color:#ffffffb8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .art-chip{position:absolute;right:var(--pad);bottom:var(--pad);width:40px;height:40px;border-radius:10px;background:#fff;display:grid;place-items:center}
@@ -224,7 +223,7 @@ a.category>span{font-size:inherit;line-height:inherit;font-weight:inherit}
 .rows .card{display:flex;gap:16px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--line)}
 .rows .card-art{flex:none;width:72px;height:72px;aspect-ratio:auto;border-radius:16px;padding:0}
 .rows .card-art.topic-art{justify-content:center;align-items:center}
-.rows .art-motif,.rows .art-topic,.rows .art-foot{display:none}
+.rows .art-motif,.rows .art-foot{display:none}
 .rows .art-letter{display:block;font-size:28px;font-weight:700}
 .rows .art-chip{top:16px;left:16px}
 .rows .card-copy{flex:1;min-width:0;padding-top:0}

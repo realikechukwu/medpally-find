@@ -1,6 +1,7 @@
 import type { Item } from './schema';
 
 // Card art for listings without an image: a dark panel coloured by the item's main topic, with a faint line motif.
+// The topic itself isn't printed, since most items span several; the tag chips under the card list them all.
 // Motif paths are drawn in a 350×219 box and cropped to the card.
 const wave = Array.from({ length: 6 }, (_, i) => { const x = 40 + i * 70; return `M${x - 70} 150 C${x - 58} 150 ${x - 54} 100 ${x - 40} 100 C${x - 26} 100 ${x - 23} 128 ${x - 17} 131 C${x - 12} 133 ${x - 9} 124 ${x - 3} 126 C${x + 4} 129 ${x - 4} 150 ${x} 150`; }).join(' ');
 const motifs = {
