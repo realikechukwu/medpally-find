@@ -1,0 +1,291 @@
+{
+  "echo": {
+    "heading": "Echocardiography learning resources",
+    "title": "Echocardiography resources | MedPally Find",
+    "description": "Find curated echo education resources, tools and references in the MedPally Find directory.",
+    "intro": "For clinicians and trainees learning echocardiography, this page brings together the directory’s echo-tagged resources. Use it to find material for study and to explore references relevant to cardiac ultrasound. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find echocardiography learning resources?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "ecg": {
+    "heading": "ECG interpretation learning resources",
+    "title": "ECG interpretation resources | MedPally Find",
+    "description": "Find curated ECG education resources, tools and references in the MedPally Find directory.",
+    "intro": "For clinicians and trainees developing ECG interpretation skills, this page gathers the directory’s ECG-tagged resources. Browse the entries to find material that fits your stage of learning and available time. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find ECG interpretation resources?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "heart-failure": {
+    "heading": "Heart failure learning resources",
+    "title": "Heart failure resources | MedPally Find",
+    "description": "Find curated heart failure education resources, tools and references in the MedPally Find directory.",
+    "intro": "This page gathers resources tagged for heart failure in MedPally Find. It offers a starting point for clinicians and trainees looking for education and reference material on the topic. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Which resources are listed for heart failure?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "ep": {
+    "heading": "Cardiac electrophysiology learning resources",
+    "title": "Cardiac electrophysiology resources | MedPally Find",
+    "description": "Find curated electrophysiology education resources, tools and references in the MedPally Find directory.",
+    "intro": "This collection is a starting point for clinicians and trainees interested in cardiac electrophysiology. The entries are tagged for electrophysiology and may be useful for finding further education or reference material. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find cardiac electrophysiology resources?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "interventional": {
+    "heading": "Interventional cardiology learning resources",
+    "title": "Interventional cardiology resources | MedPally Find",
+    "description": "Find curated interventional cardiology education resources, tools and references in the MedPally Find directory.",
+    "intro": "This collection gathers resources tagged for interventional cardiology. Clinicians and trainees can browse the directory entries to find education and reference material relevant to their interests. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Which interventional cardiology resources are listed?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "imaging": {
+    "heading": "Cardiac imaging learning resources",
+    "title": "Cardiac imaging resources | MedPally Find",
+    "description": "Find curated cardiac imaging education resources, tools and references in the MedPally Find directory.",
+    "intro": "This page brings together resources tagged for cardiac imaging. It is intended for clinicians and trainees looking for learning material and references across imaging topics represented in the directory. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find cardiac imaging learning resources?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "haemodynamics": {
+    "heading": "Haemodynamics learning resources",
+    "title": "Haemodynamics resources | MedPally Find",
+    "description": "Find curated haemodynamics education resources, tools and references in the MedPally Find directory.",
+    "intro": "This collection gathers MedPally Find resources tagged for haemodynamics. It is intended for clinicians and trainees seeking education and references on this part of cardiovascular care. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Which haemodynamics resources are listed?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "mcs": {
+    "heading": "Mechanical circulatory support learning resources",
+    "title": "Mechanical circulatory support resources | MedPally Find",
+    "description": "Find curated mechanical circulatory support education resources, tools and references in the MedPally Find directory.",
+    "intro": "This page brings together resources tagged for mechanical circulatory support. It offers clinicians and trainees a starting point for finding education and reference material on the topic. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Which mechanical circulatory support resources are listed?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "cardiac-surgery": {
+    "heading": "Cardiac surgery learning resources",
+    "title": "Cardiac surgery resources | MedPally Find",
+    "description": "Find curated cardiac surgery education resources, tools and references in the MedPally Find directory.",
+    "intro": "This collection is intended for clinicians and trainees seeking education and reference material about cardiac surgery. Resources carrying this topic tag will appear here as they are added to the directory. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find cardiac surgery resources?",
+        "answer": "Resources added under this topic will appear on this page. Browse all resources to explore the current directory."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "pharmacology": {
+    "heading": "Cardiovascular pharmacology learning resources",
+    "title": "Cardiovascular pharmacology resources | MedPally Find",
+    "description": "Find curated cardiovascular pharmacology education resources, tools and references in the MedPally Find directory.",
+    "intro": "This collection is intended for clinicians and trainees seeking cardiovascular pharmacology education and references. Resources carrying this topic tag will appear here as they are added to the directory. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find pharmacology resources?",
+        "answer": "Resources added under this topic will appear on this page. Browse all resources to explore the current directory."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "acs": {
+    "heading": "Acute coronary syndromes learning resources",
+    "title": "Acute coronary syndromes resources | MedPally Find",
+    "description": "Find curated acute coronary syndromes education resources, tools and references in the MedPally Find directory.",
+    "intro": "This page gathers resources tagged for acute coronary syndromes. Clinicians and trainees can use the entries as a starting point for finding education and reference material on the topic. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Which acute coronary syndrome resources are listed?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "valve": {
+    "heading": "Heart valve disease learning resources",
+    "title": "Heart valve disease resources | MedPally Find",
+    "description": "Find curated heart valve disease education resources, tools and references in the MedPally Find directory.",
+    "intro": "This collection brings together resources tagged for heart valve disease. It is intended for clinicians and trainees looking for education and reference material on this topic. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Which valve resources are listed?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "congenital": {
+    "heading": "Congenital heart disease learning resources",
+    "title": "Congenital heart disease resources | MedPally Find",
+    "description": "Find curated congenital heart disease education resources, tools and references in the MedPally Find directory.",
+    "intro": "This collection is intended for clinicians and trainees seeking education and references on congenital heart disease. Resources carrying this topic tag will appear here as they are added to the directory. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find congenital resources?",
+        "answer": "Resources added under this topic will appear on this page. Browse all resources to explore the current directory."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "pulmonary-hypertension": {
+    "heading": "Pulmonary hypertension learning resources",
+    "title": "Pulmonary hypertension resources | MedPally Find",
+    "description": "Find curated pulmonary hypertension education resources, tools and references in the MedPally Find directory.",
+    "intro": "This collection is intended for clinicians and trainees seeking education and references on pulmonary hypertension. Resources carrying this topic tag will appear here as they are added to the directory. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find pulmonary hypertension resources?",
+        "answer": "Resources added under this topic will appear on this page. Browse all resources to explore the current directory."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "critical-care": {
+    "heading": "Cardiac critical care learning resources",
+    "title": "Cardiac critical care resources | MedPally Find",
+    "description": "Find curated critical care education resources, tools and references in the MedPally Find directory.",
+    "intro": "This page gathers resources tagged for critical care in MedPally Find. It is intended for clinicians and trainees looking for education and references relevant to cardiac and critical care. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find critical care resources?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "ultrasound/pocus": {
+    "heading": "Ultrasound and POCUS learning resources",
+    "title": "Ultrasound and POCUS resources | MedPally Find",
+    "description": "Find curated ultrasound and POCUS education resources, tools and references in the MedPally Find directory.",
+    "intro": "This page gathers resources tagged for ultrasound and point-of-care ultrasound (POCUS). It is a starting point for clinicians and trainees looking for education and reference material in this area. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find ultrasound and POCUS learning resources?",
+        "answer": "The directory includes {{resources}} under this topic. Open the cards for descriptions and links."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  },
+  "ai": {
+    "heading": "AI in cardiology learning resources",
+    "title": "AI in cardiology resources | MedPally Find",
+    "description": "Find curated AI in cardiology education resources, tools and references in the MedPally Find directory.",
+    "intro": "This collection is intended for clinicians and trainees interested in AI in cardiology. Resources carrying this topic tag will appear here as they are added to the directory. Each card gives a short description, resource type and link so you can decide which listing is relevant to your learning. Open a listing for its available pricing and platform details before visiting the original site. The collection may include different kinds of material and will change as resources are added or reviewed. Listings are third-party resources, not clinical advice or endorsements; check local guidance when making clinical decisions.",
+    "faqs": [
+      {
+        "question": "Where can I find ai resources?",
+        "answer": "Resources added under this topic will appear on this page. Browse all resources to explore the current directory."
+      },
+      {
+        "question": "How do I check what a resource costs?",
+        "answer": "Open a listing to see the pricing information recorded in the directory, then check the original resource for current terms."
+      }
+    ],
+    "reviewed": false
+  }
+}

@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getPublishedPosts } from '../../lib/blog';
+import { date } from '../../lib/items';
+const posts = await getPublishedPosts();
+---
+<Base title="Articles | MedPally Find" description="Articles on learning resources for cardiology and cardiac critical care.">
+  <main id="main" class="shell legal blog-index">
+    <div class="section-kicker">ARTICLES</div><h1>Articles</h1>
+    <p class="legal-lead">Guides to resources for cardiology and cardiac critical care.</p>
+    {posts.length ? <ul class="post-list">{posts.map(post => <li><article><h2><a href={`/blog/${post.id}/`}>{post.data.title}</a></h2><p>{post.data.description}</p><p class="legal-date">{post.data.author} · <time datetime={post.data.published.toISOString()}>{date(post.data.published.toISOString())}</time></p></article></li>)}</ul> : <p>There are no published articles yet. Explore the <a href="/topics/">topics</a> in the meantime.</p>}
+  </main>
+</Base>
+<style>.blog-index{min-height:55vh}.post-list{list-style:none;padding:0}.post-list li{border-top:1px solid var(--line);padding:18px 0}.post-list h2{margin:0 0 8px}.post-list p{margin:8px 0}</style>

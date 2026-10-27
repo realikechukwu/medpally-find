@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import JsonLd from '../components/JsonLd.astro';
+---
+<Base title="About MedPally Find" description="How MedPally Find selects and maintains its cardiology and cardiac critical care resource listings.">
+<JsonLd data={{ '@context': 'https://schema.org', '@type': 'AboutPage', name: 'About MedPally Find', url: 'https://find.medpally.com/about/', about: { '@type': 'Organization', '@id': 'https://find.medpally.com/#organization', name: 'Marlo Solutions Ltd' } }}/>
+<main id="main" class="shell legal"><p class="legal-date">Last reviewed: TODO(curator): add the date after reviewing this page.</p><h1>About MedPally Find</h1>
+<p class="legal-lead">MedPally Find is a free, clinician-curated directory of cardiology and cardiac critical care tools, apps, courses and guidelines.</p>
+<h2>Who curates the directory</h2><p>TODO(curator): add your name, role, clinical background and one line on why you started it.</p>
+<h2>What gets listed</h2><p>We look for resources relevant to cardiology or cardiac critical care, including tools, apps, courses and guidelines. Each listing describes what the resource is and covers, using information that can be checked. Suggestions outside these areas, duplicates and resources without enough information for a truthful description are not added without further review.</p>
+<h2>How listings are maintained</h2><p>Suggestions are reviewed before they are added. The review checks the resource page and available information about its maker, pricing and platforms. Existing entries can be corrected or hidden when needed. To request a correction or removal, <a href="mailto:hello@marlosolutions.com?subject=MedPally%20Find%3A%20listing%20correction">email us</a>.</p>
+<h2>Independence</h2><p>TODO(curator): confirm whether anyone pays for listings and state any conflicts of interest.</p>
+<h2>Who runs it</h2><p>MedPally Find is run by Marlo Solutions Ltd. Contact us at <a href="mailto:hello@marlosolutions.com">hello@marlosolutions.com</a>.</p>
+<h2>Disclaimer</h2><p>Listings link to third-party resources. They are not clinical advice or endorsements; always check against local guidance.</p>
+</main></Base>
