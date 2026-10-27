@@ -153,5 +153,3 @@ a.tag-chip{display:inline-flex;align-items:center}
 .pagination .page-gap{min-width:24px;padding:0}
 @media(max-width:600px){.browse-intro{padding-top:40px;padding-bottom:28px}.browse+.all-section{padding-top:28px}.pagination{gap:2px;margin-top:40px}.pagination .page-step{font-size:0;padding:0}.pagination a.page-step:before{font-size:18px;content:attr(data-arrow)}.pagination span.page-step:before{font-size:18px;content:attr(data-arrow)}}
 a.category>span{font-size:inherit;line-height:inherit;font-weight:inherit}
-.browse+.all-section .all-heading{margin-bottom:20px}
-@media(max-width:600px){.browse+.all-section .all-heading>p{max-width:none;text-align:left;font-size:12px}}
