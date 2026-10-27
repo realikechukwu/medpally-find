@@ -25,6 +25,10 @@ npm run validate   # check the data against the schema
 npm run build      # validate and build to dist/
 ```
 
+## Licence
+
+Code is released under the [MIT Licence](LICENSE). Linked resources belong to their creators.
+
 ## Security
 
 Please report security issues privately to [hello@marlosolutions.com](mailto:hello@marlosolutions.com?subject=MedPally%20Find%3A%20security) rather than opening a public issue.
