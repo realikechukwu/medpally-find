@@ -4,6 +4,7 @@ const cards = [...document.querySelectorAll<HTMLElement>('#cards .card')];
 const categories = [...document.querySelectorAll<HTMLButtonElement>('[data-category]')];
 const categoryBar = document.querySelector<HTMLElement>('.category-bar')!;
 const chips = [...document.querySelectorAll<HTMLButtonElement>('[data-tag]')];
+const grid = document.querySelector<HTMLElement>('#cards')!;
 const empty = document.querySelector<HTMLElement>('#empty')!;
 const count = document.querySelector<HTMLElement>('#result-count')!;
 const pagination = document.querySelector<HTMLElement>('#pagination')!;
@@ -41,6 +42,8 @@ function render() {
  page = Math.min(page, pages);
  const onPage = new Set(found.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE));
  for (const card of cards) card.hidden = !onPage.has(card);
+ // Full cards for browsing; compact rows once a search or filter narrows the list, so matches are quicker to scan.
+ grid.classList.toggle('rows', Boolean(query || category || selected.size));
  renderPagination(pages);
  categories.forEach(button => { const active = button.dataset.category === category; button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
  chips.forEach(button => { const active = selected.has(button.dataset.tag!); button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
@@ -56,7 +59,7 @@ function revealCategory(smooth: boolean) {
  categoryBar.scrollTo({ left: categoryBar.scrollLeft + box.left - bar.left - (bar.width - box.width) / 2, behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto' });
 }
 input.addEventListener('input', update);
-document.querySelector('form[role="search"]')!.addEventListener('submit', event => { event.preventDefault(); update(); input.blur(); document.querySelector('.all-section')!.scrollIntoView({ behavior: 'smooth' }); });
+input.form!.addEventListener('submit', event => { event.preventDefault(); update(); input.blur(); document.querySelector('.all-section')!.scrollIntoView({ behavior: 'smooth' }); });
 categories.forEach(button => button.addEventListener('click', () => { category = button.dataset.category!; update(); revealCategory(true); }));
 chips.forEach(button => button.addEventListener('click', () => { const tag = button.dataset.tag!; selected.has(tag) ? selected.delete(tag) : selected.add(tag); update(); }));
 pagination.addEventListener('click', event => {
