@@ -1,5 +1,33 @@
 [
   {
+    "id": "pacing-simulator",
+    "title": "Pacing Simulator",
+    "url": "https://pacingsimulator.com",
+    "source_url": "https://x.com/jo3_assad/status/2112297589471351025",
+    "summary": "Free simulator for learning left bundle branch area pacing (LBBAP), built by a cardiologist with Claude. Details beyond the author's post could not be checked.",
+    "type": "app",
+    "tags": [
+      "ep"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Joe Assad",
+    "maker_url": "https://x.com/jo3_assad",
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-27T19:17:24Z",
+    "updated_at": "2026-10-27T19:17:24Z",
+    "issue": 17,
+    "owner_contact": null
+  },
+  {
     "id": "pulmonary-pocus",
     "title": "Pulmonary POCUS",
     "url": "https://pulmonarypocus.com",
