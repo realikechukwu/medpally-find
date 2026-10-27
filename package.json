@@ -6,10 +6,11 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run validate && astro build",
+    "build": "npm run validate && astro build && node scripts/check-dist.mjs",
     "preview": "astro preview",
     "validate": "node --import tsx scripts/validate.ts",
-    "benchmark": "node --import tsx scripts/benchmark.ts"
+    "benchmark": "node --import tsx scripts/benchmark.ts",
+    "check:dist": "node scripts/check-dist.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
