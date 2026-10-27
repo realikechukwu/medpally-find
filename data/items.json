@@ -1,5 +1,33 @@
 [
   {
+    "id": "cardiolads",
+    "title": "CardioLADs",
+    "url": "https://cardiolads.com/",
+    "source_url": null,
+    "summary": "Resident-run cardiology site: recent trials, one-minute trial summaries, a guideline library, daily questions, puzzles and free teaching apps.",
+    "type": "website",
+    "tags": [
+      "acs",
+      "heart-failure"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "CardioLADs",
+    "maker_url": null,
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-27T17:30:00Z",
+    "updated_at": "2026-10-27T17:30:00Z",
+    "issue": 18,
+    "owner_contact": null
+  },
+  {
     "id": "coronary-culprit",
     "title": "Coronary Culprit",
     "url": "https://cliffreid.com/culprit",
