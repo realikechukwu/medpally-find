@@ -4,7 +4,7 @@ export const types = ['tool','calculator','app','course','video','podcast','guid
 const webUrl = z.string().url().refine(value => ['http:', 'https:'].includes(new URL(value).protocol), 'Must be an HTTP(S) URL');
 const timestamp = z.string().datetime({ offset: false });
 export const itemSchema = z.object({
-  id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/), title: z.string().min(1), url: webUrl,
+  id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/), title: z.string().min(1), short_title: z.string().min(1).max(32).optional(), url: webUrl,
   source_url: webUrl.nullable(), summary: z.string().min(1).max(200), type: z.enum(types),
   tags: z.array(z.string()).min(1), specialty: z.array(z.string().min(1)).min(1), maker: z.string().min(1).nullable(),
   maker_url: webUrl.nullable(), clinician_built: z.boolean(), pricing: z.enum(['free','freemium','paid','unknown']),

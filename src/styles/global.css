@@ -5,13 +5,9 @@
 @media(prefers-color-scheme:dark){:root{--paper:#121315;--ink:#f1f2f4;--muted:#a4a8af;--line:#33363b;--accent:#e1877c;--surface:#1d1f22;--chip:#2a2d31;color:var(--ink);background:var(--paper)}.search-box{border-color:#33363b;box-shadow:0 12px 40px #0003}.search-box button,.primary-button{background:#b8524b}.brand-dot{fill:#b8524b}.type-label{color:#f0aaa0;background:#4a302d}.tag-chip{border-color:#43474d;color:#c3c7cd}.card-date{color:#a4a8af}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 
-/* Plain logo tiles, text-only tabs, quiet back link */
+/* Plain card frames, text-only tabs, quiet back link */
 .card-art{background:var(--surface);border:1px solid var(--line)}
 .card:hover .card-art{box-shadow:0 12px 28px #161b2214}
-.logo{position:absolute;inset:0;display:grid;place-items:center}
-.logo img,.monogram{grid-area:1/1;width:64px;height:64px;border-radius:16px}
-.logo img{object-fit:contain;background:var(--surface)}
-.monogram{display:grid;place-items:center;background:var(--chip);color:var(--muted);font-size:28px;font-weight:600}
 .cover{filter:none}
 
 
@@ -22,7 +18,6 @@
 .primary-button{gap:10px;padding:14px 22px}
 .primary-button svg{width:18px}
 @media(max-width:600px){.category{height:52px}.category-bar{gap:22px}}
-@media(prefers-color-scheme:dark){.logo img{background:#fff;padding:6px}}
 
 /* Footer */
 .site-footer{--ink:#f1f2f4;--muted:#a4a8af;--line:#36393e;--footer-bg:#1b1c1f;background:var(--footer-bg);box-shadow:0 100vh 0 100vh var(--footer-bg);border-top:0;padding:64px 0 max(32px,env(safe-area-inset-bottom));font-size:13px;color:var(--muted)}
@@ -195,3 +190,30 @@ a.category>span{font-size:inherit;line-height:inherit;font-weight:inherit}
 
 .card-labels{display:flex;gap:6px;flex-wrap:wrap;min-width:0}
 .maker-label{color:var(--muted);background:var(--chip);border-radius:99px;padding:5px 9px;font-size:10px;font-weight:650}
+
+/* Topic art: a listing without an image gets a dark panel in its main topic's colour (src/lib/art.ts) */
+.card-art{container-type:inline-size}
+.card-art.topic-art{--pad:clamp(14px,6cqi,20px);background:var(--topic);border-color:transparent;display:flex;flex-direction:column;justify-content:space-between;padding:var(--pad);color:#fff}
+.art-motif{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:#fff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.13}
+.art-topic,.art-foot{position:relative}
+.art-topic{padding-right:44px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffffffb8}
+.art-name{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:clamp(18px,7.6cqi,27px);line-height:1.08;letter-spacing:-.04em;font-weight:700;text-wrap:balance}
+.art-domain{display:block;margin-top:8px;font-size:11px;font-weight:600;color:#ffffffb8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.art-chip{position:absolute;right:var(--pad);bottom:var(--pad);width:40px;height:40px;border-radius:10px;background:#fff;display:grid;place-items:center}
+.art-chip img{width:28px;height:28px;object-fit:contain}
+.topic-art:has(.art-chip) .art-foot{padding-right:52px}
+
+/* Browse results: compact rows with a small tile, two columns on wide screens */
+.cards-grid.rows{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.cards-grid.rows .card:not([hidden])~.card:not([hidden]):before{content:none}
+.card-row{display:flex;gap:16px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--line)}
+.card-row .card-art{flex:none;width:72px;height:72px;aspect-ratio:auto;border-radius:16px;padding:0;justify-content:center;align-items:center}
+.card-row .art-letter{font-size:28px;font-weight:700}
+.card-row .art-chip{top:16px;left:16px}
+.card-row .card-copy{flex:1;min-width:0;padding-top:0}
+.card-row .card-topline{padding-right:40px;min-height:24px}
+.card-row h3{font-size:16px;margin:8px 0 4px}
+.card-row .card-tags{margin-top:10px}
+.card-row .save-toggle{top:14px;right:-8px;border:0;background:transparent}
+.card-row:hover .card-art,.card-row:hover .save-toggle{transform:none;box-shadow:none}
+@media(max-width:600px){.cards-grid.rows{grid-template-columns:1fr}}
