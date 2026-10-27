@@ -2,15 +2,15 @@
 import type { Item } from '../lib/schema';
 import { date, label } from '../lib/items';
 import { topicArt } from '../lib/art';
-interface Props { item: Item; compact?: boolean; row?: boolean }
-const { item, compact = false, row = false } = Astro.props;
+interface Props { item: Item; compact?: boolean }
+const { item, compact = false } = Astro.props;
 const host = new URL(item.url).hostname;
 const icon = `https://www.google.com/s2/favicons?domain=${host}&sz=128`;
 const art = topicArt(item);
 ---
-<article class:list={['card', compact && 'card-compact', row && 'card-row']} data-id={item.id} data-type={item.type} data-clinician={String(item.clinician_built)} data-tags={item.tags.join('|')}>
+<article class:list={['card', compact && 'card-compact']} data-id={item.id} data-type={item.type} data-clinician={String(item.clinician_built)} data-tags={item.tags.join('|')}>
   {item.image ? <div class="card-art"><img class="cover" src={item.image} alt="" loading="lazy"/></div> : <div class="card-art topic-art" style={`--topic:${art.colour}`} aria-hidden="true">
-    {row ? <span class="art-letter">{art.name.charAt(0)}</span> : <><svg class="art-motif" viewBox="0 0 350 219" preserveAspectRatio="xMidYMid slice"><path d={art.motif}/></svg><span class="art-topic">{label(art.topic)}</span><span class="art-foot"><span class="art-name">{art.name}</span><span class="art-domain">{host.replace(/^www\./, '')}</span></span></>}
+    <svg class="art-motif" viewBox="0 0 350 219" preserveAspectRatio="xMidYMid slice"><path d={art.motif}/></svg><span class="art-topic">{label(art.topic)}</span><span class="art-foot"><span class="art-name">{art.name}</span><span class="art-domain">{host.replace(/^www\./, '')}</span></span><span class="art-letter">{art.name.charAt(0)}</span>
     <span class="art-chip"><img src={icon} alt="" loading="lazy" onerror="this.parentNode.remove()" onload="if(this.naturalWidth<24)this.parentNode.remove()"/></span>
   </div>}
   <button class="save-toggle" type="button" data-save={item.id} aria-pressed="false" aria-label={`Save ${item.title}`} hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5h10a1 1 0 0 1 1 1v14l-6-4-6 4v-14a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
