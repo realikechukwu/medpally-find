@@ -1,5 +1,33 @@
 [
   {
+    "id": "intro2echo",
+    "title": "The Heart by Ultrasound (Intro2Echo)",
+    "url": "https://intro2echo.com/",
+    "source_url": null,
+    "summary": "Interactive illustrated echo guide: physics, standard TTE/TOE views, function, valves, LVADs, TAVI and AI measurement tools. Maker and pricing could not be checked.",
+    "type": "website",
+    "tags": [
+      "echo",
+      "imaging"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": null,
+    "maker_url": null,
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-27T12:30:00Z",
+    "updated_at": "2026-10-27T12:30:00Z",
+    "issue": 6,
+    "owner_contact": null
+  },
+  {
     "id": "angioview",
     "title": "AngioView",
     "url": "https://angioview.com/",
