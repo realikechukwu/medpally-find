@@ -120,7 +120,6 @@
 .site-menu:popover-open{display:grid;gap:2px}
 .site-menu a{display:flex;align-items:center;gap:12px;min-height:48px;padding:0 12px;border-radius:12px;font-size:15px}
 .site-menu a:hover,.site-menu a[aria-current]{background:var(--chip)}
-.site-menu svg{width:20px;height:20px;flex:none;color:var(--muted)}
 .site-menu .saved-count{margin-left:auto}
 @media(max-width:600px){.header-nav{display:none}.menu-button{display:grid}}
 @media(prefers-color-scheme:dark){.site-menu{box-shadow:0 16px 40px #0006}}
@@ -159,7 +158,8 @@ a.category>span{font-size:inherit;line-height:inherit;font-weight:inherit}
 /* Home: photo hero. The header sits on the photo; a dark wash, heaviest behind the text, keeps white type readable */
 .site-header.on-photo{position:absolute;inset:0 0 auto;z-index:10;border-bottom-color:#ffffff1f;color:#fff}
 .on-photo .header-nav a{color:#ffffffd9}
-.on-photo .header-nav a:hover,.on-photo .header-nav a[aria-current]{color:#fff;background:#ffffff1f}
+.on-photo .header-nav a:hover{color:#fff;background:#ffffff1f}
+.on-photo .header-nav a[aria-current]{color:#fff}
 .on-photo .brand-mark{background:#fff;color:#1c1e21}
 .on-photo .brand-dot{fill:#b8524b}
 .on-photo .wordmark-dot{color:#f3a79e}
@@ -176,6 +176,9 @@ a.category>span{font-size:inherit;line-height:inherit;font-weight:inherit}
 .hero-inner>p{font-size:16px;line-height:1.65;color:#ffffffd9;margin:0}
 .hero-photo .search-box{border-color:transparent;box-shadow:0 18px 50px #00000059}
 .hero-photo .hero-footnote{margin-bottom:0;color:#ffffffa6}
+.hero-credit{position:absolute;z-index:2;right:max(16px,env(safe-area-inset-right));bottom:12px;margin:0;font-size:11px;color:#ffffff8c}
+.hero-credit a{text-decoration:underline;text-underline-offset:2px}
+.hero-credit a:hover{color:#fff}
 @media(max-width:600px){.hero-photo{min-height:0}.hero-inner{padding:118px 0 52px}.hero-inner>p{font-size:14px}}
 
 /* Heartbeat headline: the trace is drawn behind the letters by scripts/heartbeat.ts */
