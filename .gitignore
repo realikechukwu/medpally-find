@@ -5,4 +5,8 @@ dist/
 .dev.vars
 .intake-result.json
 .intake-event.json
-.claude/settings.local.json
+
+# Local tooling and private notes
+.DS_Store
+.claude/
+docs/

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Suggest a resource
+    url: https://find.medpally.com/suggest/
+    about: Send us a cardiology or cardiac critical care tool, app or learning resource.
+  - name: Correct or remove a listing
+    url: mailto:hello@marlosolutions.com?subject=MedPally%20Find%3A%20listing%20correction
+    about: Tell us about a broken link, wrong details, or a listing you own.
