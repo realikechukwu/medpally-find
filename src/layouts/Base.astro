@@ -21,11 +21,26 @@ for (const el of document.querySelectorAll<HTMLTimeElement>('time[data-relative]
  el.textContent = d === 0 ? 'today' : d === 1 ? 'yesterday' : d < 7 ? ago(d, 'day') : d < 30 ? ago(Math.floor(d / 7), 'week') : d < 365 ? ago(Math.floor(d / 30), 'month') : el.textContent;
 }
 // Menu drawer: a modal dialog, so the page behind is inert and Escape closes it. Tapping the dimmed page also closes it.
+// Closing slides the drawer out first and only then closes the dialog: Safari and Firefox can't animate a dialog leaving the top layer, so a plain close() snaps it away.
 const menu = document.querySelector<HTMLDialogElement>('#site-menu')!;
 const opener = document.querySelector<HTMLButtonElement>('[data-menu-open]')!;
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const closeMenu = () => {
+ if (!menu.open || menu.hasAttribute('data-closing')) return;
+ if (reduceMotion.matches) return menu.close();
+ const finish = (event?: TransitionEvent) => {
+  if (event && (event.target !== menu || event.propertyName !== 'transform')) return;
+  clearTimeout(fallback); menu.removeEventListener('transitionend', finish);
+  if (menu.hasAttribute('data-closing')) { menu.close(); menu.removeAttribute('data-closing'); }
+ };
+ const fallback = setTimeout(finish, 400);
+ menu.addEventListener('transitionend', finish);
+ menu.setAttribute('data-closing', '');
+};
 opener.addEventListener('click', () => { menu.showModal(); opener.setAttribute('aria-expanded', 'true'); });
-menu.addEventListener('close', () => opener.setAttribute('aria-expanded', 'false'));
-menu.querySelector('[data-menu-close]')!.addEventListener('click', () => menu.close());
-menu.addEventListener('click', event => { const box = menu.getBoundingClientRect(); if (event.target === menu && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) menu.close(); });
+menu.addEventListener('close', () => { opener.setAttribute('aria-expanded', 'false'); menu.removeAttribute('data-closing'); });
+menu.addEventListener('cancel', event => { event.preventDefault(); closeMenu(); });
+menu.querySelector('[data-menu-close]')!.addEventListener('click', closeMenu);
+menu.addEventListener('click', event => { const box = menu.getBoundingClientRect(); if (event.target === menu && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) closeMenu(); });
 matchMedia('(min-width: 601px)').addEventListener('change', event => { if (event.matches) menu.close(); });
 </script><script src="../scripts/saved.ts"></script></body></html>

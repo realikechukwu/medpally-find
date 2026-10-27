@@ -59,7 +59,7 @@ function revealCategory(smooth: boolean) {
  categoryBar.scrollTo({ left: categoryBar.scrollLeft + box.left - bar.left - (bar.width - box.width) / 2, behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto' });
 }
 input.addEventListener('input', update);
-input.form!.addEventListener('submit', event => { event.preventDefault(); update(); input.blur(); document.querySelector('.all-section')!.scrollIntoView({ behavior: 'smooth' }); });
+input.form!.addEventListener('submit', event => { event.preventDefault(); update(); input.blur(); document.querySelector('.all-section')!.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); });
 categories.forEach(button => button.addEventListener('click', () => { category = button.dataset.category!; update(); revealCategory(true); }));
 chips.forEach(button => button.addEventListener('click', () => { const tag = button.dataset.tag!; selected.has(tag) ? selected.delete(tag) : selected.add(tag); update(); }));
 pagination.addEventListener('click', event => {
