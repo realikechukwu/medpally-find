@@ -1,5 +1,37 @@
 [
   {
+    "id": "pulmonary-pocus",
+    "title": "Pulmonary POCUS",
+    "url": "https://pulmonarypocus.com",
+    "source_url": "https://x.com/hoosierpocus/status/2113332251606085812",
+    "summary": "POCUS and echo education site with free simulators: TTE/TEE views, colour and spectral Doppler, and hemodynamics. Also a basic POCUS path; the full study guide is for members.",
+    "type": "website",
+    "tags": [
+      "ultrasound/pocus",
+      "echo",
+      "haemodynamics",
+      "critical-care"
+    ],
+    "specialty": [
+      "cardiology",
+      "critical-care"
+    ],
+    "maker": "Pulmonary POCUS",
+    "maker_url": "https://x.com/HoosierPocus",
+    "clinician_built": false,
+    "pricing": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-27T19:15:53Z",
+    "updated_at": "2026-10-27T19:15:53Z",
+    "issue": 15,
+    "owner_contact": null
+  },
+  {
     "id": "learn-pvcs",
     "title": "Learn PVCs",
     "url": "https://www.learnpvcs.com",
