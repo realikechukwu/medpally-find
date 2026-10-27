@@ -219,6 +219,7 @@
   {
     "id": "learncoronary",
     "title": "Learn Coronary: Virtual Coronary Angiography",
+    "short_title": "Learn Coronary",
     "url": "https://learncoronary.com/",
     "source_url": "https://x.com/stefankmil/status/2110404999297839348",
     "summary": "Interactive coronary angiography guide: 3D anatomy viewer, adjustable RAO/LAO and cranial/caudal projections, a name-the-vessel quiz and cath lab equipment. Pricing not checked.",
@@ -306,6 +307,7 @@
   {
     "id": "hku-advanced-cardiac-imaging-cardiac-ct",
     "title": "Advanced Cardiac Imaging: Cardiac Computed Tomography",
+    "short_title": "Cardiac Computed Tomography",
     "url": "https://tl.hku.hk/2020/05/advanced-cardiac-imaging-cardiac-computed-tomography/",
     "source_url": null,
     "summary": "HKU cardiac CT course with 50 hands-on cases: calcium score, CT coronary angiography, TAVI planning, CT-FFR, physics and reporting. No prior experience needed. Pricing not checked.",
@@ -334,6 +336,7 @@
   {
     "id": "hkux-advanced-cardiac-imaging-cmr",
     "title": "Advanced Cardiac Imaging: Cardiac Magnetic Resonance (CMR)",
+    "short_title": "Cardiac Magnetic Resonance",
     "url": "https://www.edx.org/learn/medicine/university-of-hong-kong-advanced-cardiac-imaging-cardiac-magnetic-resonance-cmr",
     "source_url": null,
     "summary": "edX course from HKUx (University of Hong Kong) on cardiac magnetic resonance imaging. Syllabus, format and pricing could not be checked.",
