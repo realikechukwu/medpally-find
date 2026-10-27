@@ -4,7 +4,7 @@
     "title": "LITFL ECG Library",
     "url": "https://litfl.com/ecg-library/",
     "source_url": null,
-    "summary": "A practical library of ECG patterns, interpretation guides and clinical examples.",
+    "summary": "An ECG library of patterns, interpretation guides and clinical examples.",
     "type": "website",
     "tags": [
       "ecg",
@@ -185,7 +185,7 @@
     ],
     "maker": "EMCrit Project",
     "maker_url": "https://emcrit.org/",
-    "pricing": "unknown",
+    "pricing": "free",
     "platforms": [
       "web"
     ],

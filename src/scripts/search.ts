@@ -26,7 +26,7 @@ function render() {
  categories.forEach(button => { const active = button.dataset.category === category; button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
  chips.forEach(button => { const active = selected.has(button.dataset.tag!); button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
  empty.hidden = visible > 0; if (recent) recent.hidden = Boolean(query || category || selected.size);
- count.textContent = `${visible} ${visible === 1 ? 'resource' : 'resources'}${query || category || selected.size ? ' found' : ', thoughtfully collected'}`;
+ count.textContent = `${visible} ${visible === 1 ? 'resource' : 'resources'}${query || category || selected.size ? ' found' : ''}`;
 }
 function update() { sync(); render(); }
 input.addEventListener('input', update);
