@@ -1,5 +1,35 @@
 [
   {
+    "id": "hkux-advanced-cardiac-imaging-echo",
+    "title": "Advanced Cardiac Imaging: Echocardiography (Echo)",
+    "short_title": "Echocardiography (Echo)",
+    "url": "https://www.edx.org/learn/medicine/the-university-of-hong-kong-advanced-cardiac-imaging-echocardiography-echo",
+    "source_url": null,
+    "summary": "edX course from HKUx (University of Hong Kong) on echocardiography. Syllabus, format and pricing could not be checked.",
+    "type": "course",
+    "tags": [
+      "echo",
+      "imaging"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "HKUx (University of Hong Kong)",
+    "maker_url": null,
+    "clinician_built": false,
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-27T19:02:05Z",
+    "updated_at": "2026-10-27T19:02:05Z",
+    "issue": 3,
+    "owner_contact": null
+  },
+  {
     "id": "perpetua-pulse",
     "title": "Perpetua Pulse",
     "url": "https://pulsepoint.perpetuaheart.com",
