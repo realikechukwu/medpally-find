@@ -1,5 +1,35 @@
 [
   {
+    "id": "night-float-cardiology",
+    "title": "Night Float Cardiology",
+    "url": "https://cardsnightfloat.netlify.app",
+    "source_url": "https://x.com/AbedfromBeirut/status/2113307326577004749",
+    "summary": "Browser simulation of a cardiology night on call for fellows: multi-patient cases (STEMI, shock, VT storm, crashing Impella) with an attending to call. Pricing not checked.",
+    "type": "clinician-built",
+    "tags": [
+      "critical-care",
+      "mcs",
+      "acs"
+    ],
+    "specialty": [
+      "cardiology",
+      "critical-care"
+    ],
+    "maker": "Abdul-Rahman Akkawi, MD",
+    "maker_url": "https://x.com/AbedfromBeirut",
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": "Clinician built",
+    "status": "active",
+    "added_at": "2026-10-27T16:40:00Z",
+    "updated_at": "2026-10-27T16:40:00Z",
+    "issue": 10,
+    "owner_contact": null
+  },
+  {
     "id": "how-to-perform-a-transthoracic-echocardiogram-tte",
     "title": "How to Perform a Transthoracic Echocardiogram (TTE): Step-by-Step Guide",
     "url": "https://www.youtube.com/watch?v=UPwwvKI4iUA",
