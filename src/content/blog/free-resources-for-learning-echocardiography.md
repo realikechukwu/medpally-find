@@ -27,9 +27,11 @@ A course helps when reading on your own starts to feel random. Physics, haemodyn
 
 ## Use the guidelines as your reference
 
-The [ASE guidelines](/item/ase-guidelines/) are free and set out how to measure chambers, assess function and grade valve disease. UK practice leans on ASE and EACVI recommendations alongside British Society of Echocardiography guidance, so these documents sit behind a lot of the numbers in an echo report.
+In the UK, the British Society of Echocardiography (BSE) sets the standard. Its guidance, including the minimum dataset for a transthoracic study, is free on the BSE website, and it's what your department's reports are built on. Learn that first.
 
-Don't read them cover to cover. Start with a question from a scan, such as how to grade the aortic stenosis you just saw, then find that section and read it. Over time you'll learn where everything is. If you're training in the UK, get to know the BSE's own guidance too.
+The [ASE guidelines](/item/ase-guidelines/) are the American equivalent. They're free and set out how to measure chambers, assess function and grade valve disease. The ASE writes its main chamber and valve recommendations jointly with the European society (EACVI), and BSE guidance draws on them, so the numbers are broadly the same on both sides of the Atlantic.
+
+Don't read any of them cover to cover. Start with a question from a scan, such as how to grade the aortic stenosis you just saw, then find that section and read it. Over time you'll learn where everything is.
 
 ## Look beyond echo when you need to
 
@@ -39,10 +41,18 @@ Don't read them cover to cover. Start with a question from a scan, such as how t
 
 - **Before a list:** go over the views you'll need in Intro2Echo.
 - **During the list:** scan, ask questions and get feedback. This is where most of the learning happens.
-- **After the list:** look up anything you measured or graded in the ASE guidelines.
+- **After the list:** look up anything you measured or graded in the BSE or ASE guidance.
 - **Through the year:** work through a course for the theory you keep tripping over.
 
 Keep a logbook from the start, even before you're formally collecting cases. It's much easier than reconstructing one later.
+
+## How accreditation works
+
+In the UK it goes through the BSE. Level 1 covers focused scanning to rule out life-threatening problems, and FUSIC Heart from the Intensive Care Society is a similar route for intensive care. Level 2 transthoracic accreditation is the full credential, with exams and a logbook, and it's the one most cardiology trainees and physiologists work towards. The BSE also accredits transoesophageal, stress, critical care and congenital echo.
+
+Elsewhere in Europe, the equivalent is EACVI certification: an exam first, then a logbook. In the US the system is different. Sonographers usually do the scanning and hold their own credentials (RDCS or RCS), and cardiologists who report echo sit the National Board of Echocardiography exam.
+
+Not all of the resources above are UK-based. American teaching is still useful here; just check the numbers against BSE guidance before you put them in a report.
 
 ## Questions people ask
 
@@ -52,7 +62,7 @@ You can learn the theory and the views online, but the hand skills only come fro
 
 ### Which of these are free?
 
-The ASE guidelines are free. 123sonography and Radiopaedia have free content alongside paid features. I haven't confirmed pricing for Intro2Echo yet, so check the site.
+BSE guidance and the ASE guidelines are free. 123sonography and Radiopaedia have free content alongside paid features. I haven't confirmed pricing for Intro2Echo yet, so check the site.
 
 ### Where can I find more?
 

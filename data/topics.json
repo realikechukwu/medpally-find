@@ -2,8 +2,8 @@
   "echo": {
     "heading": "Learn echocardiography",
     "title": "Echo learning resources and courses | MedPally Find",
-    "description": "Free and paid resources for learning echo: illustrated guides, online courses and the ASE guidelines. Picked by a cardiology registrar.",
-    "intro": "Echo is learned with a probe in your hand, but the reading around it matters. You need the standard views in your head before you scan, a way to check your measurements afterwards, and a reference for when the report doesn't match the patient.\n\nThe resources here include illustrated guides for views and anatomy, structured courses for physics and pathology, and society guidelines for chamber measurements and valve grading. They suit doctors starting echo in cardiology training, physiologists working towards accreditation, and anyone in acute medicine or intensive care who scans.",
+    "description": "Resources for learning echo, from illustrated guides to courses, and how accreditation works in the UK (BSE), Europe and the US.",
+    "intro": "Echo is learned with a probe in your hand, but the reading around it matters. You need the standard views in your head before you scan, a way to check your measurements afterwards, and a reference for when the report doesn't match the patient.\n\nThe resources here include illustrated guides for views and anatomy, structured courses for physics and pathology, and society guidelines for chamber measurements and valve grading. They suit doctors starting echo in cardiology training, physiologists working towards accreditation, and anyone in acute medicine or intensive care who scans.\n\nIn the UK, the British Society of Echocardiography (BSE) sets the standard. Most echo is done by cardiac physiologists, and doctors and physiologists work towards the same BSE accreditation: Level 1 for focused scanning and Level 2 for full transthoracic studies. Elsewhere in Europe the equivalent is EACVI certification. In the US, sonographers usually scan and cardiologists report, and each has their own credential.",
     "faqs": [
       {
         "question": "Where should I start if I've never done echo?",
@@ -11,11 +11,11 @@
       },
       {
         "question": "Which guidelines do echo reports follow?",
-        "answer": "Most departments base measurements and valve grading on American Society of Echocardiography (ASE) and EACVI recommendations, and in the UK on British Society of Echocardiography (BSE) guidance. Check which your department uses."
+        "answer": "In the UK, departments follow BSE guidance, including the BSE minimum dataset for a transthoracic study, alongside EACVI recommendations. Elsewhere in Europe, EACVI recommendations are the usual reference, and in the US it's the ASE guidelines. ASE and EACVI write the main chamber and valve recommendations together, so the numbers are broadly the same. BSE guidance and the ASE guidelines are both free to read. Check which your department uses."
       },
       {
-        "question": "Is there free echo teaching online?",
-        "answer": "Yes. The ASE guidelines are free to read, and several of the courses and guides listed here have free sections. Each listing shows pricing where it's known."
+        "question": "How does echo accreditation work in the UK, Europe and the US?",
+        "answer": "In the UK, through the BSE. Level 1 covers focused scanning to rule out life-threatening problems, and Level 1 scanning has to be backed by a Level 2 service. Level 2 transthoracic accreditation is the full credential, with exams and a logbook. The BSE also accredits transoesophageal, stress, critical care and congenital echo. In Europe, EACVI certification is an exam followed by a logbook. In the US, doctors sit the National Board of Echocardiography exam (the ASCeXAM), and sonographers hold RDCS or RCS credentials."
       }
     ],
     "reviewed": false
@@ -24,7 +24,7 @@
     "heading": "Learn ECG interpretation",
     "title": "ECG interpretation resources | MedPally Find",
     "description": "Resources for getting better at reading ECGs, from free pattern libraries to case-based courses. Picked by a cardiology registrar.",
-    "intro": "Most people get better at ECGs the same way: learn a system, then read a lot of tracings and check your answer each time. The hard part is finding enough good examples with honest explanations.\n\nThis page collects ECG libraries, case-based courses and references. They're useful for medical students and foundation doctors learning the basics, for medical and emergency registrars who review ECGs on call, and for cardiology trainees revising for exams.",
+    "intro": "Most people get better at ECGs the same way: learn a system, then read a lot of tracings and check your answer each time. The hard part is finding enough good examples with honest explanations.\n\nThis page collects ECG libraries, case-based courses and references. They're useful for medical students and foundation doctors learning the basics, for medical and emergency registrars who review ECGs on call, and for cardiology trainees revising for exams.\n\nIn the UK you'll be reading ECGs from your first foundation job, on the take and in the emergency department, often without a cardiologist nearby. ECG criteria are largely shared internationally, so American and European teaching works just as well here.",
     "faqs": [
       {
         "question": "What's the best way to learn ECGs?",
@@ -33,6 +33,10 @@
       {
         "question": "Are there free ECG resources?",
         "answer": "Yes. The LITFL ECG Library is free and covers most patterns you'll see on the wards. Some case-based courses charge a subscription, so check each listing."
+      },
+      {
+        "question": "Do exams test ECG interpretation?",
+        "answer": "Yes. In the UK, MRCP includes ECGs, and cardiology trainees sit the European Exam in General Cardiology (EEGC) as their knowledge-based assessment. Trainees across Europe sit the same exam. In the US, the ABIM cardiovascular disease board exam has its own ECG section."
       }
     ],
     "reviewed": false
@@ -41,11 +45,11 @@
     "heading": "Heart failure resources",
     "title": "Heart failure guidelines and tools | MedPally Find",
     "description": "Guidelines, risk scores and learning resources for managing heart failure. Picked by a cardiology registrar.",
-    "intro": "Heart failure guidelines have changed often in recent years. For reduced ejection fraction, treatment is now built on several drug classes started and titrated together. You need the current recommendations close at hand and a reliable place to find risk scores.\n\nThis page lists the guideline sources and decision tools that come up in heart failure clinics, on the wards and on the medical take. They're useful for medical registrars, heart failure nurses and anyone looking after patients with reduced or preserved ejection fraction.",
+    "intro": "Heart failure guidelines have changed often in recent years. For reduced ejection fraction, treatment is now built on several drug classes started and titrated together. You need the current recommendations close at hand and a reliable place to find risk scores.\n\nThis page lists the guideline sources and decision tools that come up in heart failure clinics, on the wards and on the medical take. They're useful for medical registrars, heart failure nurses and anyone looking after patients with reduced or preserved ejection fraction.\n\nIn the UK, NICE sets the framework for diagnosis and referral, including NT-proBNP thresholds and how quickly patients should get a specialist assessment and echo. Most cardiology teams follow the ESC guidelines for treatment, and heart failure specialist nurses do much of the titration. Elsewhere in Europe the ESC guidelines are the main reference. In the US, teams follow the ACC/AHA/HFSA guideline.",
     "faqs": [
       {
         "question": "Which heart failure guidelines should I follow?",
-        "answer": "In the UK and Europe most teams use the ESC heart failure guidelines alongside NICE guidance. The ESC guidelines are free to read on the ESC website. Follow local protocols for prescribing and titration."
+        "answer": "In the UK, NICE guidance on chronic heart failure alongside the ESC heart failure guidelines, plus local protocols for prescribing and titration. Elsewhere in Europe, the ESC guidelines. In the US, the ACC/AHA/HFSA guideline. They agree on the main drug classes for reduced ejection fraction but differ in places. For example, NICE uses an NT-proBNP of 400 ng/L as its referral threshold, while the ESC treats a level below 125 ng/L (125 pg/mL) as making heart failure unlikely."
       },
       {
         "question": "Where can I find heart failure risk scores?",
@@ -58,7 +62,7 @@
     "heading": "Electrophysiology and device resources",
     "title": "EP and cardiac device learning resources | MedPally Find",
     "description": "Learning resources for electrophysiology and cardiac devices: pacemakers, ICDs, CRT and remote monitoring. Picked by a cardiology registrar.",
-    "intro": "Electrophysiology covers arrhythmias, ablation and implanted devices. For most trainees, devices come first: checking a pacemaker, making sense of a remote monitoring alert, or implanting a loop recorder or pacemaker under supervision.\n\nThe resources here cover device programming and troubleshooting, arrhythmia mechanisms and preparation for device exams. They're aimed at cardiology trainees, cardiac physiologists and nurses who work in pacing clinics or EP labs.",
+    "intro": "Electrophysiology covers arrhythmias, ablation and implanted devices. For most trainees, devices come first: checking a pacemaker, making sense of a remote monitoring alert, or implanting a loop recorder or pacemaker under supervision.\n\nThe resources here cover device programming and troubleshooting, arrhythmia mechanisms and preparation for device exams. They're aimed at cardiology trainees, cardiac physiologists and nurses who work in pacing clinics or EP labs.\n\nIn the UK, the British Heart Rhythm Society (BHRS) runs accreditation exams in devices and EP for doctors, physiologists and nurses. Elsewhere in Europe, EHRA runs its own certification. In the US most people sit the IBHRE exams, which are also taken internationally.",
     "faqs": [
       {
         "question": "Where can I learn about pacemakers and ICDs?",
@@ -66,7 +70,7 @@
       },
       {
         "question": "How do I prepare for a device exam?",
-        "answer": "Exams such as BHRS, IBHRE and EHRA device certification need theory plus plenty of hands-on interrogation practice. Some manufacturer courses include exam preparation; check each listing."
+        "answer": "In the UK the usual exam is BHRS accreditation. In Europe it's EHRA certification, and in the US and many other countries it's IBHRE. All of them need theory and plenty of hands-on interrogation practice. Some manufacturer courses include exam preparation; check each listing."
       }
     ],
     "reviewed": false
@@ -75,7 +79,7 @@
     "heading": "Interventional cardiology resources",
     "title": "Interventional cardiology learning resources | MedPally Find",
     "description": "Resources for learning coronary angiography and the cath lab: projection simulators, anatomy guides and courses. Picked by a cardiology registrar.",
-    "intro": "Early in the cath lab, the hardest part is often working out what you're looking at. Coronary anatomy on a flat angiogram depends on the projection, and it takes time to recognise each vessel in RAO, LAO, cranial and caudal views.\n\nThis page lists tools that help with that: 3D anatomy viewers, projection simulators and guides to the cath lab. They suit cardiology trainees starting angiography, cath lab nurses and radiographers, and anyone who wants to read angiogram reports with more confidence.",
+    "intro": "Early in the cath lab, the hardest part is often working out what you're looking at. Coronary anatomy on a flat angiogram depends on the projection, and it takes time to recognise each vessel in RAO, LAO, cranial and caudal views.\n\nThis page lists tools that help with that: 3D anatomy viewers, projection simulators and guides to the cath lab. They suit cardiology trainees starting angiography, cath lab nurses and radiographers, and anyone who wants to read angiogram reports with more confidence.\n\nIn the UK, interventional training happens within cardiology specialty training, usually in the later years, and the British Cardiovascular Intervention Society (BCIS) sets standards and runs the national PCI audit. In Europe, EAPCI offers certification in interventional cardiology. In the US, interventional cardiology is a separate fellowship year after general cardiology, with its own board exam.",
     "faqs": [
       {
         "question": "How do I learn the angiographic projections?",
@@ -92,7 +96,7 @@
     "heading": "Cardiac imaging resources",
     "title": "Cardiac imaging courses: echo, CT and CMR | MedPally Find",
     "description": "Courses and references for cardiac imaging, including echo, cardiac CT and cardiac MRI. Picked by a cardiology registrar.",
-    "intro": "Cardiac imaging now goes well beyond echo. Cardiac CT is used for chest pain and TAVI planning, and cardiac MRI for cardiomyopathy, myocarditis and viability. Most trainees need to know what each test can answer, even if they never report one.\n\nThe resources here include case-based CT and CMR courses, echo guides, radiology references and coronary angiography tools. Some suit beginners; others are aimed at people working towards reporting.",
+    "intro": "Cardiac imaging now goes well beyond echo. Cardiac CT is used for chest pain and TAVI planning, and cardiac MRI for cardiomyopathy, myocarditis and viability. Most trainees need to know what each test can answer, even if they never report one.\n\nThe resources here include case-based CT and CMR courses, echo guides, radiology references and coronary angiography tools. Some suit beginners; others are aimed at people working towards reporting.\n\nIn the UK, BSCI/BSCCT runs accreditation in cardiac CT from Level 1 to Level 3, and the British Society of Cardiovascular Magnetic Resonance (BSCMR) covers cardiac MRI. Elsewhere in Europe, EACVI runs certification in echo, CT and CMR. In the US, the main societies are SCCT and SCMR.",
     "faqs": [
       {
         "question": "Where can I learn cardiac CT?",
@@ -101,6 +105,10 @@
       {
         "question": "Where can I learn cardiac MRI?",
         "answer": "The University of Hong Kong (HKUx) also runs an online CMR course on edX. Radiopaedia also has free articles and cases on cardiac imaging."
+      },
+      {
+        "question": "How do I get accredited in cardiac CT in the UK?",
+        "answer": "Through BSCI/BSCCT accreditation, which runs from Level 1 to Level 3, with Level 2 the usual target for reporting. The BSCI also recognises SCCT and EACVI accreditation, so a European or US credential can count towards UK practice."
       }
     ],
     "reviewed": false
@@ -109,7 +117,7 @@
     "heading": "Haemodynamics resources",
     "title": "Haemodynamics and shock learning resources | MedPally Find",
     "description": "Resources for understanding haemodynamics, shock and invasive monitoring in cardiac critical care. Picked by a cardiology registrar.",
-    "intro": "Haemodynamics sits behind most decisions in cardiac critical care: whether a patient in shock needs fluid, inotropes or mechanical support, and what a pulmonary artery catheter or echo is telling you.\n\nThese resources cover the physiology of shock, invasive monitoring and how to read pressure and flow data at the bedside. They're useful for intensive care and cardiology registrars, critical care nurses and anyone looking after patients with cardiogenic shock or after cardiac surgery.",
+    "intro": "Haemodynamics sits behind most decisions in cardiac critical care: whether a patient in shock needs fluid, inotropes or mechanical support, and what a pulmonary artery catheter or echo is telling you.\n\nThese resources cover the physiology of shock, invasive monitoring and how to read pressure and flow data at the bedside. They're useful for intensive care and cardiology registrars, critical care nurses and anyone looking after patients with cardiogenic shock or after cardiac surgery.\n\nIn the UK, these patients are usually looked after on a coronary care unit or in intensive care, with cardiology and intensive care deciding together. The physiology is the same wherever you train, so it doesn't matter much where a resource comes from.",
     "faqs": [
       {
         "question": "Where can I learn about cardiogenic shock?",
@@ -126,7 +134,7 @@
     "heading": "Mechanical circulatory support resources",
     "title": "Mechanical circulatory support resources | MedPally Find",
     "description": "Learning resources on IABP, Impella, ECMO and LVADs for cardiology and critical care teams. Picked by a cardiology registrar.",
-    "intro": "Mechanical circulatory support covers devices that take over some of the heart's work: intra-aortic balloon pumps, Impella, VA-ECMO and long-term LVADs. Patients on them are looked after jointly by cardiology, intensive care and cardiac surgery, and everyone involved needs to know how the device works and what can go wrong.\n\nThis page lists references on device physiology, indications and troubleshooting, for intensive care and cardiology trainees, critical care nurses and perfusionists.",
+    "intro": "Mechanical circulatory support covers devices that take over some of the heart's work: intra-aortic balloon pumps, Impella, VA-ECMO and long-term LVADs. Patients on them are looked after jointly by cardiology, intensive care and cardiac surgery, and everyone involved needs to know how the device works and what can go wrong.\n\nThis page lists references on device physiology, indications and troubleshooting, for intensive care and cardiology trainees, critical care nurses and perfusionists.\n\nIn the UK, balloon pumps are widely available, but most other mechanical support is concentrated in specialist centres. VA-ECMO is offered at a smaller number of centres, and long-term LVADs are implanted only at the heart transplant centres, mostly as a bridge to transplant. In the US, LVADs are also used as long-term destination therapy, and temporary devices such as Impella are used more often.",
     "faqs": [
       {
         "question": "What's the difference between an IABP, Impella and ECMO?",
@@ -143,7 +151,7 @@
     "heading": "Cardiac surgery resources",
     "title": "Cardiac surgery learning resources | MedPally Find",
     "description": "Learning resources on cardiac surgery and post-operative care for cardiology, intensive care and surgical teams. Picked by a cardiology registrar.",
-    "intro": "Cardiology and cardiac surgery meet at the heart team meeting, in the cardiac ICU and on the ward after surgery. Knowing what an operation involves helps you explain it to patients and spot complications early.\n\nThis page collects resources on CABG, valve surgery and post-operative care, for cardiology and intensive care trainees, cardiac surgical trainees and nurses.",
+    "intro": "Cardiology and cardiac surgery meet at the heart team meeting, in the cardiac ICU and on the ward after surgery. Knowing what an operation involves helps you explain it to patients and spot complications early.\n\nThis page collects resources on CABG, valve surgery and post-operative care, for cardiology and intensive care trainees, cardiac surgical trainees and nurses.\n\nIn the UK, the Society for Cardiothoracic Surgery (SCTS) and the national cardiac surgery audit publish outcomes for each unit and surgeon. In the US, the Society of Thoracic Surgeons (STS) runs the main national database and risk score.",
     "faqs": [
       {
         "question": "What should a cardiology trainee know about cardiac surgery?",
@@ -152,6 +160,10 @@
       {
         "question": "Where can I learn post-operative cardiac care?",
         "answer": "Critical care references and cardiac ICU guides are the best place to start. More resources will be added here as they're reviewed."
+      },
+      {
+        "question": "Which surgical risk score should I use?",
+        "answer": "In the UK and Europe, EuroSCORE II is the one you'll see most in heart team meetings. In the US, the STS score is standard. Both estimate the risk of death after cardiac surgery, and some teams look at both."
       }
     ],
     "reviewed": false
@@ -160,11 +172,11 @@
     "heading": "Cardiovascular pharmacology resources",
     "title": "Cardiovascular pharmacology resources | MedPally Find",
     "description": "References and learning resources on cardiovascular drugs, from antiplatelets to inotropes. Picked by a cardiology registrar.",
-    "intro": "Cardiology relies on a lot of high-risk drugs: anticoagulants, antiplatelets, antiarrhythmics, heart failure medicines and inotropes. Doses change with kidney function, interactions are common and the evidence keeps moving.\n\nThis page lists references and learning resources on cardiovascular drugs. They're for understanding the drugs; always check doses against the BNF or your local formulary before prescribing.",
+    "intro": "Cardiology relies on a lot of high-risk drugs: anticoagulants, antiplatelets, antiarrhythmics, heart failure medicines and inotropes. Doses change with kidney function, interactions are common and the evidence keeps moving.\n\nThis page lists references and learning resources on cardiovascular drugs. They're for understanding the drugs; always check doses against the BNF or your local formulary before prescribing.\n\nIf you use American resources, some drug names differ: adrenaline and noradrenaline are epinephrine and norepinephrine in the US.",
     "faqs": [
       {
         "question": "Where should I check cardiac drug doses?",
-        "answer": "In the UK, use the BNF and your local formulary. Learning resources help you understand the drugs but shouldn't replace a prescribing reference."
+        "answer": "In the UK, use the BNF and your local formulary. Elsewhere in Europe, check your national formulary or the drug's summary of product characteristics (SmPC). In the US, use the FDA-approved prescribing information and your hospital formulary. Learning resources help you understand the drugs but shouldn't replace a prescribing reference."
       },
       {
         "question": "Which drug topics come up most in cardiology training?",
@@ -177,15 +189,15 @@
     "heading": "Acute coronary syndrome resources",
     "title": "ACS guidelines and learning resources | MedPally Find",
     "description": "Guidelines, risk scores and learning resources for acute coronary syndromes. Picked by a cardiology registrar.",
-    "intro": "Acute coronary syndromes are among the most common reasons for a cardiology referral. Managing them well means reading the ECG quickly, using troponin pathways properly, choosing antithrombotic therapy and knowing when a patient needs the cath lab.\n\nThe resources here include risk scores, guidelines and teaching on ACS. They're useful for emergency and acute medicine doctors, medical registrars on call and cardiology trainees.",
+    "intro": "Acute coronary syndromes are among the most common reasons for a cardiology referral. Managing them well means reading the ECG quickly, using troponin pathways properly, choosing antithrombotic therapy and knowing when a patient needs the cath lab.\n\nThe resources here include risk scores, guidelines and teaching on ACS. They're useful for emergency and acute medicine doctors, medical registrars on call and cardiology trainees.\n\nIn the UK, NICE guidance covers chest pain assessment and ACS, and regional networks run primary PCI for STEMI around the clock. Most cardiology teams use the ESC guidelines for treatment. Elsewhere in Europe the ESC guidelines are the standard. In the US, the ACC/AHA published a single combined ACS guideline in 2025, replacing their separate STEMI and NSTE-ACS guidelines.",
     "faqs": [
       {
         "question": "Where can I find ACS risk scores?",
-        "answer": "MDCalc has the scores commonly used in chest pain and ACS, such as GRACE and HEART, with notes on how each was developed."
+        "answer": "MDCalc has the scores commonly used in chest pain and ACS, with notes on how each was developed. NICE recommends GRACE for NSTEMI and unstable angina; the HEART score is used more in emergency departments, particularly in the US."
       },
       {
         "question": "Which guidelines cover ACS?",
-        "answer": "The ESC guidelines cover the diagnosis and management of acute coronary syndromes and are free to read. In the UK, NICE guidance and local pathways also apply."
+        "answer": "In the UK, NICE guidance on acute coronary syndromes and on recent-onset chest pain, alongside the ESC guidelines and your local pathways. Elsewhere in Europe, the ESC guidelines. In the US, the 2025 ACC/AHA ACS guideline. Both the ESC and ACC/AHA guidelines are free to read."
       }
     ],
     "reviewed": false
@@ -194,15 +206,15 @@
     "heading": "Valve disease resources",
     "title": "Valvular heart disease resources | MedPally Find",
     "description": "Guidelines and learning resources for valvular heart disease, from echo assessment to TAVI. Picked by a cardiology registrar.",
-    "intro": "Valve disease is common, and more so as people live longer. Managing it means grading severity on echo, timing intervention well and choosing between surgery and transcatheter options such as TAVI.\n\nThis page lists guidelines and learning resources on aortic, mitral, tricuspid and pulmonary valve disease, for cardiology trainees, echo physiologists and anyone who sees valve patients in clinic.",
+    "intro": "Valve disease is common, and more so as people live longer. Managing it means grading severity on echo, timing intervention well and choosing between surgery and transcatheter options such as TAVI.\n\nThis page lists guidelines and learning resources on aortic, mitral, tricuspid and pulmonary valve disease, for cardiology trainees, echo physiologists and anyone who sees valve patients in clinic.\n\nIn the UK, NICE's heart valve disease guideline covers when to refer and how often to repeat echo. Treatment decisions go through a heart team, and the ESC/EACTS guidelines are the main reference. Elsewhere in Europe the ESC/EACTS guidelines apply. In the US, teams use the ACC/AHA valve guideline, which differs in some thresholds, such as the age cut-offs for choosing between TAVI and surgery.",
     "faqs": [
       {
         "question": "Which guidelines cover valve disease?",
-        "answer": "The ESC/EACTS valvular heart disease guidelines are widely used in Europe and the UK and are free to read on the ESC website. In the US, the ACC/AHA publish their own guideline."
+        "answer": "In the UK, NICE's heart valve disease guideline alongside the ESC/EACTS valvular heart disease guidelines, which are free to read on the ESC website. Elsewhere in Europe, the ESC/EACTS guidelines. In the US, the ACC/AHA guideline."
       },
       {
         "question": "Where can I learn to grade valve disease on echo?",
-        "answer": "The ASE guidelines set out how to measure and grade valve lesions, and the BSE publishes UK guidance too. An illustrated echo guide helps with the views you'll need first."
+        "answer": "In the UK, start with BSE guidance, which sets out how to grade each valve lesion. The ASE and EACVI guidelines cover the same ground and are used in the US and Europe. An illustrated echo guide helps with the views you'll need first."
       }
     ],
     "reviewed": false
@@ -211,11 +223,11 @@
     "heading": "Congenital heart disease resources",
     "title": "Congenital heart disease resources | MedPally Find",
     "description": "Learning resources on congenital heart disease in children and adults. Picked by a cardiology registrar.",
-    "intro": "More people born with congenital heart disease now live well into adulthood, so adult cardiologists see them more often: in clinic, on the ward and in emergencies. Their anatomy and previous operations can make routine problems complicated.\n\nThis page collects resources on congenital heart lesions, their repairs and long-term follow-up, for cardiology trainees, adult congenital heart disease teams and paediatric staff.",
+    "intro": "More people born with congenital heart disease now live well into adulthood, so adult cardiologists see them more often: in clinic, on the ward and in emergencies. Their anatomy and previous operations can make routine problems complicated.\n\nThis page collects resources on congenital heart lesions, their repairs and long-term follow-up, for cardiology trainees, adult congenital heart disease teams and paediatric staff.\n\nIn the UK, adult congenital care is organised around specialist centres set out in NHS England's congenital heart disease standards, with local cardiology teams sharing follow-up. In Europe the ESC adult congenital heart disease guidelines are the main reference. In the US, the ACC/AHA publish their own guideline.",
     "faqs": [
       {
         "question": "What should a general cardiology trainee know about adult congenital heart disease?",
-        "answer": "The common lesions and their repairs, such as ASD, VSD, tetralogy of Fallot, coarctation and the Fontan circulation, and when to involve a specialist adult congenital centre."
+        "answer": "The common lesions and their repairs, such as ASD, VSD, tetralogy of Fallot, coarctation and the Fontan circulation, and when to involve your regional adult congenital heart disease centre."
       },
       {
         "question": "Can I suggest a congenital heart disease resource?",
@@ -228,15 +240,15 @@
     "heading": "Pulmonary hypertension resources",
     "title": "Pulmonary hypertension resources | MedPally Find",
     "description": "Guidelines and learning resources on diagnosing and managing pulmonary hypertension. Picked by a cardiology registrar.",
-    "intro": "Pulmonary hypertension is often first suspected on an echo or during a breathlessness work-up. Diagnosis needs right heart catheterisation, and the underlying cause decides the treatment, so getting the classification right matters.\n\nThis page lists guidelines and learning resources on pulmonary hypertension, for cardiology and respiratory trainees, echo physiologists and anyone referring patients to a specialist centre.",
+    "intro": "Pulmonary hypertension is often first suspected on an echo or during a breathlessness work-up. Diagnosis needs right heart catheterisation, and the underlying cause decides the treatment, so getting the classification right matters.\n\nThis page lists guidelines and learning resources on pulmonary hypertension, for cardiology and respiratory trainees, echo physiologists and anyone referring patients to a specialist centre.\n\nIn the UK, adults with suspected pulmonary arterial hypertension are referred to one of a small number of designated national centres, which confirm the diagnosis and start specialist drugs, often with shared care closer to home. Elsewhere in Europe the ESC/ERS guidelines set the definitions and treatment. In the US there's no single national network, so where patients are referred depends on local services.",
     "faqs": [
       {
         "question": "Which guidelines cover pulmonary hypertension?",
-        "answer": "The ESC/ERS pulmonary hypertension guidelines set out the definitions, classification and treatment, and are free to read on the ESC website."
+        "answer": "The ESC/ERS pulmonary hypertension guidelines set out the definitions, classification and treatment. They're the main reference in the UK and Europe, are widely used in the US too, and are free to read on the ESC website."
       },
       {
         "question": "How is pulmonary hypertension diagnosed?",
-        "answer": "Echo estimates how likely pulmonary hypertension is, but the diagnosis is confirmed with right heart catheterisation. In the UK, patients are usually referred to a designated pulmonary hypertension centre."
+        "answer": "Echo estimates how likely pulmonary hypertension is, but the diagnosis is confirmed with right heart catheterisation. In the UK that usually happens at a designated pulmonary hypertension centre after referral."
       }
     ],
     "reviewed": false
@@ -245,7 +257,7 @@
     "heading": "Cardiac critical care resources",
     "title": "Cardiac critical care learning resources | MedPally Find",
     "description": "References and learning resources for cardiac intensive care: shock, arrhythmias, mechanical support and post-op care. Picked by a cardiology registrar.",
-    "intro": "Cardiac critical care looks after the sickest cardiology patients: cardiogenic shock, survivors of cardiac arrest, patients on mechanical support and those recovering from heart surgery. Care is shared between cardiology, intensive care and anaesthetics.\n\nThe resources here are practical references and teaching, including free critical care textbooks and ECG libraries. They're useful for intensive care and cardiology registrars, critical care nurses and advanced practitioners.",
+    "intro": "Cardiac critical care looks after the sickest cardiology patients: cardiogenic shock, survivors of cardiac arrest, patients on mechanical support and those recovering from heart surgery. Care is shared between cardiology, intensive care and anaesthetics.\n\nThe resources here are practical references and teaching, including free critical care textbooks and ECG libraries. They're useful for intensive care and cardiology registrars, critical care nurses and advanced practitioners.\n\nIn the UK, cardiac critical care is split between coronary care units run by cardiology, cardiothoracic intensive care units in surgical centres, and general intensive care. The Intensive Care Society and the Faculty of Intensive Care Medicine set standards and training. In Europe, ESICM leads on training. In the US, cardiac intensive care units are more often run by cardiologists with critical care training.",
     "faqs": [
       {
         "question": "Is there a free critical care textbook online?",
@@ -261,8 +273,8 @@
   "ultrasound/pocus": {
     "heading": "Point-of-care ultrasound (POCUS) resources",
     "title": "POCUS and focused echo learning resources | MedPally Find",
-    "description": "Courses and guides for learning point-of-care ultrasound and focused echo. Picked by a cardiology registrar.",
-    "intro": "Point-of-care ultrasound lets you answer focused questions at the bedside. Is the left ventricle badly impaired? Is there a pericardial effusion? Is the right ventricle dilated? It's now part of training in acute medicine, emergency medicine and intensive care.\n\nThe resources here teach focused cardiac ultrasound and related POCUS skills, from probe handling and standard views to recognising key findings. Accreditation still needs supervised scans and a logbook, so treat online learning as a supplement.",
+    "description": "Courses and guides for learning POCUS and focused echo, and how accreditation works in the UK (FUSIC, BSE Level 1). Picked by a cardiology registrar.",
+    "intro": "Point-of-care ultrasound lets you answer focused questions at the bedside. Is the left ventricle badly impaired? Is there a pericardial effusion? Is the right ventricle dilated? It's now part of training in acute medicine, emergency medicine and intensive care.\n\nThe resources here teach focused cardiac ultrasound and related POCUS skills, from probe handling and standard views to recognising key findings. Accreditation still needs supervised scans and a logbook, so treat online learning as a supplement.\n\nIn the UK, the main routes are FUSIC Heart from the Intensive Care Society and BSE Level 1, and emergency medicine trainees also follow the Royal College of Emergency Medicine ultrasound curriculum. In Europe, EACVI offers certification in focus cardiac ultrasound. In the US there's no single national credential; hospitals credential clinicians locally.",
     "faqs": [
       {
         "question": "What's the difference between POCUS and a full echo?",
@@ -270,7 +282,7 @@
       },
       {
         "question": "How do I get accredited in focused echo in the UK?",
-        "answer": "Common routes are FUSIC from the Intensive Care Society and BSE Level 1. Both combine course learning with supervised scans and a logbook."
+        "answer": "The common routes are FUSIC Heart from the Intensive Care Society and BSE Level 1. Both combine course learning with supervised scans, a logbook and a final assessment. In Europe the closest equivalent is EACVI certification in focus cardiac ultrasound."
       },
       {
         "question": "Is there free POCUS teaching online?",
@@ -283,7 +295,7 @@
     "heading": "AI in cardiology resources",
     "title": "AI in cardiology: tools and resources | MedPally Find",
     "description": "AI tools and learning resources for cardiology, from echo measurement to ECG analysis. Picked by a cardiology registrar.",
-    "intro": "AI is turning up in cardiology in practical ways: automated echo measurements, ECG analysis, and tools that summarise papers or draft letters. Some of it is useful now; much of it is still being tested.\n\nThis page lists AI tools and resources on how AI is used in cardiology, for clinicians who want to try the tools or understand the evidence. Check whether a tool is approved for clinical use before relying on it with patients.",
+    "intro": "AI is turning up in cardiology in practical ways: automated echo measurements, ECG analysis, and tools that summarise papers or draft letters. Some of it is useful now; much of it is still being tested.\n\nThis page lists AI tools and resources on how AI is used in cardiology, for clinicians who want to try the tools or understand the evidence. Check whether a tool is approved for clinical use before relying on it with patients.\n\nIn the UK, AI tools used in patient care are regulated as medical devices by the MHRA, and NHS organisations also check them against the Digital Technology Assessment Criteria (DTAC). In Europe they need CE marking under the Medical Device Regulation, and the EU AI Act adds further rules. In the US, the FDA authorises them and publishes a list of AI-enabled devices.",
     "faqs": [
       {
         "question": "Can I use AI tools with patient data?",

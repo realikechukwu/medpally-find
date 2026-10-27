@@ -50,6 +50,10 @@ The LITFL ECG Library is free and covers most of what you'll need, from the basi
 
 Use it as a prompt, not an answer. Automated reports measure most intervals reasonably well, though the QT is often off, and they can miss or overcall important findings, so always read the ECG yourself.
 
+### Do exams test ECGs?
+
+Yes. In the UK, MRCP includes ECGs, and cardiology trainees sit the European Exam in General Cardiology (EEGC) as their knowledge-based assessment. Trainees across Europe sit the same exam. In the US, the ABIM cardiovascular disease board exam has its own ECG section. ECG criteria are largely the same internationally, so American resources like ECG Weekly work fine for UK exams.
+
 ### Where can I find more ECG resources?
 
 The [ECG topic page](/topics/ecg/) has the full list, and I'll add more as I find good ones.
