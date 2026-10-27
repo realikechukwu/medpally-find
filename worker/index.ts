@@ -1,13 +1,20 @@
 // Serves the static site and handles /api/* (see run_worker_first in wrangler.jsonc).
 // POST /api/suggest turns a public suggestion into a GitHub issue labelled `suggestion`.
-// It never publishes anything: the curator approves by adding the `intake` label.
+// It never publishes anything: the curator approves by adding the `intake` label. The curator gets an
+// email for each one, because GitHub doesn't notify you about issues opened with your own token.
+import { EmailMessage } from 'cloudflare:email';
 import { normalizeUrl } from '../src/lib/url';
 
 interface Fetcher { fetch(input: Request | string, init?: RequestInit): Promise<Response> }
 interface RateLimit { limit(options: { key: string }): Promise<{ success: boolean }> }
+interface SendEmail { send(message: EmailMessage): Promise<void> }
+interface ExecutionContext { waitUntil(promise: Promise<unknown>): void }
 interface Env {
  ASSETS: Fetcher;
  SUGGEST_LIMIT: RateLimit;
+ NOTIFY_EMAIL?: SendEmail;
+ NOTIFY_FROM: string;
+ NOTIFY_TO: string;
  GITHUB_REPO: string;
  GITHUB_TOKEN?: string;
  TURNSTILE_SECRET_KEY?: string;
@@ -21,18 +28,18 @@ const json = (body: unknown, status = 200, headers: Record<string, string> = {})
 const fail = (message: string, status: number) => json({ ok: false, message }, status);
 
 export default {
- async fetch(request: Request, env: Env): Promise<Response> {
+ async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   const { pathname } = new URL(request.url);
   if (pathname === '/api/suggest') {
    if (request.method !== 'POST') return json({ ok: false, message: 'Use POST.' }, 405, { Allow: 'POST' });
-   return suggest(request, env);
+   return suggest(request, env, ctx);
   }
   if (pathname.startsWith('/api/')) return fail('Not found.', 404);
   return env.ASSETS.fetch(request);
  },
 };
 
-async function suggest(request: Request, env: Env): Promise<Response> {
+async function suggest(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
  if (!env.GITHUB_TOKEN || !env.TURNSTILE_SECRET_KEY) return fail("Suggestions aren't available right now. Please email hello@marlosolutions.com instead.", 503);
  if (request.headers.get('Origin') !== new URL(request.url).origin) return fail('Please use the form on find.medpally.com.', 403);
  if (Number(request.headers.get('Content-Length') ?? 0) > MAX_BODY) return fail('That suggestion is too long.', 413);
@@ -66,6 +73,8 @@ async function suggest(request: Request, env: Env): Promise<Response> {
   console.error('GitHub issue creation failed', response.status, await response.text().catch(() => ''));
   return fail("Couldn't send your suggestion. Please try again later.", 502);
  }
+ const issue = await response.json().catch(() => null) as { html_url?: string } | null;
+ ctx.waitUntil(notify(env, link.href, note, issue?.html_url ?? `https://github.com/${env.GITHUB_REPO}/issues`));
  return json({ ok: true, message: "Thanks, we have it. We'll take a look before it's added." }, 201);
 }
 
@@ -108,6 +117,28 @@ function issueBody(url: string, note: string): string {
   '---',
   'Sent from find.medpally.com/suggest. Add the `intake` label to approve it for curation, or close the issue to decline.',
  ].join('\n');
+}
+
+// A plain-text email to the curator's verified Email Routing address. Failure is logged, never shown to
+// the suggester: the issue already exists.
+async function notify(env: Env, url: string, note: string, issueUrl: string): Promise<void> {
+ if (!env.NOTIFY_EMAIL) return;
+ const host = new URL(url).hostname.replace(/^www\./, '');
+ const body = [url, '', note ? `Note from the suggester:\n${note}` : 'No note from the suggester.', '', `Review it: ${issueUrl}`, 'Add the `intake` label to approve, or close the issue to decline.'].join('\n');
+ const raw = [
+  `From: MedPally Find <${env.NOTIFY_FROM}>`,
+  `To: ${env.NOTIFY_TO}`,
+  `Subject: New suggestion: ${host}`,
+  `Message-ID: <${crypto.randomUUID()}@${env.NOTIFY_FROM.split('@')[1]}>`,
+  `Date: ${new Date().toUTCString()}`,
+  'MIME-Version: 1.0',
+  'Content-Type: text/plain; charset=utf-8',
+  'Content-Transfer-Encoding: 8bit',
+  '',
+  body,
+ ].join('\r\n').replace(/(?<!\r)\n/g, '\r\n');
+ try { await env.NOTIFY_EMAIL.send(new EmailMessage(env.NOTIFY_FROM, env.NOTIFY_TO, raw)); }
+ catch (error) { console.error('Suggestion email failed', error); }
 }
 
 const truncate = (value: string, length: number) => value.length > length ? `${value.slice(0, length - 1)}…` : value;

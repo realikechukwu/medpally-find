@@ -26,6 +26,8 @@ The Claude prompt is in `.github/intake-prompt.md`. The workflow validates befor
 
 `/suggest/` posts to `/api/suggest`. The Worker checks Cloudflare Turnstile, rate-limits by IP, skips links already listed, and opens a GitHub issue labelled `suggestion`, with the suggester's note in a code block. Nothing is published until you add the `intake` label to that issue; the intake workflow then curates it as normal. Close the issue to decline.
 
+Each new suggestion also emails `NOTIFY_TO` (set in `wrangler.jsonc`), since GitHub doesn't notify you about issues opened with your own token. It sends through Email Routing on `marlosolutions.com`, so the recipient must be a verified Email Routing destination and must match the binding's `destination_address`.
+
 Setup:
 
 1. Create the `suggestion` label in the repository.
