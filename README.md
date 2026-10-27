@@ -29,3 +29,13 @@ The Wrangler config serves `dist` as static assets; it does not apply a route. I
 ## Adding a specialty
 
 Add the specialty string to relevant items' `specialty` arrays. The schema already accepts multiple specialties. When the collection is large enough, add a specialty filter and pages using that field; existing item IDs, links, and JSON consumers remain stable. See [the roadmap](docs/roadmap.md).
+
+## Brand
+
+The mark is an **M.** monogram: a geometric M with a terracotta full stop. It is the MedPally parent mark, so the product name lives only in the wordmark: **MedPally** (bold) **Find** (regular) followed by the terracotta full stop.
+
+- Colours: ink `#272522`, paper `#fcfbf8`, terracotta `#b8524b` (light backgrounds) and `#e1877c` (dark backgrounds).
+- `public/favicon.svg` switches to a light tile in dark mode. `apple-touch-icon.png`, `icon-192.png` and `icon-512.png` are full-bleed for iOS and Android masking.
+- `public/brand/` holds the marks as SVG (`mark`, `mark-reversed`, `mark-mono`, `tile`, `tile-reversed`) and the horizontal and stacked lockups as PNG, in light and dark.
+- `public/og.png` is the default link-preview image; items with their own image use that instead.
+- The lockup PNGs are set in Inter, which is open-licensed. Don't build logo files in SF Pro, because Apple's licence doesn't allow it. The site header uses the system font as live text.
