@@ -76,6 +76,9 @@
 .save-toggle:hover{color:var(--ink)}
 .save-toggle.saved,.save-button.saved{color:var(--accent)}
 .save-toggle.saved svg,.save-button.saved svg{fill:currentColor}
+
+/* Phone: one column, so a hairline in the gap marks where each card ends (skips cards hidden by filters/pagination) */
+@media(max-width:600px){.cards-grid{row-gap:56px}.cards-grid .card:not([hidden])~.card:not([hidden]):before{content:"";position:absolute;top:-28px;left:0;right:0;height:1px;background:var(--line)}}
 .detail-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:24px}
 .detail-actions .primary-button{margin-top:0}
 .secondary-button{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border:1px solid var(--line);border-radius:99px;background:var(--surface);color:var(--ink);font-size:14px;font-weight:650}
