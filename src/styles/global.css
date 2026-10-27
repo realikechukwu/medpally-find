@@ -60,3 +60,52 @@
 @media(max-width:600px){.category-bar{margin-inline:-20px;padding-inline:20px;scroll-padding-inline:20px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 20px,#000 calc(100% - 20px),transparent);mask-image:linear-gradient(90deg,transparent,#000 20px,#000 calc(100% - 20px),transparent)}}
 /* No second divider under the filters when "Recently added" is hidden or absent */
 .browse+.all-section .all-heading,.new-section[hidden]+.all-section .all-heading{border-top:0;padding-top:0}
+
+/* Header nav */
+.header-nav{display:flex;align-items:center;gap:6px;font-size:14px}
+.header-nav a{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 12px;border-radius:99px;color:var(--muted)}
+.header-nav a:hover{color:var(--ink);background:var(--chip)}
+.saved-count{min-width:20px;height:20px;padding:0 6px;border-radius:99px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;display:inline-grid;place-items:center}
+@media(prefers-color-scheme:dark){.saved-count{background:#b8524b}}
+@media(max-width:600px){.header-nav{gap:0;margin-right:-10px}.header-nav a{padding:0 10px}}
+
+/* Save toggles */
+.save-toggle{position:absolute;z-index:2;top:10px;right:10px;width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--muted);transition:transform .2s ease,color .15s ease}
+.card:hover .save-toggle{transform:translateY(-4px)}
+.save-toggle svg,.save-button svg{width:20px;height:20px;fill:none}
+.save-toggle:hover{color:var(--ink)}
+.save-toggle.saved,.save-button.saved{color:var(--accent)}
+.save-toggle.saved svg,.save-button.saved svg{fill:currentColor}
+.detail-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:24px}
+.detail-actions .primary-button{margin-top:0}
+.secondary-button{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border:1px solid var(--line);border-radius:99px;background:var(--surface);color:var(--ink);font-size:14px;font-weight:650}
+.secondary-button:hover{border-color:var(--muted)}
+
+/* Saved page */
+.saved-page{padding-top:56px;padding-bottom:100px;min-height:calc(100vh - 155px)}
+.saved-heading{margin-bottom:12px}
+.saved-heading h1{font-size:clamp(36px,5vw,52px);letter-spacing:-.04em;line-height:1.1;margin:12px 0 0}
+.saved-note{color:var(--muted);font-size:14px;margin:0 0 40px}
+#saved-cards:not(.ready) .card{display:none}
+@media(max-width:600px){.saved-heading>p{display:block;font-size:12px}}
+
+/* Suggest page */
+.suggest-page{max-width:640px;padding-top:45px;padding-bottom:100px}
+.suggest-page h1{font-size:clamp(36px,5vw,52px);letter-spacing:-.04em;line-height:1.1;margin:12px 0 16px}
+.suggest-page .back-link{margin-bottom:28px}
+.suggest-lead{font-size:17px;line-height:1.6;color:var(--muted);margin:0 0 36px}
+.suggest-form{display:grid;gap:22px}
+.field{display:grid;gap:8px}
+.field label{font-size:14px;font-weight:650}
+.field label span{font-weight:400;color:var(--muted);margin-left:4px}
+.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);padding:14px 16px;font-size:16px;line-height:1.5}
+.field textarea{resize:vertical;min-height:120px}
+.field input:focus-visible,.field textarea:focus-visible{outline:3px solid #b8524b;outline-offset:1px}
+.honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.suggest-public{font-size:13px;line-height:1.6;color:var(--muted);margin:0}
+.suggest-public a,.form-status a{text-decoration:underline;text-underline-offset:3px}
+.suggest-form .primary-button{justify-self:start;margin-top:0;border:0}
+.suggest-form .primary-button:disabled{opacity:.6;cursor:progress}
+.form-status{margin:0;font-size:14px;min-height:1.5em}
+.form-status.error{color:var(--accent)}
+.empty-state .suggest-link{display:block;margin-top:16px;font-size:14px;color:var(--muted);text-decoration:underline;text-underline-offset:3px}

@@ -1,6 +1,6 @@
 # MedPally Find
 
-A static, curated cardiology and cardiac critical care resource directory. Items live in `data/items.json`; `data/tags.json` is the controlled vocabulary. There is no login, database, or server-side application.
+A static, curated cardiology and cardiac critical care resource directory. Items live in `data/items.json`; `data/tags.json` is the controlled vocabulary. There is no login or database. A small Worker (`worker/index.ts`) handles `/api/*`; everything else is served straight from `dist`. Saved resources live in the visitor's browser (`localStorage`), keyed by item ID.
 
 ```text
 iPhone share sheet → Shortcut → GitHub issue (intake)
@@ -22,9 +22,21 @@ Use Node 24 or newer. Run `npm ci`, `npm run dev`, `npm run validate`, and `npm 
 
 The Claude prompt is in `.github/intake-prompt.md`. The workflow validates before committing and only comments success after a successful push. GitHub concurrency allows one running and one pending run per group; an additional queued event can replace an older pending event, so check Actions and retrigger any displaced intake.
 
+## Public suggestions
+
+`/suggest/` posts to `/api/suggest`. The Worker checks Cloudflare Turnstile, rate-limits by IP, skips links already listed, and opens a GitHub issue labelled `suggestion`, with the suggester's note in a code block. Nothing is published until you add the `intake` label to that issue; the intake workflow then curates it as normal. Close the issue to decline.
+
+Setup:
+
+1. Create the `suggestion` label in the repository.
+2. In Cloudflare, create a Turnstile widget for `find.medpally.com`. Set the site key as the build variable `PUBLIC_TURNSTILE_SITE_KEY` in Workers Builds, and the secret key as the Worker secret `TURNSTILE_SECRET_KEY`.
+3. Create a fine-grained PAT limited to this repository with **Issues: read and write**, and set it as the Worker secret `GITHUB_TOKEN`. It can be the same kind of token as the Shortcut's, but use a separate one so either can be revoked alone.
+
+Without both secrets the form replies that suggestions are unavailable. To try it locally, run `npm run build`, put Cloudflare's test secret (`TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA`) and a token in `.dev.vars`, and run `npx wrangler dev`.
+
 ## Cloudflare Workers
 
-The Wrangler config serves `dist` as static assets; it does not apply a route. In Cloudflare, connect the GitHub repository to Workers Builds, select `main`, set the build command to `npm run build`, and set the deploy command to `npx wrangler deploy`. Set a supported Node version (24+) in the build environment. After the initial setup, add `find.medpally.com` as a custom domain in the Worker's **Settings → Domains & Routes**; the domain must be in a zone on your Cloudflare account. This project does not deploy itself or create secrets.
+The Wrangler config serves `dist` as static assets and runs `worker/index.ts` for `/api/*` only. In Cloudflare, connect the GitHub repository to Workers Builds, select `main`, set the build command to `npm run build`, and set the deploy command to `npx wrangler deploy`. Set a supported Node version (24+) in the build environment. After the initial setup, add `find.medpally.com` as a custom domain in the Worker's **Settings → Domains & Routes**; the domain must be in a zone on your Cloudflare account. This project does not deploy itself or create secrets.
 
 ## Adding a specialty
 

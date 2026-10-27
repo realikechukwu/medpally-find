@@ -1,0 +1,6 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import { activeItems } from '../lib/items';
+---
+<Base title="Saved | MedPally Find" description="Resources you have saved on MedPally Find." noindex><main id="main" class="shell saved-page"><div class="section-heading saved-heading"><div><div class="section-kicker">YOUR LIST</div><h1>Saved</h1></div><p id="saved-total" aria-live="polite"></p></div><p class="saved-note">Saved resources stay in this browser. They aren't sent to us and won't appear on your other devices.</p><div class="cards-grid" id="saved-cards">{activeItems.map(item => <Card item={item}/>)}</div><div class="empty-state" id="saved-empty" hidden><h3>Nothing saved yet.</h3><p>Tap the bookmark on any resource to keep it here.</p><a class="primary-button" href="/">Browse resources</a></div><div class="empty-state" id="saved-unavailable" hidden><h3>Saving isn't available.</h3><p>Your browser is blocking site storage, for example in a private window. Allow it to save resources here.</p></div></main></Base>

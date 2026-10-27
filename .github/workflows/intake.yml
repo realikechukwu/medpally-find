@@ -1,7 +1,7 @@
 name: Curator intake
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]
   issue_comment:
     types: [created]
 permissions:
@@ -12,7 +12,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   intake:
-    if: github.actor == github.repository_owner && (contains(github.event.issue.labels.*.name, 'intake') || startsWith(github.event.issue.title, 'intake:')) && (github.event_name != 'issues' || github.event.action != 'labeled' || github.event.label.name == 'intake')
+    # A public suggestion (label `suggestion`) runs only once the owner adds `intake`. Shortcut issues
+    # are created already labelled, so their `labeled` event is skipped to avoid a second run.
+    if: github.actor == github.repository_owner && (contains(github.event.issue.labels.*.name, 'intake') || startsWith(github.event.issue.title, 'intake:')) && (github.event_name != 'issues' || github.event.action != 'labeled' || (github.event.label.name == 'intake' && contains(github.event.issue.labels.*.name, 'suggestion')))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

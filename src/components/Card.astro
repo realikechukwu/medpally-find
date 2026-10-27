@@ -10,5 +10,6 @@ const icon = `https://www.google.com/s2/favicons?domain=${host}&sz=128`;
   <div class="card-art">
     {item.image ? <img class="cover" src={item.image} alt="" loading="lazy"/> : <span class="logo"><span class="monogram" aria-hidden="true">{item.title.charAt(0)}</span><img src={icon} alt="" loading="lazy" onerror="this.remove()" onload="if(this.naturalWidth<24)this.remove()"/></span>}
   </div>
+  <button class="save-toggle" type="button" data-save={item.id} aria-pressed="false" aria-label={`Save ${item.title}`} hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5h10a1 1 0 0 1 1 1v14l-6-4-6 4v-14a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
   <div class="card-copy"><div class="card-topline"><span class="type-label">{label(item.type)}</span><time class="card-date" datetime={item.added_at} data-relative>{date(item.added_at)}</time></div><h3><a href={`/item/${item.id}/`}>{item.title}</a></h3><p>{item.summary}</p><div class="card-tags">{item.tags.slice(0,3).map(tag => <span>{label(tag)}</span>)}</div></div>
 </article>
