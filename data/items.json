@@ -1,5 +1,32 @@
 [
   {
+    "id": "hku-advanced-cardiac-imaging-cardiac-ct",
+    "title": "Advanced Cardiac Imaging: Cardiac Computed Tomography",
+    "url": "https://tl.hku.hk/2020/05/advanced-cardiac-imaging-cardiac-computed-tomography/",
+    "source_url": null,
+    "summary": "HKU cardiac CT course with 50 hands-on cases: calcium score, CT coronary angiography, TAVI planning, CT-FFR, physics and reporting. No prior experience needed. Pricing not checked.",
+    "type": "course",
+    "tags": [
+      "imaging"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Department of Diagnostic Radiology, University of Hong Kong",
+    "maker_url": null,
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-27T11:20:00Z",
+    "updated_at": "2026-10-27T11:20:00Z",
+    "issue": 4,
+    "owner_contact": null
+  },
+  {
     "id": "hkux-advanced-cardiac-imaging-cmr",
     "title": "Advanced Cardiac Imaging: Cardiac Magnetic Resonance (CMR)",
     "url": "https://www.edx.org/learn/medicine/university-of-hong-kong-advanced-cardiac-imaging-cardiac-magnetic-resonance-cmr",
