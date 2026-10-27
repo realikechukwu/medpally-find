@@ -179,9 +179,9 @@ a.category>span{font-size:inherit;line-height:inherit;font-weight:inherit}
 .hero-inner>p{font-size:16px;line-height:1.65;color:#ffffffd9;margin:0}
 .hero-photo .search-box{border-color:transparent;box-shadow:0 18px 50px #00000059}
 .hero-photo .hero-footnote{margin-bottom:0;color:#ffffffa6}
-.hero-credit{position:absolute;z-index:2;right:max(16px,env(safe-area-inset-right));bottom:12px;margin:0;font-size:11px;color:#ffffff8c}
+.hero .hero-credit{position:absolute;z-index:2;right:max(16px,env(safe-area-inset-right));bottom:10px;margin:0;font-size:9px;color:#ffffff4d}
 .hero-credit a{text-decoration:underline;text-underline-offset:2px}
-.hero-credit a:hover{color:#fff}
+.hero-credit a:hover{color:#ffffffb3}
 @media(max-width:600px){.hero-photo{min-height:0}.hero-inner{padding:118px 0 52px}.hero-inner>p{font-size:14px}}
 
 /* Heartbeat headline: the trace is drawn behind the letters by scripts/heartbeat.ts */
