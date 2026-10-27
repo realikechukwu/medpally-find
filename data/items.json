@@ -1,5 +1,34 @@
 [
   {
+    "id": "audioscholar-cardiology-weekly",
+    "title": "AudioScholar Cardiology Weekly",
+    "short_title": "Cardiology Weekly",
+    "url": "https://audioscholar.cc/feed/cardiology",
+    "source_url": "https://x.com/dr_nikhilshah/status/2114744611419852806",
+    "summary": "Free weekly ~10-minute audio briefing of recent PubMed cardiology literature, as a podcast and email. AI-written, so check the papers.",
+    "type": "podcast",
+    "tags": [
+      "ai"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Nikhil Shah, MBBS DNB (nephrologist)",
+    "maker_url": "https://x.com/dr_nikhilshah",
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": "Clinician built",
+    "status": "active",
+    "added_at": "2026-10-27T18:23:55Z",
+    "updated_at": "2026-10-27T18:23:55Z",
+    "issue": 24,
+    "owner_contact": null
+  },
+  {
     "id": "clinote",
     "title": "Clinote",
     "url": "https://clinote.co/",
