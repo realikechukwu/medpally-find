@@ -1,5 +1,11 @@
 # Add to MedPally Find on iPhone
 
+## Easy way
+
+Open [`Add to MedPally Find.shortcut`](Add%20to%20MedPally%20Find.shortcut) on your Mac (or iPhone). Shortcuts asks for your GitHub token during import; paste it there. It is stored only in your copy of the shortcut, and syncs to your other devices via iCloud. The file in this repo contains no token.
+
+## Build it by hand
+
 The `intake` label already exists in the repository. Create a GitHub fine-grained personal access token limited to this repository with **Issues: read and write**. Keep it private: anyone who can use the token can create and edit issues. Replace `<PAT>` below with that token.
 
 1. In Shortcuts, create a shortcut named **Add to MedPally Find**. Open its details, enable **Show in Share Sheet**, and set accepted types to **URLs** and **Text**. Set “If there's no input” to ask for input.
