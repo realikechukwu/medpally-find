@@ -1,5 +1,34 @@
 [
   {
+    "id": "coronary-lesion-map",
+    "title": "Coronary Lesion Map",
+    "url": "https://cctamap.com",
+    "source_url": "https://x.com/cuevasdcm/status/2114869170760290555",
+    "summary": "Free CAD-RADS 2.0 reporting aid for coronary CT angiography: mark lesions on a coronary diagram and get an editable report draft. Not a medical device.",
+    "type": "calculator",
+    "tags": [
+      "imaging",
+      "acs"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "David Cuevas, MD",
+    "maker_url": "https://x.com/cuevasdcm",
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": "Clinician built",
+    "status": "active",
+    "added_at": "2026-10-27T18:25:47Z",
+    "updated_at": "2026-10-27T18:25:47Z",
+    "issue": 28,
+    "owner_contact": null
+  },
+  {
     "id": "audioscholar-cardiology-weekly",
     "title": "AudioScholar Cardiology Weekly",
     "short_title": "Cardiology Weekly",
