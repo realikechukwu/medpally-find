@@ -1,5 +1,35 @@
 [
   {
+    "id": "coronary-physiology-mentor",
+    "title": "Coronary Physiology Mentor",
+    "short_title": "Coronary Physiology Mentor",
+    "url": "https://systole.live/lab.html",
+    "source_url": "https://x.com/yadersandoval/status/2115267510060630135",
+    "summary": "Interactive coronary physiology tool: simulated FFR, NHPR, pullback and thermodilution procedures, case quizzes, a cause-and-effect simulator, pitfalls, and a calculator.",
+    "type": "app",
+    "tags": [
+      "haemodynamics",
+      "interventional"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Yader Sandoval, MD",
+    "maker_url": null,
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-28T07:59:02Z",
+    "updated_at": "2026-10-28T07:59:02Z",
+    "issue": 40,
+    "owner_contact": null
+  },
+  {
     "id": "this-week-in-cardiology",
     "title": "This Week in Cardiology",
     "url": "https://podcasts.apple.com/gb/podcast/this-week-in-cardiology/id991125169",
