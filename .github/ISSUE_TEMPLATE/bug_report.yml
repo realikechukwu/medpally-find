@@ -1,0 +1,38 @@
+name: Bug report
+description: Something on the site is broken or doesn't work as expected.
+title: 'bug: '
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        To correct or remove a listing, use the email link on the previous page instead. Report security issues privately to hello@marlosolutions.com.
+
+        Issues are public. Don't include patient information or anyone's personal details.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The link to the page where it happened.
+      placeholder: https://find.medpally.com/
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the page
+        2. Tap …
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: iPhone 15, Safari 26

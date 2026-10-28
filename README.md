@@ -25,9 +25,17 @@ npm run validate   # check the data against the schema
 npm run build      # validate and build to dist/
 ```
 
+## Contributing
+
+Bug reports and fixes are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). To add a resource, use the [suggest form](https://find.medpally.com/suggest/).
+
 ## Licence
 
-Code is released under the [MIT Licence](LICENSE). Linked resources belong to their creators.
+The code is open source under the [MIT Licence](LICENSE).
+
+The directory content (the listings and topic pages in [`data/`](data/) and the posts in [`src/content/blog/`](src/content/blog/)) is licensed under [CC BY-NC 4.0](LICENSE-CONTENT). You can share and adapt it for non-commercial purposes if you credit MedPally Find. For commercial use, email [hello@marlosolutions.com](mailto:hello@marlosolutions.com?subject=MedPally%20Find%3A%20commercial%20use).
+
+The MedPally Find name and logo are not licensed for reuse. Linked resources and third-party images belong to their creators.
 
 ## Security
 
