@@ -1,5 +1,31 @@
 [
   {
+    "id": "this-week-in-cardiology",
+    "title": "This Week in Cardiology",
+    "url": "https://podcasts.apple.com/gb/podcast/this-week-in-cardiology/id991125169",
+    "source_url": null,
+    "summary": "Weekly podcast from Medscape in which cardiologist John Mandrola, MD summarises and discusses the week's top cardiology news.",
+    "type": "podcast",
+    "tags": [
+      "general-cardiology"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Medscape",
+    "maker_url": null,
+    "clinician_built": false,
+    "pricing": "unknown",
+    "platforms": [],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-28T00:05:45Z",
+    "updated_at": "2026-10-28T00:05:45Z",
+    "issue": 37,
+    "owner_contact": null
+  },
+  {
     "id": "omi-pocket-guide",
     "title": "OMI Pocket Guide",
     "url": "https://omiguide.org",
