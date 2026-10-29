@@ -1,5 +1,34 @@
 [
   {
+    "id": "is-this-vt",
+    "title": "Is this VT?",
+    "url": "https://is-this-vt.vercel.app",
+    "source_url": null,
+    "summary": "Study aid for wide complex tachycardia: VT vs SVT differentiation criteria, VT localization and VT storm reference, plus a quiz mode. For education, not clinical decisions.",
+    "type": "app",
+    "tags": [
+      "ecg",
+      "ep"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Mounir Al Gibbawi, MD",
+    "maker_url": null,
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-29T15:48:26Z",
+    "updated_at": "2026-10-29T15:48:26Z",
+    "issue": 42,
+    "owner_contact": null
+  },
+  {
     "id": "coronary-physiology-mentor",
     "title": "Coronary Physiology Mentor",
     "short_title": "Coronary Physiology Mentor",
