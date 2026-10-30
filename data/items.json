@@ -1,5 +1,34 @@
 [
   {
+    "id": "ecg-toolkit",
+    "title": "ECG Toolkit",
+    "url": "https://ecgtoolkit.com",
+    "source_url": "https://x.com/willyhfrick/status/2115995683257991251",
+    "summary": "Free browser tools for ECGs: calipers and annotation, a laddergram maker with pacemaker timing (beta), and a QTc calculator with six formulas. Works offline once opened.",
+    "type": "tool",
+    "tags": [
+      "ecg",
+      "ep"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Willy Frick, MD",
+    "maker_url": null,
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": "Clinician built",
+    "status": "active",
+    "added_at": "2026-10-30T07:39:16Z",
+    "updated_at": "2026-10-30T07:39:16Z",
+    "issue": 43,
+    "owner_contact": null
+  },
+  {
     "id": "is-this-vt",
     "title": "Is this VT?",
     "url": "https://is-this-vt.vercel.app",
