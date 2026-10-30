@@ -1,5 +1,35 @@
 [
   {
+    "id": "introductory-guide-to-angiography",
+    "title": "Introductory Guide to Angiography",
+    "short_title": "Guide to Angiography",
+    "url": "https://intuitivecardiology.notion.site/angiography",
+    "source_url": "https://x.com/willyhfrick/status/1860833945492877535",
+    "summary": "Introductory guide to angiography with annotated diagrams, written for those learning to read angiograms.",
+    "type": "website",
+    "tags": [
+      "interventional",
+      "imaging"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Willy Frick, MD",
+    "maker_url": null,
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": "Clinician built",
+    "status": "active",
+    "added_at": "2026-10-30T07:41:34Z",
+    "updated_at": "2026-10-30T07:41:34Z",
+    "issue": 44,
+    "owner_contact": null
+  },
+  {
     "id": "ecg-toolkit",
     "title": "ECG Toolkit",
     "url": "https://ecgtoolkit.com",
