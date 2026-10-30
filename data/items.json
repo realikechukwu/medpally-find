@@ -1,5 +1,34 @@
 [
   {
+    "id": "tavrfy",
+    "title": "TAVRfy",
+    "url": "https://tavrfy.com",
+    "source_url": "https://x.com/alfredoredondod/status/2115831503070392485",
+    "summary": "Free tool for checking sizing ranges of the main TAVR valve platforms, based on manufacturers' instructions for use and sizing guides, with sources cited.",
+    "type": "tool",
+    "tags": [
+      "valve",
+      "interventional"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Alfredo Redondo",
+    "maker_url": null,
+    "clinician_built": false,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-10-30T19:29:09Z",
+    "updated_at": "2026-10-30T19:29:09Z",
+    "issue": 45,
+    "owner_contact": null
+  },
+  {
     "id": "introductory-guide-to-angiography",
     "title": "Introductory Guide to Angiography",
     "short_title": "Guide to Angiography",
