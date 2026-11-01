@@ -1,5 +1,35 @@
 [
   {
+    "id": "sandoval-troponin-lab",
+    "title": "Sandoval Troponin Lab",
+    "short_title": "Troponin Lab",
+    "url": "https://systole.live/labs/troponin.html",
+    "source_url": null,
+    "summary": "Interactive troponin tool covering 0/1 h and 0/2 h cut-offs, a delta calculator, MI probability and risk scores, assay and guideline summaries, and a quiz.",
+    "type": "app",
+    "tags": [
+      "acs",
+      "general-cardiology"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Yader Sandoval, MD",
+    "maker_url": null,
+    "clinician_built": true,
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-11-01T23:26:27Z",
+    "updated_at": "2026-11-01T23:26:27Z",
+    "issue": 46,
+    "owner_contact": null
+  },
+  {
     "id": "tavrfy",
     "title": "TAVRfy",
     "url": "https://tavrfy.com",
