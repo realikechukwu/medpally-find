@@ -417,7 +417,7 @@
     "title": "Learn PVCs",
     "url": "https://www.learnpvcs.com",
     "source_url": "https://x.com/challa1218/status/2111907147894100084",
-    "summary": "Educational prototype for localizing PVC origins: 3D heart anatomy, ECG lead entry to a teaching differential, practice cases and an axis sandbox. Not clinically validated.",
+    "summary": "Educational prototype for localizing PVC origins: 3D heart anatomy, ECG lead entry to a teaching differential, practice cases and an axis sandbox. Web and free iOS app. Not clinically validated.",
     "type": "app",
     "tags": [
       "ep",
@@ -429,15 +429,16 @@
     "maker": "Abhiram Challa, MD",
     "maker_url": "https://x.com/Challa1218",
     "clinician_built": true,
-    "pricing": "unknown",
+    "pricing": "free",
     "platforms": [
-      "web"
+      "web",
+      "ios"
     ],
     "image": null,
     "note": "Clinician built",
     "status": "active",
     "added_at": "2026-10-27T19:14:27Z",
-    "updated_at": "2026-10-27T19:14:27Z",
+    "updated_at": "2026-11-03T21:55:24Z",
     "issue": 12,
     "owner_contact": null
   },
