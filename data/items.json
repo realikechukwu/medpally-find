@@ -1,5 +1,34 @@
 [
   {
+    "id": "flipbook-of-cardiology-tools",
+    "title": "Flipbook of Cardiology Tools",
+    "short_title": "Cardiology Tools Flipbook",
+    "url": "https://tools.rueyhu.com/library",
+    "source_url": "https://x.com/ruey_hu/status/2118357922233069639",
+    "summary": "Flipbook directory of free cardiology tools from clinicians and developers, grouped by area: cath lab, echo, CT, ECG, heart failure and shock, prevention and simulation.",
+    "type": "website",
+    "tags": [
+      "general-cardiology"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Ruey Hu, MD, MPH",
+    "maker_url": "http://www.rueyhu.com",
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-11-05T16:17:18Z",
+    "updated_at": "2026-11-05T16:17:18Z",
+    "issue": 49,
+    "owner_contact": null
+  },
+  {
     "id": "sandoval-troponin-lab",
     "title": "Sandoval Troponin Lab",
     "short_title": "Troponin Lab",
