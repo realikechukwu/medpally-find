@@ -1,5 +1,35 @@
 [
   {
+    "id": "flatliner",
+    "title": "Flatliner",
+    "url": "https://flatliner.app",
+    "source_url": null,
+    "summary": "CPR documentation app for code blue teams. Logs events, medications, rhythms, shocks and timings, calculates chest compression fraction and generates a note for the medical record.",
+    "type": "app",
+    "tags": [
+      "critical-care"
+    ],
+    "specialty": [
+      "cardiology",
+      "critical-care"
+    ],
+    "maker": null,
+    "maker_url": null,
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-11-08T12:52:21Z",
+    "updated_at": "2026-11-08T12:52:21Z",
+    "issue": 50,
+    "owner_contact": null
+  },
+  {
     "id": "flipbook-of-cardiology-tools",
     "title": "Flipbook of Cardiology Tools",
     "short_title": "Cardiology Tools Flipbook",
