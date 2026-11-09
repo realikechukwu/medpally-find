@@ -1,5 +1,37 @@
 [
   {
+    "id": "iatrox-acute-coronary-syndrome-cpd",
+    "title": "Acute coronary syndrome CPD — iatroX",
+    "short_title": "ACS CPD — iatroX",
+    "url": "https://www.iatrox.com/cpd/topics/acute-coronary-syndrome",
+    "source_url": null,
+    "summary": "UK CPD session on acute coronary syndrome: five clinical questions with explanations and a reflection record. Covers NSTEMI, angiography timing, STEMI reperfusion and DAPT, with NICE and ESC sources.",
+    "type": "course",
+    "tags": [
+      "acs",
+      "general-cardiology"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "iatroX",
+    "maker_url": null,
+    "clinician_built": false,
+    "pricing": "freemium",
+    "platforms": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-11-09T10:14:04Z",
+    "updated_at": "2026-11-09T10:14:04Z",
+    "issue": 51,
+    "owner_contact": null
+  },
+  {
     "id": "flatliner",
     "title": "Flatliner",
     "url": "https://flatliner.app",
