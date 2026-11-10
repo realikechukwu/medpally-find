@@ -24,8 +24,12 @@ const topics: Record<string, [colour: string, motif: Motif]> = {
 
 // The main topic is the item's first tag, as the curator orders them (it is also the first tag chip on the card).
 export const mainTopic = (item: Item) => item.tags[0];
+// Colour and motif path for a topic; also used by the topic tiles on the home page.
+export function topicStyle(topic: string) {
+  const [colour, motif] = topics[topic] ?? ['#2c3644', 'grid'];
+  return { colour, motif: motifs[motif] };
+}
 export function topicArt(item: Item) {
   const topic = mainTopic(item);
-  const [colour, motif] = topics[topic] ?? ['#2c3644', 'grid'];
-  return { topic, colour, motif: motifs[motif], name: item.short_title ?? item.title };
+  return { topic, ...topicStyle(topic), name: item.short_title ?? item.title };
 }
