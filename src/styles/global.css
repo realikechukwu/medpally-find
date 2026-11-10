@@ -202,6 +202,9 @@ a.category>span{font-size:inherit;line-height:inherit;font-weight:inherit}
 .beat-trace{position:absolute;z-index:-1;pointer-events:none}
 .beat-ch,.beat-dot{display:inline-block}
 .beat-dot{transform-origin:50% 80%}
+/* After the sweep the full stop beats on its own at 60 bpm, with a lub-dub */
+@keyframes beat-pulse{0%,40%,100%{transform:scale(1)}8%{transform:scale(1.35)}16%{transform:scale(1)}24%{transform:scale(1.15)}}
+@media(prefers-reduced-motion:no-preference){.is-resting .beat-dot{animation:beat-pulse 1s ease-in-out .4s infinite}}
 .beat-word{white-space:nowrap}
 .breadcrumbs{display:flex;flex-wrap:wrap;gap:9px;align-items:center;color:var(--muted);font-size:13px;line-height:1.5}.breadcrumbs a{text-decoration:underline;text-underline-offset:3px}.related-resources{padding-bottom:40px}.related-resources .section-heading{margin-bottom:28px}
 .badge-code{overflow-x:auto;padding:16px;background:var(--chip);border-radius:10px;font-size:12px;line-height:1.5}
