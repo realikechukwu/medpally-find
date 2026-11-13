@@ -1,5 +1,34 @@
 [
   {
+    "id": "echo-companion",
+    "title": "Echo Companion",
+    "url": "https://echo.clinote.co",
+    "source_url": null,
+    "summary": "Web aid for adult transthoracic echo reporting, with checklists and measurements following British Society of Echocardiography guidance. Data stays in the browser tab.",
+    "type": "tool",
+    "tags": [
+      "echo",
+      "imaging"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Clinote",
+    "maker_url": "https://clinote.co/",
+    "clinician_built": true,
+    "pricing": "unknown",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": "Clinician built. For echo reporting using the BSE level 2 format.",
+    "status": "active",
+    "added_at": "2026-11-13T04:55:07Z",
+    "updated_at": "2026-11-13T04:55:07Z",
+    "issue": 54,
+    "owner_contact": null
+  },
+  {
     "id": "iatrox-acute-coronary-syndrome-cpd",
     "title": "Acute coronary syndrome CPD — iatroX",
     "short_title": "ACS CPD — iatroX",
