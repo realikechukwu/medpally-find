@@ -1,5 +1,34 @@
 [
   {
+    "id": "what-happens-to-a-babys-heart-at-birth",
+    "title": "What Happens to a Baby’s Heart at Birth",
+    "short_title": "Baby’s Heart at Birth",
+    "url": "https://x.com/Margaret9908/status/2121671735426551834",
+    "source_url": null,
+    "summary": "30-second vertical video on how a baby’s heart changes at birth, shared as an X post by Margaret.",
+    "type": "thread",
+    "tags": [
+      "congenital"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "Margaret",
+    "maker_url": "https://x.com/Margaret9908",
+    "clinician_built": false,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2121671590450487296/img/nCd__Rh-q2unLJH-.jpg",
+    "note": "Twitter explainer video for embryology of septal defect.",
+    "status": "active",
+    "added_at": "2026-11-14T20:33:39Z",
+    "updated_at": "2026-11-14T20:33:39Z",
+    "issue": 55,
+    "owner_contact": null
+  },
+  {
     "id": "echo-companion",
     "title": "Echo Companion",
     "url": "https://echo.clinote.co",
