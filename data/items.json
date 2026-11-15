@@ -1,5 +1,33 @@
 [
   {
+    "id": "cardiac-axis-trainer",
+    "title": "Cardiac Axis Trainer",
+    "url": "https://cardiacaxis.com",
+    "source_url": "https://x.com/trackyourheart/status/2121215315736477791",
+    "summary": "Interactive ECG tool: rotate the cardiac axis through 360° and see how QRS morphology changes across the six limb leads, to practise axis interpretation.",
+    "type": "app",
+    "tags": [
+      "ecg"
+    ],
+    "specialty": [
+      "cardiology"
+    ],
+    "maker": "David Schaack",
+    "maker_url": null,
+    "clinician_built": false,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-11-15T09:02:44Z",
+    "updated_at": "2026-11-15T09:02:44Z",
+    "issue": 56,
+    "owner_contact": null
+  },
+  {
     "id": "what-happens-to-a-babys-heart-at-birth",
     "title": "What Happens to a Baby’s Heart at Birth",
     "short_title": "Baby’s Heart at Birth",
