@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '1x00000000000000000000AA';
 ---
 <Base title="Suggest a resource | MedPally Find" description="Suggest a cardiology or cardiac critical care tool, app or learning resource for MedPally Find."><main id="main" class="shell suggest-page"><a class="back-link" href="/browse/"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14.5 6-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All resources</a><div class="section-kicker">SUGGEST</div><h1>Know a good resource?</h1><p class="suggest-lead">Send us a tool, app, course or guideline for cardiology or cardiac critical care. We read every suggestion before anything is added.</p>
-<form class="suggest-form" id="suggest-form" action="/api/suggest" method="post" novalidate><div class="field"><label for="suggest-url">Link</label><input id="suggest-url" name="url" type="url" inputmode="url" placeholder="https://" required maxlength="2000" autocomplete="url"/></div><div class="field"><label for="suggest-note">Why is it useful? <span>Optional</span></label><textarea id="suggest-note" name="note" rows="4" maxlength="1000"></textarea></div><div class="honeypot" aria-hidden="true"><label for="suggest-website">Leave this empty</label><input id="suggest-website" name="website" tabindex="-1" autocomplete="off"/></div><p class="suggest-public">Suggestions are posted publicly on <a href="https://github.com/realikechukwu/medpally-find/issues?q=label%3Asuggestion" target="_blank" rel="noopener">GitHub</a> for review. Don't include your name, contact details or anything about patients.</p><div class="cf-turnstile" data-sitekey={siteKey} data-size="flexible" data-action="suggest"></div><button class="primary-button" type="submit">Send suggestion</button><p class="form-status" id="suggest-status" role="status" aria-live="polite"></p></form></main>
+<form class="suggest-form" id="suggest-form" action="/api/suggest" method="post" novalidate><div class="field"><label for="suggest-url">Link</label><span id="suggest-url-hint" class="field-hint">Format: https://example.com</span><input id="suggest-url" name="url" type="url" inputmode="url" placeholder="https://" required maxlength="2000" autocomplete="url" aria-describedby="suggest-url-hint" aria-errormessage="suggest-url-error"/><span id="suggest-url-error" class="field-error"><span aria-hidden="true">!</span> Enter a full link, starting with https://</span></div><div class="field"><label for="suggest-note">Why is it useful? <span>Optional</span></label><textarea id="suggest-note" name="note" rows="4" maxlength="1000"></textarea></div><div class="honeypot" aria-hidden="true"><label for="suggest-website">Leave this empty</label><input id="suggest-website" name="website" tabindex="-1" autocomplete="off"/></div><p class="suggest-public">Suggestions are posted publicly on <a href="https://github.com/realikechukwu/medpally-find/issues?q=label%3Asuggestion" target="_blank" rel="noopener">GitHub</a> for review. Don't include your name, contact details or anything about patients.</p><div class="cf-turnstile" data-sitekey={siteKey} data-size="flexible" data-action="suggest"></div><button class="primary-button" type="submit">Send suggestion</button><p class="form-status" id="suggest-status" role="status" aria-live="polite"></p></form></main>
 <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
 declare const turnstile: { reset(): void } | undefined;
@@ -14,6 +14,56 @@ const status = document.querySelector<HTMLElement>('#suggest-status')!;
 const submit = form.querySelector<HTMLButtonElement>('[type=submit]')!;
 const prefill = new URLSearchParams(location.search).get('url');
 if (prefill) url.value = prefill;
+// Synchronize aria-invalid with :user-invalid (with WeakMap fallback for older browsers)
+if (CSS.supports('selector(:user-invalid)')) {
+ const syncAria = (event: Event) => {
+  const input = event.target;
+  if (!(input instanceof HTMLInputElement || input instanceof HTMLTextAreaElement || input instanceof HTMLSelectElement)) return;
+  if (input.matches(':user-invalid')) input.setAttribute('aria-invalid', 'true');
+  else input.removeAttribute('aria-invalid');
+ };
+ form.addEventListener('blur', syncAria, true);
+ form.addEventListener('focus', syncAria, true);
+ form.addEventListener('input', event => {
+  const input = event.target;
+  if (input instanceof HTMLElement && input.getAttribute('aria-invalid') === 'true') syncAria(event);
+ });
+} else {
+ const dirtyState = new WeakMap<Element, { hasInteracted: boolean; hasBlurred: boolean }>();
+ const updateState = (input: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement) => {
+  const isValid = input.checkValidity();
+  input.classList.toggle('user-invalid-fallback', !isValid);
+  input.classList.toggle('user-valid-fallback', isValid);
+  if (!isValid) input.setAttribute('aria-invalid', 'true');
+  else input.removeAttribute('aria-invalid');
+ };
+ const handleEvent = (event: Event) => {
+  const target = event.target;
+  if (event.type === 'reset' && target instanceof HTMLFormElement) {
+   for (const control of target.elements) {
+    dirtyState.delete(control);
+    control.classList.remove('user-invalid-fallback', 'user-valid-fallback');
+    control.removeAttribute('aria-invalid');
+   }
+   return;
+  }
+  if (!(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement)) return;
+  const state = dirtyState.get(target) ?? { hasInteracted: false, hasBlurred: false };
+  if (event.type === 'input' || event.type === 'change') {
+   state.hasInteracted = true;
+   dirtyState.set(target, state);
+   if (state.hasBlurred) updateState(target);
+  } else if (event.type === 'blur') {
+   state.hasBlurred = true;
+   dirtyState.set(target, state);
+   if (state.hasInteracted) updateState(target);
+  }
+ };
+ form.addEventListener('blur', handleEvent, true);
+ form.addEventListener('input', handleEvent, true);
+ form.addEventListener('change', handleEvent, true);
+ form.addEventListener('reset', handleEvent, true);
+}
 function show(message: string, kind: 'error' | 'ok', link?: { href: string; text: string }) {
  status.className = `form-status ${kind}`;
  status.replaceChildren(message);
@@ -21,7 +71,7 @@ function show(message: string, kind: 'error' | 'ok', link?: { href: string; text
 }
 form.addEventListener('submit', async event => {
  event.preventDefault();
- if (!url.checkValidity()) { show('Enter a full link, starting with https://', 'error'); url.focus(); return; }
+ if (!url.checkValidity()) { url.classList.add('user-invalid-fallback'); url.setAttribute('aria-invalid', 'true'); show('Enter a full link, starting with https://', 'error'); url.focus(); return; }
  submit.disabled = true; show('Sending…', 'ok');
  try {
   const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
