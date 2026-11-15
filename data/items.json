@@ -1,5 +1,65 @@
 [
   {
+    "id": "pericardiocentesis-trainer",
+    "title": "Pericardiocentesis Trainer",
+    "url": "https://dramkm.netlify.app/images/uploads/pericardiocentesis-trainer.html",
+    "source_url": "https://x.com/AbdulMannan5465/status/2121959768730599529",
+    "summary": "Interactive cutaway of the heart and pericardial space for practising pericardiocentesis: device anatomy, a needle-technique memory aid and parasternal and apical approaches.",
+    "type": "app",
+    "tags": [
+      "interventional",
+      "critical-care"
+    ],
+    "specialty": [
+      "cardiology",
+      "critical-care"
+    ],
+    "maker": "Abdul Mannan Khan Minhas",
+    "maker_url": "https://dramkm.netlify.app",
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-11-15T21:21:34Z",
+    "updated_at": "2026-11-15T21:21:34Z",
+    "issue": 58,
+    "owner_contact": null
+  },
+  {
+    "id": "tvp-trainer",
+    "title": "TVP Trainer",
+    "url": "https://dramkm.netlify.app/images/uploads/tvp-trainer.html",
+    "source_url": "https://x.com/AbdulMannan5465/status/2121959768730599529",
+    "summary": "Step-by-step practice for transvenous pacemaker insertion via the right internal jugular, with a back-table kit, key numbers to remember and a labelling quiz.",
+    "type": "app",
+    "tags": [
+      "ep",
+      "critical-care"
+    ],
+    "specialty": [
+      "cardiology",
+      "critical-care"
+    ],
+    "maker": "Abdul Mannan Khan Minhas",
+    "maker_url": "https://dramkm.netlify.app",
+    "clinician_built": true,
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "image": null,
+    "note": null,
+    "status": "active",
+    "added_at": "2026-11-15T21:21:34Z",
+    "updated_at": "2026-11-15T21:21:34Z",
+    "issue": 58,
+    "owner_contact": null
+  },
+  {
     "id": "cardiac-axis-trainer",
     "title": "Cardiac Axis Trainer",
     "url": "https://cardiacaxis.com",
