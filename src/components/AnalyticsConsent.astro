@@ -1,0 +1,28 @@
+<aside id="analytics-consent" aria-labelledby="analytics-heading" hidden>
+  <h2 id="analytics-heading" tabindex="-1">Allow optional analytics?</h2>
+  <p>PostHog helps us count visits and see which resources people use. <a href="/privacy/#analytics">Privacy notice</a></p>
+  <div class="analytics-actions">
+    <button class="secondary-button" type="button" data-analytics-choice="allow">Allow analytics</button>
+    <button class="secondary-button" type="button" data-analytics-choice="decline">Decline analytics</button>
+  </div>
+</aside>
+<style>
+  aside {
+    position: fixed;
+    z-index: 20;
+    inset-inline-end: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    width: min(27rem, calc(100% - 2rem));
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 8px 32px #0002;
+  }
+  h2 { font-size: 1rem; font-weight: 700; }
+  p { margin-block: .4rem .8rem; font-size: .875rem; line-height: 1.5; }
+  a { text-decoration: underline; text-underline-offset: .15em; }
+  .analytics-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .analytics-actions button { flex: 1 0 auto; justify-content: center; min-height: 44px; }
+</style>

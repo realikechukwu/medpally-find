@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Card from './Card.astro';
 import JsonLd from './JsonLd.astro';
+import { getPublishedPosts } from '../lib/blog';
 import { MIN_INDEXABLE_ITEMS, activeItems, label, slug } from '../lib/items';
 import type { Item } from '../lib/schema';
 interface Content { heading: string; title: string; description: string; intro: string; faqs: { question: string; answer: string }[] }
@@ -10,6 +11,7 @@ const { content, listings, kind, value } = Astro.props;
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 const resourceNames = new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(listings.slice(0, 3).map(item => item.title));
 const faqs = content.faqs.map(faq => ({ ...faq, answer: faq.answer.replaceAll('{{resources}}', resourceNames) }));
+const guides = kind === 'topic' ? (await getPublishedPosts()).filter(post => post.data.topics.includes(value)) : [];
 const related = [...new Set(listings.flatMap(item => item.tags))]
   .filter(tag => tag !== value && activeItems.some(item => item.tags.includes(tag)))
   .sort((a, b) => listings.filter(item => item.tags.includes(b)).length - listings.filter(item => item.tags.includes(a)).length)
@@ -32,11 +34,14 @@ const data = { '@context': 'https://schema.org', '@graph': [
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span>{kind === 'topic' && <><a href="/topics/">Topics</a><span aria-hidden="true">›</span></>}<span aria-current="page">{content.heading}</span></nav>
     <div class="landing-intro"><div class="section-kicker">{kind === 'topic' ? 'TOPIC' : 'RESOURCE TYPE'}</div><h1>{content.heading}</h1>{content.intro.split(/\n\n+/).map(paragraph => <p>{paragraph}</p>)}</div>
     <section class="landing-section" aria-labelledby="resources-heading"><div class="section-heading"><h2 id="resources-heading">Resources <span>({listings.length})</span></h2></div><div class="cards-grid">{listings.map(item => <Card item={item}/>)}</div></section>
+    {guides.length > 0 && <section class="landing-section landing-text" aria-labelledby="guides-heading"><h2 id="guides-heading">Learning guides</h2><ul class="learning-guides">{guides.map(post => <li><a href={`/blog/${post.id}/`}>{post.data.title}</a></li>)}</ul></section>}
     {faqs.length > 0 && <section class="landing-section landing-text" aria-labelledby="faq-heading"><h2 id="faq-heading">Common questions</h2><div class="faq-list">{faqs.map((faq, i) => <details class="faq-item" name="landing-faq" open={i === 0}><summary class="faq-summary"><span>{faq.question}</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="faq-body"><p>{faq.answer}</p></div></details>)}</div></section>}
     {related.length > 0 && <section class="landing-section" aria-labelledby="related-heading"><h2 id="related-heading">Related topics</h2><div class="landing-links">{related.map(tag => <a class="tag-chip" href={`/topics/${slug(tag)}/`}>{label(tag)}</a>)}</div></section>}
   </main>
 </Base>
 <style>
+  .learning-guides { display: grid; gap: .75rem; margin-top: 1rem; }
+  .learning-guides a { text-decoration: underline; text-underline-offset: .2em; }
   .landing{padding-top:40px;padding-bottom:100px}.breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--muted);font-size:13px}.breadcrumbs a{text-decoration:underline;text-underline-offset:3px}.landing-intro{max-width:850px;margin-top:65px}.landing-intro h1{font-size:clamp(36px,5vw,56px);letter-spacing:-.045em;line-height:1.1;margin:14px 0 20px}.landing-intro p,.landing-text p{color:var(--muted);line-height:1.7}.landing-intro p+p{margin-top:14px}.landing-section{margin-top:72px}.landing-section+.landing-section{content-visibility:auto;contain-intrinsic-size:auto none auto 280px}.landing-section h2{font-size:28px;letter-spacing:-.035em}.landing-text{max-width:850px}.faq-list{margin-top:20px;border-top:1px solid var(--line)}.faq-item{border-bottom:1px solid var(--line)}.faq-summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;font-size:18px;font-weight:650;cursor:pointer;user-select:none}.faq-summary::-webkit-details-marker{display:none}.faq-summary svg{width:20px;height:20px;flex:none;color:var(--muted);rotate:0deg;transition:rotate .2s ease}.faq-item[open] .faq-summary svg{rotate:180deg;color:var(--accent)}.faq-item::details-content{block-size:0;overflow:clip;transition:block-size .25s ease,content-visibility .25s;transition-behavior:allow-discrete}.faq-item[open]::details-content{block-size:auto}.faq-body{padding:0 0 22px}.landing-text p{margin:0}.landing-links{display:flex;flex-wrap:wrap;gap:8px}.landing-links a{display:inline-flex;align-items:center}.landing-links a:hover{color:var(--ink)}
   @media(prefers-reduced-motion:reduce){.faq-item::details-content,.faq-summary svg{transition:none!important}}
   @media(max-width:600px){.landing{padding-top:28px;padding-bottom:65px}.landing-intro{margin-top:42px}.landing-section{margin-top:52px}}

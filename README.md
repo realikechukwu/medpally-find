@@ -25,6 +25,14 @@ npm run validate   # check the data against the schema
 npm run build      # validate and build to dist/
 ```
 
+## Traffic and search performance
+
+Set `PUBLIC_POSTHOG_PROJECT_TOKEN` to the MedPally Find project’s public token and `PUBLIC_POSTHOG_HOST` to `https://eu.i.posthog.com`. For Cloudflare Workers Builds, set these under **Settings → Build → Build variables and secrets** and rebuild. For a local build, set them in `.env.local`. Builds with either variable unset omit analytics. Use a separate PostHog project for routine development traffic.
+
+- [PostHog Web analytics](https://eu.posthog.com/project/365447/web) shows visitors, sessions, page views, top pages and traffic sources. These figures cover visitors who allow analytics.
+- Use [PostHog Product analytics](https://eu.posthog.com/project/365447/insights) to count `resource_opened`, `resource_saved` and `directory_search`. Break down resource events by `resource_id` and filter `directory_search` to `result_count = 0` to find searches without results.
+- Use [Google Search Console](https://search.google.com/search-console) for Google impressions, clicks, search queries and indexing. The sitemap is at [find.medpally.com/sitemap.xml](https://find.medpally.com/sitemap.xml).
+
 ## Contributing
 
 Bug reports and fixes are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). To add a resource, use the [suggest form](https://find.medpally.com/suggest/).

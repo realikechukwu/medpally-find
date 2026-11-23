@@ -5,6 +5,8 @@ const root = path.resolve('dist');
 const errors = [];
 const titles = new Map();
 const descriptions = new Map();
+const site = 'https://find.medpally.com';
+const indexable = new Set();
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   return (await Promise.all(entries.map(entry => entry.isDirectory() ? walk(path.join(dir, entry.name)) : [path.join(dir, entry.name)]))).flat();
@@ -17,6 +19,11 @@ const exists = async file => { try { return (await stat(file)).isFile(); } catch
 for (const file of htmlFiles) {
   const html = await readFile(file, 'utf8');
   const relative = path.relative(root, file);
+  const pathname = relative === '404.html' ? '/404.html' : `/${relative.replace(/index\.html$/, '')}`;
+  const canonical = new URL(pathname, site).href;
+  const canonicals = [...html.matchAll(/<link\b[^>]*>/gi)].map(match => match[0]).filter(tag => attr(tag, 'rel') === 'canonical');
+  if (canonicals.length !== 1 || attr(canonicals[0], 'href') !== canonical) errors.push(`${relative}: expected canonical ${canonical}`);
+  if (!/name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)) indexable.add(canonical);
   const titleMatches = [...html.matchAll(/<title\b[^>]*>([\s\S]*?)<\/title\s*>/gi)];
   const metas = [...html.matchAll(/<meta\b[^>]*>/gi)].map(match => match[0]).filter(tag => attr(tag, 'name')?.toLowerCase() === 'description');
   if (titleMatches.length !== 1 || !titleMatches[0]?.[1].trim()) errors.push(`${relative}: expected one nonempty title`);
@@ -43,7 +50,11 @@ for (const file of htmlFiles) {
   }
 }
 const sitemap = await readFile(path.join(root, 'sitemap.xml'), 'utf8');
+const sitemapUrls = new Set();
 for (const match of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+  if (sitemapUrls.has(match[1])) errors.push(`sitemap: duplicate URL ${match[1]}`);
+  sitemapUrls.add(match[1]);
+  if (!indexable.has(match[1])) errors.push(`sitemap: noncanonical or excluded URL ${match[1]}`);
   const url = new URL(match[1]);
   const candidate = path.join(root, decodeURIComponent(url.pathname), 'index.html');
   if (!await exists(candidate)) { errors.push(`sitemap: missing ${url.pathname}`); continue; }
@@ -51,4 +62,5 @@ for (const match of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
   if (/name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)) errors.push(`sitemap: noindex page ${url.pathname}`);
   if (['/saved/', '/suggest/', '/badge/'].includes(url.pathname)) errors.push(`sitemap: excluded page ${url.pathname}`);
 }
+for (const url of indexable) if (!sitemapUrls.has(url)) errors.push(`sitemap: missing indexable page ${url}`);
 if (errors.length) { console.error(errors.join('\n')); process.exitCode = 1; } else console.log(`Checked ${htmlFiles.length} HTML pages: internal links, unique metadata, JSON-LD and sitemap passed.`);

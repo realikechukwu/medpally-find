@@ -87,6 +87,9 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(-
 .site-footer h2{font-size:12px;font-weight:650;color:var(--ink);margin:0 0 14px}
 .site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .site-footer nav a:hover,.footer-bottom a:hover{color:var(--ink)}
+.analytics-settings{color:inherit;text-align:start;cursor:pointer}
+.analytics-settings:hover{color:var(--ink)}
+.analytics-settings:focus-visible{outline-color:#e1877c}
 .footer-bottom{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;line-height:1.6}
 .footer-bottom p{margin:0}
 .footer-bottom a{text-decoration:underline;text-underline-offset:3px}

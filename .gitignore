@@ -3,6 +3,7 @@ dist/
 .astro/
 .wrangler/
 .dev.vars
+.env.local
 .intake-result.json
 .intake-event.json
 

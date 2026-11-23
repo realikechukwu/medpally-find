@@ -1,4 +1,6 @@
-// Saved resources live only in this browser, as item IDs (newest first). Stable IDs let them move to an account later.
+import { trackDirectoryEvent } from './analytics';
+
+// The save list lives in this browser, as item IDs (newest first).
 const KEY = 'mpf:saved';
 
 function storageAvailable() {
@@ -48,7 +50,9 @@ if (available) {
   button.addEventListener('click', () => {
    const id = button.dataset.save!;
    const ids = read();
-   write(ids.includes(id) ? ids.filter(other => other !== id) : [id, ...ids]);
+   const alreadySaved = ids.includes(id);
+   write(alreadySaved ? ids.filter(other => other !== id) : [id, ...ids]);
+   if (!alreadySaved && read().includes(id)) trackDirectoryEvent('resource_saved', { resource_id: id });
    render();
   });
  }
